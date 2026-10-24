@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b1722">
+  <meta name="description" content="ドラゴンと巨大な骨の峡谷を巡り、風と痕跡から失われた土地の物語を集める探索試作。">
+  <title>白骨の風路｜探索試作</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M8 44C24 12 36 10 56 17 40 21 30 31 24 52Z' fill='%23e8d8b7'/%3E%3Cpath d='M19 42c12-12 20-17 35-19' fill='none' stroke='%23d89444' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="app" aria-live="polite">
+    <section id="game" class="view active" aria-label="白骨の風路 探索画面">
+      <div id="viewport" tabindex="0" aria-label="飛行エリア。矢印キーまたはWASDで移動">
+        <div id="world">
+          <img class="world-art" src="assets/bonewind-panorama.png" alt="巨大な肋骨、頭蓋骨、観測塔、断崖の集落が雲海に浮かぶ白骨の風路">
+          <div id="weather" aria-hidden="true"></div>
+          <div id="landmarks" aria-hidden="true"></div>
+          <div id="dragon" aria-label="ドラゴン"><span class="wing">◆</span><span class="body">🐉</span></div>
+        </div>
+      </div>
+
+      <header class="hud top-hud">
+        <div class="title-lockup"><span class="eyebrow">探索記録 01</span><strong>白骨の風路</strong></div>
+        <div class="progress-wrap"><span id="chapterLabel">侵入航路</span><div class="progress"><i id="progressBar"></i></div><span id="foundCount">痕跡 0 / 7</span></div>
+        <nav aria-label="画面切替">
+          <a class="ghost nav-link" href="composer.html">フィールド配置</a>
+          <a class="ghost nav-link featured" href="blockout.html">飛行探索版</a>
+          <button class="ghost" data-open="library">図書館</button>
+          <button class="ghost" data-open="ledger">制作台帳</button>
+        </nav>
+      </header>
+
+      <aside id="companion" class="companion"><span class="pulse"></span><p id="companionText">相棒が風の匂いを確かめている。</p></aside>
+      <button id="inspect" class="inspect" disabled>近くに気配はない</button>
+
+      <div class="altimeter" aria-label="高度"><span>高</span><i id="altitudeNeedle"></i><span>雲海</span></div>
+      <div class="minimap" aria-hidden="true"><i id="mapDot"></i><span>塔</span><span>肋骨</span><span>集落</span><span>頭蓋</span></div>
+
+      <div class="controls" aria-label="移動操作">
+        <div class="dpad">
+          <button data-move="up" aria-label="上昇">▲</button>
+          <button data-move="left" aria-label="左へ">◀</button>
+          <button data-move="down" aria-label="下降">▼</button>
+          <button data-move="right" aria-label="右へ">▶</button>
+        </div>
+        <p><kbd>WASD</kbd> / <kbd>矢印</kbd> で飛行<br><kbd>Space</kbd> で調査</p>
+      </div>
+    </section>
+
+    <section id="library" class="view panel-view" aria-label="大図書館">
+      <header class="panel-head"><div><span class="eyebrow">帰還地点</span><h1>風渡りの大図書館</h1></div><button class="close-view" data-open="game">探索へ戻る</button></header>
+      <div class="library-grid">
+        <article class="shelf-card hero-shelf">
+          <div><span class="eyebrow">第一架空域・地域記録</span><h2>白骨の風路</h2><p id="libraryStatus">まだ白紙の頁が多い。持ち帰った痕跡が、ここに一冊の記録を作る。</p></div>
+          <div class="book-meter"><i id="bookMeter"></i></div>
+        </article>
+        <section><h2>収蔵記録</h2><div id="archiveCards" class="archive-grid"></div></section>
+        <section><h2>展示室</h2><div id="exhibitCards" class="exhibit-grid"></div></section>
+      </div>
+    </section>
+
+    <section id="ledger" class="view panel-view" aria-label="探索パッケージ制作台帳">
+      <header class="panel-head"><div><span class="eyebrow">PACKAGE BLUEPRINT v0.1</span><h1>白骨の風路｜制作台帳</h1></div><div class="head-actions"><a class="download" href="packages/white-bone.json" download>パッケージJSON</a><button class="close-view" data-open="game">探索へ戻る</button></div></header>
+      <div id="ledgerContent" class="ledger-content"></div>
+    </section>
+  </main>
+
+  <dialog id="introDialog" class="story-dialog">
+    <div class="dialog-art"></div>
+    <div class="dialog-copy"><span class="eyebrow">古い航路記録 7-B</span><h1>白骨の風路</h1><p>六十七年前に閉ざされた峡谷から、昨夜ひとつだけ風信号が届いた。送信者はいないはずだ。</p><blockquote>「白い門を越える者へ。骨の下では、風の音を信じるな」</blockquote><a class="dialog-primary" href="blockout.html">ドラゴンで調査へ向かう</a><button class="secondary intro-secondary" id="startGame">2Dコンセプトで探索</button><small>30km四方の地形を飛び、景色と相棒の反応から記録を探します。</small></div>
+  </dialog>
+
+  <dialog id="recordDialog" class="record-dialog">
+    <button class="dialog-x" aria-label="閉じる">×</button>
+    <span id="recordType" class="eyebrow"></span><h2 id="recordTitle"></h2><p id="recordSnippet"></p>
+    <div id="recordMeaning" class="meaning"></div>
+    <button id="storeRecord">図書館へ収蔵する</button>
+  </dialog>
+
+  <dialog id="endingDialog" class="story-dialog ending-dialog">
+    <div class="dialog-copy"><span class="eyebrow">調査完了</span><h1>風は、声の抜け殻だった。</h1><p>住民は巨大生物に滅ぼされたのではない。暮らしを守ろうと作った装置が渡りの群れを狂わせ、最後の一頭と街を同時に失わせた。だが、あの飛行は救出だったのか、ただの混乱だったのか——骨は答えない。</p><div class="ending-actions"><button data-open="library" id="returnLibrary">図書館へ帰還</button><button class="secondary" id="continueExplore">探索を続ける</button></div></div>
+  </dialog>
+  <script src="app.js" type="module"></script>
+</body>
+</html>

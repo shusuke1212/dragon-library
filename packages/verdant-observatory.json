@@ -1,0 +1,1480 @@
+{
+  "schemaVersion": "exploration-package/0.2",
+  "id": "verdant-observatory",
+  "title": "緑陰の天文台",
+  "premise": "枝葉に埋もれた観測所から、季節の違う星図が届いた。差出人の名前の代わりに、小さな芽が押し花にされている。",
+  "playTimeMinutes": {
+    "target": "15-25",
+    "readingExcluded": false
+  },
+  "departureBrief": {
+    "title": "緑陰の天文台へ",
+    "text": "枝葉に埋もれた観測所から、季節の違う星図が届いた。差出人の名前の代わりに、小さな芽が押し花にされている。 出発時の正面にある「枝影の観測塔」へ。着陸場から色布を目印に、最初の記録を探そう。"
+  },
+  "regionRecipe": {
+    "siteTerraces": [
+      {
+        "id": "entry",
+        "nx": 0.85,
+        "nz": 0.10666666666666667,
+        "height": 0.83,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "tower",
+        "nx": 0.7466666666666666,
+        "nz": 0.24666666666666667,
+        "height": 0.5178477511427119,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "crossing",
+        "nx": 0.8033333333333333,
+        "nz": 0.44333333333333336,
+        "height": 0.4704075708432927,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "village",
+        "nx": 0.64,
+        "nz": 0.6233333333333333,
+        "height": 0.748283245090791,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "center",
+        "nx": 0.49333333333333335,
+        "nz": 0.7866666666666667,
+        "height": 0.3960768482158566,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "refuge",
+        "nx": 0.3,
+        "nz": 0.5933333333333334,
+        "height": 0.2995662511526514,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "memorial",
+        "nx": 0.16,
+        "nz": 0.8033333333333333,
+        "height": 0.6110044842342025,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      }
+    ],
+    "generator": "common-canyon-v1",
+    "noiseScale": 1.8099999999999998,
+    "octaves": 5,
+    "canyon": {
+      "width": 0.082,
+      "depth": 0.24,
+      "bendFrequency": 5.8,
+      "bendAmount": 0.11,
+      "depthVariationFrequency": 4.2,
+      "terraceLevels": 5,
+      "terraceSharpness": 5.4,
+      "innerWidth": 0.26,
+      "innerDepth": 0.065,
+      "tributaryFrequency": 11,
+      "tributaryDepth": 0.1,
+      "tributarySharpness": 8,
+      "rillFrequency": 62,
+      "rillDepth": 0.026,
+      "rillSharpness": 10
+    },
+    "ridge": {
+      "headingDeg": 35,
+      "minimumHeight": 0.54,
+      "heightBlend": 0.18,
+      "alongScale": 1.8,
+      "crossScale": 5.2,
+      "warp": 0.42,
+      "sharpness": 3.6,
+      "detailWeight": 0.04,
+      "relief": 0.275
+    },
+    "palette": [
+      {
+        "max": 0.18,
+        "color": [
+          57,
+          83,
+          91
+        ]
+      },
+      {
+        "max": 0.28,
+        "color": [
+          74,
+          99,
+          102
+        ]
+      },
+      {
+        "max": 0.43,
+        "color": [
+          89,
+          100,
+          91
+        ]
+      },
+      {
+        "max": 0.6,
+        "color": [
+          102,
+          100,
+          85
+        ]
+      },
+      {
+        "max": 0.76,
+        "color": [
+          94,
+          91,
+          82
+        ]
+      },
+      {
+        "max": 1,
+        "color": [
+          119,
+          116,
+          105
+        ]
+      }
+    ],
+    "semanticLayers": [
+      "height",
+      "canyon",
+      "ridge",
+      "shelf",
+      "basin"
+    ]
+  },
+  "fieldLayout": {
+    "schemaVersion": "story-field-layout/0.2",
+    "fieldSizeKm": 30,
+    "terrainSeed": 3947,
+    "cruiseSpeedKmh": 200,
+    "boundaryAssist": {
+      "enabled": true,
+      "minimumMarginM": 1800,
+      "extraMarginM": 750,
+      "lookAheadSeconds": 8
+    },
+    "storyAreas": [
+      {
+        "id": "entry",
+        "name": "苔むした旧道",
+        "order": 1,
+        "positionKm": [
+          25.5,
+          3.2
+        ],
+        "recordIds": [],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "森の星環の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "forest",
+          "kind": "entry",
+          "palette": {
+            "stone": "#899b81",
+            "metal": "#7f9864",
+            "cloth": "#d9c288",
+            "foliage": "#365947",
+            "floor": "#78896e",
+            "low": [
+              0.055,
+              0.14,
+              0.085
+            ],
+            "high": [
+              0.28,
+              0.44,
+              0.23
+            ],
+            "sky": [
+              40,
+              74,
+              74
+            ],
+            "middle": [
+              112,
+              154,
+              137
+            ],
+            "haze": [
+              0.46,
+              0.61,
+              0.51
+            ],
+            "depth": 0.24
+          },
+          "points": [
+            {
+              "id": "verdant-observatory-arrival",
+              "label": "旅の案内札",
+              "recordIds": [],
+              "offset": [
+                0,
+                14
+              ],
+              "observation": {
+                "type": "入口の痕跡",
+                "text": "枝葉に埋もれた観測所から、季節の違う星図が届いた。差出人の名前の代わりに、小さな芽が押し花にされている。"
+              },
+              "clue": "正面の「枝影の観測塔」を探そう。色布のそばの机に、この土地の最初の記録が残る。",
+              "lookTargetId": "tower"
+            }
+          ]
+        }
+      },
+      {
+        "id": "tower",
+        "name": "枝影の観測塔",
+        "order": 2,
+        "positionKm": [
+          22.4,
+          7.4
+        ],
+        "recordIds": [
+          "verdant-observatory-1"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "森の星環の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "forest",
+          "kind": "beacon",
+          "palette": {
+            "stone": "#899b81",
+            "metal": "#7f9864",
+            "cloth": "#d9c288",
+            "foliage": "#365947",
+            "floor": "#78896e",
+            "low": [
+              0.055,
+              0.14,
+              0.085
+            ],
+            "high": [
+              0.28,
+              0.44,
+              0.23
+            ],
+            "sky": [
+              40,
+              74,
+              74
+            ],
+            "middle": [
+              112,
+              154,
+              137
+            ],
+            "haze": [
+              0.46,
+              0.61,
+              0.51
+            ],
+            "depth": 0.24
+          },
+          "points": [
+            {
+              "id": "verdant-observatory-point-1",
+              "label": "春を迎えなかった星",
+              "recordIds": [
+                "verdant-observatory-1"
+              ],
+              "offset": [
+                -28,
+                2
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "crossing",
+        "name": "星環の回廊",
+        "order": 3,
+        "positionKm": [
+          24.1,
+          13.3
+        ],
+        "recordIds": [
+          "verdant-observatory-2",
+          "verdant-observatory-3"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "森の星環の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "forest",
+          "kind": "crossing",
+          "palette": {
+            "stone": "#899b81",
+            "metal": "#7f9864",
+            "cloth": "#d9c288",
+            "foliage": "#365947",
+            "floor": "#78896e",
+            "low": [
+              0.055,
+              0.14,
+              0.085
+            ],
+            "high": [
+              0.28,
+              0.44,
+              0.23
+            ],
+            "sky": [
+              40,
+              74,
+              74
+            ],
+            "middle": [
+              112,
+              154,
+              137
+            ],
+            "haze": [
+              0.46,
+              0.61,
+              0.51
+            ],
+            "depth": 0.24
+          },
+          "points": [
+            {
+              "id": "verdant-observatory-point-2",
+              "label": "ずらした目盛り",
+              "recordIds": [
+                "verdant-observatory-2"
+              ],
+              "offset": [
+                -34,
+                10
+              ]
+            },
+            {
+              "id": "verdant-observatory-point-3",
+              "label": "根の深さで覚える",
+              "recordIds": [
+                "verdant-observatory-3"
+              ],
+              "offset": [
+                32,
+                10
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "village",
+        "name": "暦師の集落",
+        "order": 4,
+        "positionKm": [
+          19.2,
+          18.7
+        ],
+        "recordIds": [
+          "verdant-observatory-4",
+          "verdant-observatory-5"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "森の星環の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "forest",
+          "kind": "village",
+          "palette": {
+            "stone": "#899b81",
+            "metal": "#7f9864",
+            "cloth": "#d9c288",
+            "foliage": "#365947",
+            "floor": "#78896e",
+            "low": [
+              0.055,
+              0.14,
+              0.085
+            ],
+            "high": [
+              0.28,
+              0.44,
+              0.23
+            ],
+            "sky": [
+              40,
+              74,
+              74
+            ],
+            "middle": [
+              112,
+              154,
+              137
+            ],
+            "haze": [
+              0.46,
+              0.61,
+              0.51
+            ],
+            "depth": 0.24
+          },
+          "points": [
+            {
+              "id": "verdant-observatory-point-4",
+              "label": "同じ日を売る仕事",
+              "recordIds": [
+                "verdant-observatory-4"
+              ],
+              "offset": [
+                -28,
+                -12
+              ]
+            },
+            {
+              "id": "verdant-observatory-point-5",
+              "label": "土を見た観測士",
+              "recordIds": [
+                "verdant-observatory-5"
+              ],
+              "offset": [
+                27,
+                -19
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "center",
+        "name": "緑陰の大天球儀",
+        "order": 5,
+        "positionKm": [
+          14.8,
+          23.6
+        ],
+        "recordIds": [
+          "verdant-observatory-6"
+        ],
+        "discoveryRadiusM": 700,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "森の星環の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "forest",
+          "kind": "center",
+          "palette": {
+            "stone": "#899b81",
+            "metal": "#7f9864",
+            "cloth": "#d9c288",
+            "foliage": "#365947",
+            "floor": "#78896e",
+            "low": [
+              0.055,
+              0.14,
+              0.085
+            ],
+            "high": [
+              0.28,
+              0.44,
+              0.23
+            ],
+            "sky": [
+              40,
+              74,
+              74
+            ],
+            "middle": [
+              112,
+              154,
+              137
+            ],
+            "haze": [
+              0.46,
+              0.61,
+              0.51
+            ],
+            "depth": 0.24
+          },
+          "points": [
+            {
+              "id": "verdant-observatory-point-6",
+              "label": "暦は命令ではない",
+              "recordIds": [
+                "verdant-observatory-6"
+              ],
+              "offset": [
+                -28,
+                10
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "refuge",
+        "name": "苗床の保管庫",
+        "order": 6,
+        "positionKm": [
+          9,
+          17.8
+        ],
+        "recordIds": [
+          "verdant-observatory-7"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "森の星環の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "forest",
+          "kind": "refuge",
+          "palette": {
+            "stone": "#899b81",
+            "metal": "#7f9864",
+            "cloth": "#d9c288",
+            "foliage": "#365947",
+            "floor": "#78896e",
+            "low": [
+              0.055,
+              0.14,
+              0.085
+            ],
+            "high": [
+              0.28,
+              0.44,
+              0.23
+            ],
+            "sky": [
+              40,
+              74,
+              74
+            ],
+            "middle": [
+              112,
+              154,
+              137
+            ],
+            "haze": [
+              0.46,
+              0.61,
+              0.51
+            ],
+            "depth": 0.24
+          },
+          "points": [
+            {
+              "id": "verdant-observatory-point-7",
+              "label": "返すための種",
+              "recordIds": [
+                "verdant-observatory-7"
+              ],
+              "offset": [
+                0,
+                -15
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "memorial",
+        "name": "春分の石庭",
+        "order": 7,
+        "positionKm": [
+          4.8,
+          24.1
+        ],
+        "recordIds": [
+          "verdant-observatory-8"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "森の星環の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "forest",
+          "kind": "final",
+          "palette": {
+            "stone": "#899b81",
+            "metal": "#7f9864",
+            "cloth": "#d9c288",
+            "foliage": "#365947",
+            "floor": "#78896e",
+            "low": [
+              0.055,
+              0.14,
+              0.085
+            ],
+            "high": [
+              0.28,
+              0.44,
+              0.23
+            ],
+            "sky": [
+              40,
+              74,
+              74
+            ],
+            "middle": [
+              112,
+              154,
+              137
+            ],
+            "haze": [
+              0.46,
+              0.61,
+              0.51
+            ],
+            "depth": 0.24
+          },
+          "points": [
+            {
+              "id": "verdant-observatory-point-8",
+              "label": "星と土のあいだ",
+              "recordIds": [
+                "verdant-observatory-8"
+              ],
+              "offset": [
+                0,
+                5
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "verdant-observatory-1",
+      "type": "観測野帳",
+      "title": "春を迎えなかった星",
+      "snippet": "暦では今日が播種の日。だが北の斜面にはまだ霜が残り、芽を数えても昨日と同じだった。星の位置は正しい。私たちが星へ付けた季節の名前の方が、土地から少しずつ離れているのではないか。",
+      "required": true,
+      "fieldClue": "次は「星環の回廊」へ。森の星環を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "crossing"
+    },
+    {
+      "id": "verdant-observatory-2",
+      "type": "環の修理票",
+      "title": "ずらした目盛り",
+      "snippet": "大天球儀の歯は欠けていない。星環の目盛りだけ、七日分ずらされていた。調整者の署名はない。元に戻すか迷い、いったん修理票を回廊の机へ置く。正しい目盛りが、正しい畑を作るとは限らない。",
+      "required": true,
+      "fieldClue": "同じ足場の反対側にも、もう一枚の記録がある。次は「暦師の集落」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "village"
+    },
+    {
+      "id": "verdant-observatory-3",
+      "type": "庭師の小帳",
+      "title": "根の深さで覚える",
+      "snippet": "年号は苦手なので、霜の深さと虫が戻った日を書くことにした。これは天文学ではない、と言われた。けれど暦を見ない小さな畑だけが、今年も芽を出した。来年は観測士にも、土を一握り持っていこう。",
+      "required": false,
+      "fieldClue": "次は「暦師の集落」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "village"
+    },
+    {
+      "id": "verdant-observatory-4",
+      "type": "暦の配給札",
+      "title": "同じ日を売る仕事",
+      "snippet": "種の配給は暦に合わせて一斉に行う。遅らせるには村ごとの申請が必要で、申請には次の暦が要る。父はこの仕事を誇りにしていた。私も、誰にでも同じ春が来ると思っていた。札の裏へ霜の日を書き始めたのは、その後だ。",
+      "required": true,
+      "fieldClue": "もう一方の色布の机にも、人の残した言葉がありそうだ。次は「緑陰の大天球儀」へ。森の星環を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "center"
+    },
+    {
+      "id": "verdant-observatory-5",
+      "type": "観測所の往復書簡",
+      "title": "土を見た観測士",
+      "snippet": "庭師の記録を受領した。北斜面と川沿いで同じ暦を使う方が誤りだった。星図の配布を止める必要はない。播種日を一つに決めるのを止めたい。星の位置の下に、土地ごとの余白を設けること。",
+      "required": true,
+      "fieldClue": "次は「緑陰の大天球儀」へ。森の星環を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "center"
+    },
+    {
+      "id": "verdant-observatory-6",
+      "type": "評議会の訂正稿",
+      "title": "暦は命令ではない",
+      "snippet": "来年より播種日の印刷を廃する。代わりに、霜、地温、芽吹きの観察欄を加える。誤った暦で種を失った家には、保管庫の種を無償で返す。これは天の運行の訂正ではない。私たちの配り方の訂正である。",
+      "required": true,
+      "fieldClue": "次は「苗床の保管庫」へ。森の星環を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "refuge"
+    },
+    {
+      "id": "verdant-observatory-7",
+      "type": "種袋の添え書き",
+      "title": "返すための種",
+      "snippet": "ここにある種は、失敗した畑へ戻す分。食用へ回さないこと。庭師の畑から分けてもらった種も混ざっているが、恩を記す札は付けなかった。次に誰かの土で育ったら、その土地の名を袋へ書いてほしい。",
+      "required": true,
+      "fieldClue": "次は「春分の石庭」へ。高台の淡い灯を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "memorial"
+    },
+    {
+      "id": "verdant-observatory-8",
+      "type": "石庭の銘",
+      "title": "星と土のあいだ",
+      "snippet": "星は動き、土も変わる。一つの輪へ押し込めようとした私たちだけが、長く止まっていた。この庭では、最初の芽が出た日を春とする。ここに名を刻んだ者は、観測士一名、庭師十一名。肩書の順番は毎年替える。",
+      "required": true,
+      "fieldClue": "次は「枝影の観測塔」へ。欠けた輪を頂く塔を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "tower"
+    }
+  ],
+  "explorationLeads": [
+    {
+      "id": "arrival",
+      "sourcePointIds": [
+        "verdant-observatory-arrival"
+      ],
+      "targetRecordIds": [
+        "verdant-observatory-1"
+      ],
+      "title": "枝影の観測塔を探す",
+      "clue": "色布を掲げた塔の麓で、最初の記録を読もう。"
+    },
+    {
+      "id": "lead-0",
+      "sourceRecordIds": [
+        "verdant-observatory-1"
+      ],
+      "targetRecordIds": [
+        "verdant-observatory-2",
+        "verdant-observatory-3"
+      ],
+      "title": "星環の回廊に残るもの",
+      "clue": "次は「星環の回廊」へ。森の星環を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-1",
+      "sourceRecordIds": [
+        "verdant-observatory-2"
+      ],
+      "targetRecordIds": [
+        "verdant-observatory-4",
+        "verdant-observatory-5"
+      ],
+      "title": "暦師の集落に残るもの",
+      "clue": "同じ足場の反対側にも、もう一枚の記録がある。次は「暦師の集落」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "local-1",
+      "sourceRecordIds": [
+        "verdant-observatory-2"
+      ],
+      "targetRecordIds": [
+        "verdant-observatory-3"
+      ],
+      "title": "近くのもう一つの記録",
+      "clue": "同じ足場の反対側にも、もう一枚の記録がある。相棒に戻る前に、反対側の色布を探してみよう。"
+    },
+    {
+      "id": "lead-2",
+      "sourceRecordIds": [
+        "verdant-observatory-3"
+      ],
+      "targetRecordIds": [
+        "verdant-observatory-4",
+        "verdant-observatory-5"
+      ],
+      "title": "暦師の集落に残るもの",
+      "clue": "次は「暦師の集落」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-3",
+      "sourceRecordIds": [
+        "verdant-observatory-4"
+      ],
+      "targetRecordIds": [
+        "verdant-observatory-6"
+      ],
+      "title": "緑陰の大天球儀に残るもの",
+      "clue": "もう一方の色布の机にも、人の残した言葉がありそうだ。次は「緑陰の大天球儀」へ。森の星環を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "local-3",
+      "sourceRecordIds": [
+        "verdant-observatory-4"
+      ],
+      "targetRecordIds": [
+        "verdant-observatory-5"
+      ],
+      "title": "近くのもう一つの記録",
+      "clue": "もう一方の色布の机にも、人の残した言葉がありそうだ。相棒に戻る前に、反対側の色布を探してみよう。"
+    },
+    {
+      "id": "lead-4",
+      "sourceRecordIds": [
+        "verdant-observatory-5"
+      ],
+      "targetRecordIds": [
+        "verdant-observatory-6"
+      ],
+      "title": "緑陰の大天球儀に残るもの",
+      "clue": "次は「緑陰の大天球儀」へ。森の星環を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-5",
+      "sourceRecordIds": [
+        "verdant-observatory-6"
+      ],
+      "targetRecordIds": [
+        "verdant-observatory-7"
+      ],
+      "title": "苗床の保管庫に残るもの",
+      "clue": "次は「苗床の保管庫」へ。森の星環を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-6",
+      "sourceRecordIds": [
+        "verdant-observatory-7"
+      ],
+      "targetRecordIds": [
+        "verdant-observatory-8"
+      ],
+      "title": "春分の石庭に残るもの",
+      "clue": "次は「春分の石庭」へ。高台の淡い灯を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-7",
+      "sourceRecordIds": [
+        "verdant-observatory-8"
+      ],
+      "targetRecordIds": [
+        "verdant-observatory-1"
+      ],
+      "title": "枝影の観測塔に残るもの",
+      "clue": "次は「枝影の観測塔」へ。欠けた輪を頂く塔を空から探し、色布の付いた机を調べよう。"
+    }
+  ],
+  "storyModel": {
+    "hintLinks": [
+      {
+        "from": "entry",
+        "to": "tower",
+        "mode": "visual",
+        "clue": "正面に、色布を掲げた塔が立つ"
+      },
+      {
+        "from": "tower",
+        "to": "crossing",
+        "mode": "text",
+        "clue": "次は「星環の回廊」へ。森の星環を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "crossing",
+        "to": "village",
+        "mode": "text",
+        "clue": "同じ足場の反対側にも、もう一枚の記録がある。次は「暦師の集落」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "village",
+        "to": "center",
+        "mode": "text",
+        "clue": "もう一方の色布の机にも、人の残した言葉がありそうだ。次は「緑陰の大天球儀」へ。森の星環を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "center",
+        "to": "refuge",
+        "mode": "text",
+        "clue": "次は「苗床の保管庫」へ。森の星環を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "refuge",
+        "to": "memorial",
+        "mode": "text",
+        "clue": "次は「春分の石庭」へ。高台の淡い灯を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "memorial",
+        "to": "tower",
+        "mode": "text",
+        "clue": "次は「枝影の観測塔」へ。欠けた輪を頂く塔を空から探し、色布の付いた机を調べよう。"
+      }
+    ],
+    "historyTimeline": [
+      {
+        "id": "history-0",
+        "order": 1,
+        "summary": "正確すぎた暦",
+        "areaIds": [
+          "tower"
+        ]
+      },
+      {
+        "id": "history-1",
+        "order": 2,
+        "summary": "七日ずれた輪",
+        "areaIds": [
+          "crossing"
+        ]
+      },
+      {
+        "id": "history-2",
+        "order": 3,
+        "summary": "余白を配る",
+        "areaIds": [
+          "village"
+        ]
+      },
+      {
+        "id": "history-3",
+        "order": 4,
+        "summary": "芽吹きを待つ庭",
+        "areaIds": [
+          "center"
+        ]
+      }
+    ]
+  },
+  "environmentPresentation": {
+    "renderer": "layered-atmosphere-v1",
+    "hazeColor": [
+      117,
+      156,
+      130
+    ],
+    "visibilityKm": 30,
+    "altitudeColorHeightM": 2400,
+    "surfaceCueHeightM": 720,
+    "surfaceCellM": 210,
+    "cloudLayers": [
+      {
+        "name": "低い雲海",
+        "heightM": 180,
+        "thicknessM": 100,
+        "count": 44,
+        "sizeM": [
+          620,
+          1450
+        ],
+        "flatness": 0.12,
+        "opacity": 0.09,
+        "driftMps": 3.5
+      },
+      {
+        "name": "中層のちぎれ雲",
+        "heightM": 1050,
+        "thicknessM": 620,
+        "count": 32,
+        "sizeM": [
+          240,
+          720
+        ],
+        "flatness": 0.28,
+        "opacity": 0.13,
+        "driftMps": 7.5
+      },
+      {
+        "name": "高空の薄雲",
+        "heightM": 2350,
+        "thicknessM": 360,
+        "count": 18,
+        "sizeM": [
+          700,
+          1500
+        ],
+        "flatness": 0.09,
+        "opacity": 0.08,
+        "driftMps": 14
+      }
+    ],
+    "airflow": {
+      "count": 120,
+      "nearDrawKm": 4.2,
+      "visualization": "neutral-particles",
+      "color": [
+        139,
+        219,
+        234
+      ]
+    },
+    "soundscape": {
+      "windBaseGain": 0.006,
+      "windSpeedGain": 0.034,
+      "ridgeGain": 0.012,
+      "canyonGain": 0.005,
+      "filterBaseHz": 230,
+      "filterSpeedFactor": 5.5,
+      "ridgeFilterBoostHz": 370,
+      "basinFilterDropHz": 70,
+      "canyonRumbleGain": 0.012,
+      "openRumbleGain": 0.003,
+      "rumbleFadeHeightM": 1300
+    },
+    "distantLandmarks": {
+      "maxDrawKm": 30,
+      "flockCueKm": [
+        0,
+        14
+      ],
+      "flockAltitudeM": [
+        40,
+        95
+      ],
+      "flockSpanM": 150,
+      "silhouetteFloor": 0.16
+    },
+    "boundaryVisual": {
+      "style": "mountain-ring",
+      "segmentsPerSide": 32,
+      "midOffsetKm": 2.4,
+      "outerOffsetKm": 6.5,
+      "midHeightM": [
+        1450,
+        2450
+      ],
+      "outerHeightM": [
+        3300,
+        4400
+      ],
+      "colors": [
+        [
+          54,
+          76,
+          70
+        ],
+        [
+          52,
+          69,
+          76
+        ]
+      ]
+    },
+    "skyTop": [
+      40,
+      74,
+      74
+    ],
+    "skyHigh": [
+      31,
+      58,
+      58
+    ],
+    "skyMiddle": [
+      112,
+      154,
+      137
+    ],
+    "precipitation": null
+  },
+  "biomeRecipe": {
+    "defaultBiome": {
+      "id": "open-ground",
+      "name": "緑陰の天文台",
+      "groundColor": [
+        71,
+        112,
+        59
+      ],
+      "accentColor": [
+        117,
+        156,
+        130
+      ],
+      "hazeColor": [
+        117,
+        156,
+        130
+      ],
+      "colorMix": 0.86,
+      "dressing": {
+        "type": "wind-grass",
+        "density": 0.09
+      },
+      "macro": {
+        "type": "none",
+        "density": 0
+      },
+      "flight": {
+        "name": "地域の風",
+        "kind": "open",
+        "verticalMps": 0.3,
+        "lateralMps": 0.35,
+        "forwardMps": 0,
+        "turbulence": 0.18,
+        "gustRate": 0.4
+      }
+    },
+    "biomes": []
+  },
+  "terrainLod": {
+    "renderer": "webgl-nested-lod-v1",
+    "visibilityKm": 30,
+    "base": {
+      "sizeKm": 30,
+      "segments": 192
+    },
+    "mid": {
+      "sizeKm": 5,
+      "segments": 96,
+      "rebuildM": 1000
+    },
+    "near": {
+      "sizeKm": 1.6,
+      "segments": 64,
+      "rebuildM": 300
+    },
+    "boundaryMesh": {
+      "segmentsPerSide": 40,
+      "midOffsetKm": 2.6,
+      "outerOffsetKm": 6.8,
+      "midHeightM": [
+        1500,
+        2500
+      ],
+      "outerHeightM": [
+        3300,
+        4400
+      ]
+    },
+    "midEcologyCellM": 84,
+    "nearEcologyCellM": 27,
+    "groundCover": {
+      "shortGrassHeightM": [
+        0.05,
+        0.3
+      ],
+      "tallGrassHeightM": [
+        0.3,
+        1.3
+      ],
+      "windDirectionDeg": 72,
+      "waveLengthM": 46,
+      "waveSpeedMps": 11,
+      "waveContrast": 0.055,
+      "distribution": "advected-shelter-clusters"
+    },
+    "canyonSurface": {
+      "strataSpacingM": 26,
+      "strataWarpM": 18,
+      "erosionScaleM": 72,
+      "windDirectionDeg": 4,
+      "dustSpeedMps": 4.2,
+      "dustContrast": 0.07,
+      "floorMaterial": "dry-gravel-and-wash-marks",
+      "talusDistribution": "clustered-at-wall-base"
+    },
+    "basinSurface": {
+      "crackModel": "none",
+      "rippleSpacingM": 8.5,
+      "windDirectionDeg": 118,
+      "movingSandSpeedMps": 3.2,
+      "rippleContrast": 0.055,
+      "movingSandContrast": 0.035,
+      "material": "alluvial-fan-old-channels-and-wind-ripples"
+    },
+    "ridgeSurface": {
+      "windDirectionDeg": 38,
+      "erosionScaleM": 130,
+      "erosionContrast": 0.065,
+      "windwardMaterial": "sunlit-alpine-grass-and-exposed-rock",
+      "leewardMaterial": "deep-green-vegetation-and-shadowed-rock",
+      "vegetationDistribution": "broad-slope-patches-with-dark-gullies",
+      "rockExposure": "steep-slopes-crests-and-erosion-scars"
+    },
+    "transitionSurface": {
+      "boundaryWarp": "multi-scale-height-and-moisture-noise",
+      "ridgeFoot": "deep-green-foothill-to-exposed-rock",
+      "canyonLip": "broken-grass-to-dry-talus",
+      "basinFringe": "sand-fingers-with-dry-grass",
+      "visualBlendWidthM": [
+        450,
+        1100
+      ]
+    },
+    "fallback": "canvas-terrain-v1",
+    "regionTint": {
+      "low": [
+        0.055,
+        0.14,
+        0.085
+      ],
+      "high": [
+        0.28,
+        0.44,
+        0.23
+      ],
+      "haze": [
+        0.46,
+        0.61,
+        0.51
+      ],
+      "mix": 0.9
+    },
+    "seaLevel": -1
+  },
+  "ecologyPresentation": {
+    "species": [
+      {
+        "type": "wind-kite",
+        "count": 28,
+        "biomeIds": [],
+        "altitudeM": [
+          35,
+          90
+        ],
+        "scale": [
+          0.55,
+          0.9
+        ],
+        "orbitM": [
+          100,
+          260
+        ],
+        "speed": [
+          0.08,
+          0.14
+        ],
+        "color": [
+          30,
+          45,
+          48
+        ],
+        "maxDrawKm": 6
+      }
+    ],
+    "cloudShadows": {
+      "enabled": true,
+      "opacity": 0.08,
+      "maxDrawKm": 5
+    }
+  },
+  "library": {
+    "coverImage": "assets/verdant-observatory.svg",
+    "exploreUrl": "blockout.html?region=verdant-observatory&v=142",
+    "shelfDescription": "枝葉に埋もれた観測所から、季節の違う星図が届いた。差出人の名前の代わりに、小さな芽が押し花にされている。",
+    "completedStory": {
+      "title": "緑陰の天文台 ― 地域の物語",
+      "intro": "集めた八つの記録を重ね、この土地で起きた出来事を辿る。",
+      "chapters": [
+        {
+          "title": "正確すぎた暦",
+          "text": "天文台は星の運行を正しく観測していた。それでも、印刷された播種日に合わせた畑は種を失った。変わりゆく気候や斜面ごとの差を、一つの日付へまとめたことが問題だった。観測野帳には、星の正確さを疑わずに、自分たちの使い方を疑い始めた言葉が残っている。",
+          "recordIds": [
+            "verdant-observatory-1",
+            "verdant-observatory-4"
+          ]
+        },
+        {
+          "title": "七日ずれた輪",
+          "text": "目盛りをずらした者の名前は分からない。だが、根や虫や霜を記した庭師の帳面は、そのずれが何を救おうとしたかを示す。修理の担当者は目盛りをただ元へ戻さず、作業を止めた。機械の誤差に見えたものを、土地の声として読み直す時間が生まれた。",
+          "recordIds": [
+            "verdant-observatory-2",
+            "verdant-observatory-3"
+          ]
+        },
+        {
+          "title": "余白を配る",
+          "text": "観測士は庭師の記録を受け取り、星図を捨てる代わりに、土地ごとの観察を書き込む余白を提案した。評議会は播種日を一つに決める制度を廃し、失った種を返すことを決めた。天文学と庭仕事は互いの代わりにならず、同じ紙の上で別々の役割を持つようになった。",
+          "recordIds": [
+            "verdant-observatory-5",
+            "verdant-observatory-6"
+          ]
+        },
+        {
+          "title": "芽吹きを待つ庭",
+          "text": "苗床の保管庫には、補償として戻す種と、庭師が分けた種が残っている。石庭の銘には両者の名があり、順番を固定しない決まりまで刻まれた。枝葉に覆われた観測所は、星を見なくなった場所ではない。星だけを見て春を決めるのを止めた場所だった。",
+          "recordIds": [
+            "verdant-observatory-7",
+            "verdant-observatory-8"
+          ]
+        }
+      ],
+      "afterword": "資料のない部分を断定せず、残された言葉をつないでいます。気になった一文があれば、原文の頁へ戻ってみてください。"
+    }
+  },
+  "completionRule": {
+    "requiredRecords": 8,
+    "finalRecordId": "verdant-observatory-8",
+    "returnAfterFinal": true
+  },
+  "history": [
+    "天文台は星の運行を正しく観測していた。それでも、印刷された播種日に合わせた畑は種を失った。変わりゆく気候や斜面ごとの差を、一つの日付へまとめたことが問題だった。観測野帳には、星の正確さを疑わずに、自分たちの使い方を疑い始めた言葉が残っている。",
+    "目盛りをずらした者の名前は分からない。だが、根や虫や霜を記した庭師の帳面は、そのずれが何を救おうとしたかを示す。修理の担当者は目盛りをただ元へ戻さず、作業を止めた。機械の誤差に見えたものを、土地の声として読み直す時間が生まれた。",
+    "観測士は庭師の記録を受け取り、星図を捨てる代わりに、土地ごとの観察を書き込む余白を提案した。評議会は播種日を一つに決める制度を廃し、失った種を返すことを決めた。天文学と庭仕事は互いの代わりにならず、同じ紙の上で別々の役割を持つようになった。",
+    "苗床の保管庫には、補償として戻す種と、庭師が分けた種が残っている。石庭の銘には両者の名があり、順番を固定しない決まりまで刻まれた。枝葉に覆われた観測所は、星を見なくなった場所ではない。星だけを見て春を決めるのを止めた場所だった。"
+  ]
+}

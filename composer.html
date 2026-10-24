@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b1722">
+  <title>白骨の風路｜物語エリア配置台</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M8 44C24 12 36 10 56 17 40 21 30 31 24 52Z' fill='%23e8d8b7'/%3E%3Cpath d='M19 42c12-12 20-17 35-19' fill='none' stroke='%23d89444' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="composer.css">
+</head>
+<body>
+  <header class="app-head">
+    <div><span class="eyebrow">FIELD COMPOSER v0.1</span><h1>物語エリア配置台</h1></div>
+    <div class="head-stats"><span>フィールド<strong id="fieldStat">30×30 km</strong></span><span>総飛行距離<strong id="distanceStat">—</strong></span><span>巡航時間<strong id="timeStat">—</strong></span></div>
+    <nav><a href="blockout.html">3D試作</a><a href="index.html">記録集</a></nav>
+  </header>
+
+  <main>
+    <section class="map-panel">
+      <div class="map-toolbar">
+        <label>広さ<select id="fieldSize"><option value="20">20km</option><option value="30" selected>30km</option><option value="40">40km</option><option value="60">60km</option></select></label>
+        <label>巡航速度<input id="cruiseSpeed" type="number" min="80" max="500" step="10" value="240"> km/h</label>
+        <button id="reroll">自然地形を生成</button>
+        <button id="reset">初期配置へ戻す</button>
+      </div>
+      <div class="map-wrap">
+        <canvas id="terrain" aria-label="自然地形上の物語エリア配置図"></canvas>
+        <div class="map-legend"><span><i class="story-dot"></i>物語エリア</span><span><i class="route-line"></i>想定順序</span><span><i class="candidate-fill"></i>選択地点の候補地</span><small>点をドラッグして配置</small></div>
+      </div>
+      <div id="selectionBar" class="selection-bar"><span>選択中</span><strong>—</strong><small>地図上の点または右の一覧を選択</small></div>
+    </section>
+
+    <aside class="side-panel">
+      <section class="side-head"><div><span class="eyebrow">STORY AREAS</span><h2>物語エリア</h2></div><button id="addArea">＋ 追加</button></section>
+      <div id="areaList" class="area-list"></div>
+      <section class="placement-check"><span class="eyebrow">PLACEMENT REASON</span><h2>この場所にある理由</h2><div id="placementList"></div></section>
+      <section class="route-check"><span class="eyebrow">FLIGHT LEGS</span><h2>区間の確認</h2><div id="legList"></div></section>
+      <section class="hint-check"><span class="eyebrow">HINT NETWORK</span><h2>ヒント網</h2><p id="hintSummary"></p><div id="hintList"></div></section>
+      <section class="actions"><button id="saveLocal">この配置を保存</button><button id="exportJson">JSONを書き出す</button><p id="saveNote">配置はこの端末内に保存できます。</p></section>
+    </aside>
+  </main>
+
+  <template id="areaTemplate">
+    <article class="area-card"><button class="select-area"><b class="order"></b><span><strong class="name"></strong><small class="coords"></small></span><em class="fit"></em></button><div class="reorder"><button data-dir="-1" aria-label="一つ前へ">↑</button><button data-dir="1" aria-label="一つ後へ">↓</button></div></article>
+  </template>
+  <script src="composer.js" type="module"></script>
+</body>
+</html>

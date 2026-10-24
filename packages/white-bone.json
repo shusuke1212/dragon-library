@@ -1,0 +1,399 @@
+{
+  "schemaVersion": "exploration-package/0.1",
+  "id": "bonewind-passage",
+  "title": "白骨の風路",
+  "playTimeMinutes": {"target": "10-15", "readingExcluded": true},
+  "spatialPrototype": {
+    "units": "meter",
+    "bounds": {"x": [-760, 760], "y": [75, 690], "z": [-1050, 5300]},
+    "canyon": {"seed": 17, "sectionStep": 110, "averageHalfWidth": 430, "cloudSeaHeight": 22},
+    "route": {"entry": [0, 180, -950], "exit": [145, 300, 4920], "shape": "authored-spline", "cruiseSpeedMps": 50, "boostSpeedMps": 78, "brakeSpeedMps": 18},
+    "landmarkPlacements": [
+      {"id":"tower","name":"折れた観測塔","position":[-300,470,-150],"radius":175,"kind":"導入地点","assetClass":"package-hero"},
+      {"id":"ribs","name":"七連肋骨門","position":[0,370,1040],"radius":280,"kind":"航路分岐","assetClass":"package-hero"},
+      {"id":"village","name":"風待ち集落エルカ","position":[305,270,2900],"radius":240,"kind":"事件中心地","assetClass":"shared-kit-layout"},
+      {"id":"skull","name":"イオラの頭蓋","position":[0,330,4350],"radius":330,"kind":"最終接近","assetClass":"package-hero"},
+      {"id":"memorial","name":"無銘の風標","position":[145,300,4920],"radius":150,"kind":"結末地点","assetClass":"package-prop"}
+    ],
+    "windVolumes": [
+      {"id":"rib-updraft","name":"骨笛上昇流","z":[400,1750],"force":[0,12,0]},
+      {"id":"village-crosswind","name":"峡谷横風","z":[2300,3400],"force":[14,0,0]},
+      {"id":"skull-downdraft","name":"頭蓋下降流","z":[3900,4750],"force":[0,-14,0]}
+    ],
+    "evaluation": {"landmarkLabelsDefault":true,"maxQuietSeconds":25,"directFlightSeconds":{"boost":75,"cruise":117},"explorationTargetMinutes":"10-15"}
+  },
+  "fieldLayout": {
+    "schemaVersion": "story-field-layout/0.1",
+    "fieldSizeKm": 30,
+    "terrainSeed": 1704,
+    "cruiseSpeedKmh": 240,
+    "storyAreas": [
+      {"id":"entry","name":"閉鎖航路入口","order":1,"positionKm":[3,4],"functionalType":"arrival","visualPrototype":"signal-gate","historicalRole":"交易航路の閉鎖地点","recordIds":[],"discoveryRadiusM":420,"placementRequirements":{"edgeDistanceKmRange":[0,5]},"exploration":{"kind":"authored-story-area","radiusM":105},"landing":{"approachRadiusM":550,"hoverHeightM":25,"touchdownOffsetM":[42,30],"facingDeg":54.46232220802562,"departure":{"waypointOffsetM":[850,850],"handoffRadiusM":900,"handoffHeightM":160,"handoffSpeedKmh":180}}},
+      {"id":"tower","name":"折れた観測塔","order":2,"positionKm":[7,7],"functionalType":"aerial-investigation","visualPrototype":"tower","historicalRole":"雲鯨の渡りを高所から観測した施設","recordIds":["route-warning","tower-log"],"discoveryRadiusM":520,"dragonReaction":{"type":"interest-call","radiusM":1700},"placementRequirements":{"terrainTagsAny":["ridge","plateau"],"heightRange":[0.48,1]},"exploration":{"kind":"authored-story-area","radiusM":140},"landing":{"approachRadiusM":550,"hoverHeightM":25,"touchdownOffsetM":[65,42],"facingDeg":57.1313210666325,"departure":{"waypointOffsetM":[850,850],"handoffRadiusM":900,"handoffHeightM":160,"handoffSpeedKmh":180}}},
+      {"id":"ribs","name":"七連肋骨門","order":3,"positionKm":[14,8.75],"functionalType":"fly-through","visualPrototype":"rib-arches","historicalRole":"雲鯨の渡りと墜落の痕跡","recordIds":["wind-banner","field-note"],"discoveryRadiusM":720,"dragonReaction":{"type":"interest-call","radiusM":1900},"placementRequirements":{"terrainTagsAny":["canyon","basin"],"canyonRange":[0.5,1]},"exploration":{"kind":"authored-story-area","radiusM":240},"landing":{"approachRadiusM":720,"hoverHeightM":25,"touchdownOffsetM":[-115,-145],"facingDeg":-141.581944655178,"departure":{"waypointOffsetM":[-850,-850],"handoffRadiusM":900,"handoffHeightM":160,"handoffSpeedKmh":180}}},
+      {"id":"village","name":"風待ち集落エルカ","order":4,"positionKm":[18.75,15.5],"functionalType":"landing-site","exploration":{"kind":"elka-village","radiusM":145,"description":"着陸広場から風布の家と評議会へ歩き、記録を探す"},"visualPrototype":"settlement","historicalRole":"風路を利用して栄えた生活拠点","recordIds":["letter","council"],"discoveryRadiusM":650,"dragonReaction":{"type":"landing-look","radiusM":1800},"landing":{"approachRadiusM":700,"hoverHeightM":25,"touchdownOffsetM":[70,30],"facingDeg":215,"departure":{"waypointOffsetM":[-780,-620],"handoffRadiusM":850,"handoffHeightM":140,"handoffSpeedKmh":180}},"placementRequirements":{"terrainTagsAny":["shelf","plateau"],"heightRange":[0.28,0.68],"nearArea":{"id":"ribs","minKm":4,"maxKm":10}}},
+      {"id":"skull","name":"イオラの頭蓋","order":5,"positionKm":[21.5,12.5],"functionalType":"aerial-investigation","visualPrototype":"skull-cage","historicalRole":"鳴風冠事故と墜落の中心地","recordIds":[],"discoveryRadiusM":820,"dragonReaction":{"type":"alert","radiusM":2100},"placementRequirements":{"terrainTagsAny":["canyon","basin","shelf"],"canyonRange":[0.35,1],"nearArea":{"id":"village","minKm":4,"maxKm":10}},"exploration":{"kind":"authored-story-area","radiusM":200},"landing":{"approachRadiusM":820,"hoverHeightM":25,"touchdownOffsetM":[100,65],"facingDeg":56.97613244420336,"departure":{"waypointOffsetM":[850,850],"handoffRadiusM":900,"handoffHeightM":160,"handoffSpeedKmh":180}}},
+      {"id":"memorial","name":"無銘の風標","order":6,"positionKm":[23.75,18],"functionalType":"final-investigation","visualPrototype":"signal-spire","historicalRole":"退去前の住民が責任を刻んだ場所","recordIds":["memorial"],"discoveryRadiusM":430,"dragonReaction":{"type":"record-call","radiusM":1500},"placementRequirements":{"terrainTagsAny":["ridge","plateau","shelf"],"nearArea":{"id":"skull","minKm":1,"maxKm":6}},"exploration":{"kind":"authored-story-area","radiusM":105},"landing":{"approachRadiusM":550,"hoverHeightM":25,"touchdownOffsetM":[48,32],"facingDeg":56.309932474020215,"departure":{"waypointOffsetM":[850,850],"handoffRadiusM":900,"handoffHeightM":160,"handoffSpeedKmh":180}}}
+    ],
+    "placementRules": {"segmentTargetSeconds":[60,120],"edgeMarginKm":1,"typesDeferred":true},
+    "boundaryAssist": {"enabled":true,"minimumMarginM":1800,"extraMarginM":750,"lookAheadSeconds":8}
+  },
+  "regionRecipe": {
+    "siteTerraces": [{"id":"elka-landing-terrace","nx":0.625,"nz":0.5166666666666667,"height":0.46135951404030834,"innerRadius":0.005,"outerRadius":0.008},{"id":"entry-landing-terrace","nx":0.1,"nz":0.13333333333333333,"height":0.3906259584803289,"innerRadius":0.004166666666666667,"outerRadius":0.0075},{"id":"tower-landing-terrace","nx":0.23333333333333334,"nz":0.23333333333333334,"height":0.6010298546886726,"innerRadius":0.005166666666666667,"outerRadius":0.0085},{"id":"ribs-landing-terrace","nx":0.4666666666666667,"nz":0.2916666666666667,"height":0.6860939135787615,"innerRadius":0.008666666666666666,"outerRadius":0.012},{"id":"skull-landing-terrace","nx":0.7166666666666667,"nz":0.4166666666666667,"height":0.37307461094139066,"innerRadius":0.007166666666666667,"outerRadius":0.0105},{"id":"memorial-landing-terrace","nx":0.7916666666666666,"nz":0.6,"height":0.43996574920106435,"innerRadius":0.004166666666666667,"outerRadius":0.0075}],
+    "generator": "common-canyon-v1",
+    "noiseScale": 2.1,
+    "octaves": 5,
+    "canyon": {"width":0.09,"depth":0.42,"bendFrequency":8,"bendAmount":0.11,"depthVariationFrequency":4.2,"terraceLevels":5,"terraceSharpness":5.4,"innerWidth":0.26,"innerDepth":0.065,"tributaryFrequency":11,"tributaryDepth":0.1,"tributarySharpness":8,"rillFrequency":62,"rillDepth":0.026,"rillSharpness":10},
+    "ridge": {"headingDeg":38,"minimumHeight":0.54,"heightBlend":0.18,"alongScale":1.8,"crossScale":5.2,"warp":0.42,"sharpness":3.6,"detailWeight":0.04,"relief":0.34},
+    "palette": [
+      {"max":0.18,"color":[57,83,91]},
+      {"max":0.28,"color":[74,99,102]},
+      {"max":0.43,"color":[89,100,91]},
+      {"max":0.60,"color":[102,100,85]},
+      {"max":0.76,"color":[94,91,82]},
+      {"max":1.00,"color":[119,116,105]}
+    ],
+    "semanticLayers":["height","canyon","ridge","shelf","basin"]
+  },
+  "terrainRenderPrototype": {
+    "renderer":"webgl-terrain-chunk-v1",
+    "focusKm":[14,8.75],
+    "meshSegments":96,
+    "defaultSizeKm":2,
+    "defaultAltitudeM":350,
+    "comparisonSizeKm":[1,2,4],
+    "comparisonAltitudeM":[120,350,800,1800],
+    "materialRule":"傾斜・標高・峡谷度から草、土、岩を自動合成"
+  },
+  "terrainLod": {
+    "renderer":"webgl-nested-lod-v1",
+    "visibilityKm":30,
+    "base":{"sizeKm":30,"segments":192},
+    "mid":{"sizeKm":5,"segments":96,"rebuildM":1000},
+    "near":{"sizeKm":1.6,"segments":64,"rebuildM":300},
+    "boundaryMesh":{"segmentsPerSide":40,"midOffsetKm":2.6,"outerOffsetKm":6.8,"midHeightM":[1500,2500],"outerHeightM":[3300,4400]},
+    "midEcologyCellM":84,
+    "nearEcologyCellM":27,
+    "groundCover":{"shortGrassHeightM":[0.05,0.3],"tallGrassHeightM":[0.3,1.3],"windDirectionDeg":72,"waveLengthM":46,"waveSpeedMps":11,"waveContrast":0.055,"distribution":"advected-shelter-clusters"},
+    "canyonSurface":{"strataSpacingM":26,"strataWarpM":18,"erosionScaleM":72,"windDirectionDeg":4,"dustSpeedMps":4.2,"dustContrast":0.07,"floorMaterial":"dry-gravel-and-wash-marks","talusDistribution":"clustered-at-wall-base"},
+    "basinSurface":{"crackModel":"none","rippleSpacingM":8.5,"windDirectionDeg":118,"movingSandSpeedMps":3.2,"rippleContrast":0.055,"movingSandContrast":0.035,"material":"alluvial-fan-old-channels-and-wind-ripples"},
+    "ridgeSurface":{"windDirectionDeg":38,"erosionScaleM":130,"erosionContrast":0.065,"windwardMaterial":"sunlit-alpine-grass-and-exposed-rock","leewardMaterial":"deep-green-vegetation-and-shadowed-rock","vegetationDistribution":"broad-slope-patches-with-dark-gullies","rockExposure":"steep-slopes-crests-and-erosion-scars"},
+    "transitionSurface":{"boundaryWarp":"multi-scale-height-and-moisture-noise","ridgeFoot":"deep-green-foothill-to-exposed-rock","canyonLip":"broken-grass-to-dry-talus","basinFringe":"sand-fingers-with-dry-grass","visualBlendWidthM":[450,1100]},
+    "fallback":"canvas-terrain-v1"
+  },
+  "biomeRecipe": {
+    "engine":"terrain-semantic-biomes-v1",
+    "defaultBiome":{"id":"windcut-steppe","name":"風削草原","groundColor":[118,111,66],"accentColor":[184,151,67],"hazeColor":[176,164,119],"colorMix":0.7,"material":{"sunTint":[218,177,83],"shadowTint":[43,67,65],"roughness":0.72,"variation":0.18},"dressing":{"type":"wind-grass","density":0.3},"macro":{"type":"wind-rows","density":0.42,"sizeM":[420,920],"heightM":[8,18],"headingDeg":72,"angleJitterDeg":12},"flight":{"name":"草原の安定風","kind":"tailwind","verticalMps":0.25,"lateralMps":0.35,"forwardMps":3.6,"turbulence":0.08,"gustRate":0.32}},
+    "biomes":[
+      {"id":"storm-ridge","name":"鳴風稜線","match":{"terrainTagsAny":["ridge"],"heightRange":[0.64,1]},"groundColor":[76,91,101],"accentColor":[118,148,154],"hazeColor":[126,149,160],"colorMix":0.82,"material":{"sunTint":[170,157,119],"shadowTint":[27,47,61],"roughness":0.9,"variation":0.07},"dressing":{"type":"rock-spire","density":0.05},"macro":{"type":"none","density":0},"flight":{"name":"稜線上昇乱流","kind":"updraft","verticalMps":4.2,"lateralMps":0.45,"forwardMps":0,"turbulence":0.75,"gustRate":0.92}},
+      {"id":"blue-canyon","name":"青灰峡谷","match":{"terrainTagsAny":["canyon"],"canyonRange":[0.5,1]},"groundColor":[40,76,91],"accentColor":[31,55,65],"hazeColor":[91,130,148],"colorMix":0.88,"material":{"sunTint":[127,151,139],"shadowTint":[18,46,63],"roughness":0.84,"variation":0.12},"dressing":{"type":"rock-fin","density":0.35},"macro":{"type":"canyon-strata","density":0.52,"sizeM":[520,1050],"heightM":[65,150],"headingDeg":4,"angleJitterDeg":12},"flight":{"name":"峡谷上昇流","kind":"updraft","verticalMps":6.2,"lateralMps":0.8,"forwardMps":1.2,"turbulence":0.28,"gustRate":0.48}},
+      {"id":"pale-basin","name":"白砂盆地","match":{"terrainTagsAny":["basin"],"heightRange":[0,0.31]},"groundColor":[169,150,104],"accentColor":[226,194,126],"hazeColor":[207,187,142],"colorMix":0.84,"material":{"sunTint":[240,207,138],"shadowTint":[79,91,88],"roughness":0.68,"variation":0.17},"dressing":{"type":"none","density":0},"macro":{"type":"none","density":0},"flight":{"name":"盆地下降流","kind":"downdraft","verticalMps":-3.1,"lateralMps":0.25,"forwardMps":0,"turbulence":0.12,"gustRate":0.38}},
+      {"id":"windcut-steppe","name":"風削草原","match":{"terrainTagsAny":["plateau","shelf"]},"groundColor":[118,111,66],"accentColor":[184,151,67],"hazeColor":[176,164,119],"colorMix":0.7,"material":{"sunTint":[218,177,83],"shadowTint":[43,67,65],"roughness":0.72,"variation":0.18},"dressing":{"type":"wind-grass","density":0.3},"macro":{"type":"wind-rows","density":0.42,"sizeM":[420,920],"heightM":[8,18],"headingDeg":72,"angleJitterDeg":12},"flight":{"name":"草原の安定風","kind":"tailwind","verticalMps":0.25,"lateralMps":0.35,"forwardMps":3.6,"turbulence":0.08,"gustRate":0.32}}
+    ]
+  },
+  "environmentPresentation": {
+    "renderer": "layered-atmosphere-v1",
+    "hazeColor": [132,151,158],
+    "visibilityKm": 30,
+    "altitudeColorHeightM": 2400,
+    "surfaceCueHeightM": 720,
+    "surfaceCellM": 210,
+    "cloudLayers": [
+      {"name":"低い雲海","heightM":180,"thicknessM":100,"count":44,"sizeM":[620,1450],"flatness":0.12,"opacity":0.09,"driftMps":3.5},
+      {"name":"中層のちぎれ雲","heightM":1050,"thicknessM":620,"count":32,"sizeM":[240,720],"flatness":0.28,"opacity":0.13,"driftMps":7.5},
+      {"name":"高空の薄雲","heightM":2350,"thicknessM":360,"count":18,"sizeM":[700,1500],"flatness":0.09,"opacity":0.08,"driftMps":14}
+    ],
+    "airflow": {"count":120,"nearDrawKm":4.2,"visualization":"neutral-particles","color":[139,219,234]},
+    "soundscape": {"windBaseGain":0.006,"windSpeedGain":0.034,"ridgeGain":0.012,"canyonGain":0.005,"filterBaseHz":230,"filterSpeedFactor":5.5,"ridgeFilterBoostHz":370,"basinFilterDropHz":70,"canyonRumbleGain":0.012,"openRumbleGain":0.003,"rumbleFadeHeightM":1300},
+    "distantLandmarks": {"maxDrawKm":30,"flockCueKm":[0,14],"flockAltitudeM":[40,95],"flockSpanM":150,"silhouetteFloor":0.16},
+    "boundaryVisual": {"style":"mountain-ring","segmentsPerSide":32,"midOffsetKm":2.4,"outerOffsetKm":6.5,"midHeightM":[1450,2450],"outerHeightM":[3300,4400],"colors":[[54,76,70],[52,69,76]]}
+  },
+  "ecologyPresentation": {
+    "engine":"ambient-ecology-v1",
+    "species":[
+      {"type":"wind-kite","count":54,"biomeIds":["windcut-steppe","blue-canyon"],"altitudeM":[35,95],"scale":[0.55,1],"orbitM":[110,360],"speed":[0.08,0.17],"color":[30,48,51],"maxDrawKm":7.5},
+      {"type":"cloud-jelly","count":20,"biomeIds":["blue-canyon","pale-basin"],"altitudeM":[90,380],"scale":[0.8,1.55],"orbitM":[35,120],"speed":[0.018,0.045],"color":[179,208,208],"glowColor":[116,210,216],"maxDrawKm":5.5}
+    ],
+    "boneMoss":{"hostAreaIds":["ribs","skull"],"countPerArea":46,"radiusM":[90,690],"heightM":[8,310],"sizeM":[2.5,8],"color":[104,231,218],"maxDrawKm":6.5},
+    "landmarkEffects":[
+      {"areaId":"tower","type":"wind-cloth","count":4,"heightM":610,"spreadM":170,"lengthM":125,"color":[126,172,158]},
+      {"areaId":"village","type":"wind-cloth","count":9,"heightM":145,"spreadM":430,"lengthM":82,"color":[193,126,61]},
+      {"areaId":"skull","type":"resonance","heightM":470,"radiusM":760,"color":[106,213,218]},
+      {"areaId":"memorial","type":"signal-glow","heightM":720,"radiusM":85,"color":[236,174,74]}
+    ],
+    "cloudShadows":{"enabled":true,"maxDrawKm":6.5,"opacity":0.11},
+    "surfaceMotion":{"enabled":true,"swayM":14,"speed":1.15}
+  },
+  "storyModel": {
+    "historyTimeline": [
+      {"id":"migration","order":1,"summary":"雲鯨の渡りを利用してエルカが栄える","areaIds":["tower","ribs","village"]},
+      {"id":"crown","order":2,"summary":"渡りを固定するため鳴風冠が建設される","areaIds":["tower","village","skull"]},
+      {"id":"fall","order":3,"summary":"群れが混乱し、イオラが峡谷へ墜落する","areaIds":["ribs","skull"]},
+      {"id":"evacuation","order":4,"summary":"住民が地域から退去し、風標を残す","areaIds":["village","memorial"]}
+    ],
+    "hintLinks": [
+      {"from":"entry","to":"tower","mode":"sound","clue":"途切れた観測信号が高所から届く"},
+      {"from":"entry","to":"ribs","mode":"visual","clue":"遠景に七本の白いアーチが見える"},
+      {"from":"tower","to":"ribs","mode":"text","clue":"日誌に『七つの白い門』と記される"},
+      {"from":"tower","to":"village","mode":"map","clue":"旧航路図が風待ち集落を示す"},
+      {"from":"ribs","to":"village","mode":"environment","clue":"古い風布と荷車道が集落方向へ続く"},
+      {"from":"ribs","to":"skull","mode":"mural","clue":"壁画の長老個体だけに金の輪が描かれる"},
+      {"from":"village","to":"skull","mode":"text","clue":"手紙に『街の上を越えて落ちた』と残る"},
+      {"from":"village","to":"memorial","mode":"visual","clue":"墓標が頭蓋の先の高台を向いている"},
+      {"from":"skull","to":"memorial","mode":"visual","clue":"頭蓋の先の高台に、淡く光る風標が立つ"}
+    ]
+  },
+  "explorationLeads": [
+    {"id": "village-two-records", "sourceRecordIds": ["letter", "council"], "targetRecordIds": ["letter", "council"], "title": "集落に残るもう一つの声", "clue": "橙色の風布の家と、大きな銅の輪が立つ建物。まだ調べていない方にも、人々の言葉が残っていそうだ。"},
+    {
+      "id": "entry-to-tower",
+      "sourcePointIds": [
+        "closed-route"
+      ],
+      "targetRecordIds": [
+        "tower-log",
+        "route-warning"
+      ],
+      "title": "折れた塔の記録室",
+      "clue": "欠けた輪を頂く塔へ。橙色の風布の下に、開いた記録室がある。"
+    },
+    {
+      "id": "warning-to-desk",
+      "sourceRecordIds": [
+        "route-warning"
+      ],
+      "targetRecordIds": [
+        "tower-log"
+      ],
+      "title": "観測士の机を探す",
+      "clue": "第七肋骨という場所があるらしい。塔の橙色の風布の下、開いた小屋に観測士の机がある。"
+    },
+    {
+      "id": "tower-to-ribs",
+      "sourceRecordIds": [
+        "tower-log"
+      ],
+      "sourcePointIds": [
+        "tower-sighting"
+      ],
+      "targetRecordIds": [
+        "field-note",
+        "wind-banner"
+      ],
+      "title": "七つの白い門",
+      "clue": "塔の東側に銅の照準が残る。その先の尾根を越えた谷で、七つ連なる白いアーチを探そう。"
+    },
+    {
+      "id": "note-to-mural",
+      "sourceRecordIds": [
+        "field-note"
+      ],
+      "targetRecordIds": [
+        "wind-banner"
+      ],
+      "title": "七頭の図と見比べる",
+      "clue": "小屋の外に残る短い風布をたどると、骨の間の壁画に出る。七頭の図を、観察記録と見比べてみたい。"
+    },
+    {
+      "id": "ribs-to-village",
+      "sourceRecordIds": [
+        "wind-banner"
+      ],
+      "targetRecordIds": [
+        "letter",
+        "council"
+      ],
+      "title": "風布の残る集落",
+      "clue": "壁画の端の橙色と同じ風布が、谷の先の低い家並みに残る。集落で、風布の掲げられた開いた家を探そう。 大きな銅の輪が立つ建物の机にも、別の記録が残る。"
+    },
+    {
+      "id": "village-to-skull",
+      "sourceRecordIds": [
+        "letter",
+        "council"
+      ],
+      "targetPointIds": [
+        "crown-fragment"
+      ],
+      "title": "頭蓋のそばの金色の輪",
+      "clue": "「街の上を越えて落ちた」一頭。集落から巨大な頭蓋を探し、顎の脇に残る金色の輪を調べてみたい。"
+    },
+    {
+      "id": "skull-to-memorial",
+      "sourcePointIds": [
+        "crown-fragment"
+      ],
+      "targetRecordIds": [
+        "memorial"
+      ],
+      "title": "高台に残る淡い光",
+      "clue": "頭蓋の先の高台に、淡く光る風標が立っている。根元の石に残る言葉を読んでみたい。"
+    },
+    {
+      "id": "memorial-to-village",
+      "sourceRecordIds": [
+        "memorial"
+      ],
+      "targetRecordIds": [
+        "letter",
+        "council"
+      ],
+      "title": "谷を去った人々の言葉",
+      "clue": "この言葉を刻んだ人々は、何を決め、何を置いて谷を去ったのか。集落の風布の家と、輪の模型がある評議会の机を確かめたい。"
+    }
+  ],
+  "visualTheme": "骨の象牙色、青灰の雲海、酸化した銅、朝焼けの琥珀色。恐怖よりも哀惜と広がり。",
+  "premise": "六十七年前に閉鎖された古い航路から風信号が届く。主人公と相棒のドラゴンは、雲鯨の骨と無人集落が残る峡谷へ調査に向かう。",
+  "history": [
+    "峡谷都市エルカは、季節移動する巨大生物『雲鯨』が作る上昇気流を読み、交易地として栄えた。",
+    "寒冷化で雲鯨の渡りが不安定になり、住民は鳴風冠という共鳴装置で人工的に風路を固定しようとした。",
+    "装置の音が群れを混乱させ、長老個体イオラが峡谷へ墜落。直後の大嵐で都市機能を失い、住民は段階的に退去した。",
+    "イオラが集落を嵐から庇ったのか、苦痛で装置へ向かっただけなのかは確定しない。"
+  ],
+  "chapters": [
+    {"minutes":"0-2","name":"白い門","play":"低い雲を抜け、遠方の肋骨列・塔・頭蓋を同時に見せる。古い風信号が途切れ途切れに鳴る。","purpose":"最初の三つの『行ってみたい』を作る。"},
+    {"minutes":"2-5","name":"観測者の高さ","play":"壊れた観測塔へ接近。ドラゴンの首振りと鈴音で調査距離を学ぶ。航路記録を収蔵。","purpose":"UI説明を物語内の反応で済ませる。"},
+    {"minutes":"5-8","name":"骨を渡る風","play":"肋骨列に沿う安定風か、谷底の速い乱流かを選ぶ。風読み旗と生物記録を発見。","purpose":"空を道ではなく地形として選ばせる。"},
+    {"minutes":"8-11","name":"音のない集落","play":"集落跡で手紙・議事録・避難の痕跡を組み合わせる。住民の消失が襲撃ではなく退去だと分かる。","purpose":"複数資料から因果を組み立てる。"},
+    {"minutes":"11-13","name":"頭蓋の内側","play":"下降気流を避け、頭蓋に残る鳴風冠の破片へ。事件の中心に到達。","purpose":"景観上の最大物体を結末地点にする。"},
+    {"minutes":"13-15","name":"声の抜け殻","play":"墓標の信号を止め、イオラの共鳴骨片を回収。図書館へ帰還。","purpose":"断定しすぎない余韻と、収蔵の報酬を渡す。"}
+  ],
+  "map": {
+    "shape": "一本の峡谷を骨列が横断する、緩いS字の空中回廊。入口から最終頭蓋は見えるが直行すると下降気流に阻まれる。",
+    "routes": [
+      {"name":"肋骨上層路","risk":"低","reward":"安定した眺望、壁画","cost":"遠回り"},
+      {"name":"峡谷中層路","risk":"中","reward":"最短、生物観測","cost":"横風"},
+      {"name":"雲海すれすれ","risk":"高","reward":"墓標の裏面、希少な風鳶","cost":"下降流と視界不良"}
+    ]
+  },
+  "landmarks": [
+    {"id":"tower","name":"折れた観測塔","role":"導入・調査方法の学習","sightline":"侵入直後、朝日を背に左岸へ突出"},
+    {"id":"ribs","name":"七連肋骨門","role":"主要航路の分岐","sightline":"峡谷中央を横切る白いアーチ"},
+    {"id":"village","name":"風待ち集落エルカ","role":"事件の生活側を知る中心地","sightline":"橙色の屋根と風見布"},
+    {"id":"skull","name":"イオラの頭蓋","role":"事件の中心・終盤の目的地","sightline":"全域から見える最大の輪郭"},
+    {"id":"memorial","name":"無銘の風標","role":"感情的な結末・帰還信号","sightline":"頭蓋の眼窩で脈動する一点光"}
+  ],
+  "ecology": [
+    {"name":"風鳶","behavior":"肋骨間の上昇流を円を描いて飛ぶ。群れの傾きが安全な上昇口を示す。"},
+    {"name":"骨苔","behavior":"雲鯨の骨に付着し、強い風で淡青に発光。古い風路を可視化する。"},
+    {"name":"鳴き石蟹","behavior":"崖の共鳴石を叩く。接近音ではなく、風向変化の予告として使う。"},
+    {"name":"雲喰いクラゲ","behavior":"雲海に漂い、下降気流の縁に集まる。戦わず回避する対象。"}
+  ],
+  "environmentGimmicks": [
+    {"name":"骨笛上昇流","effect":"肋骨の隙間で笛のように鳴り、上昇を補助。音程が安全度を示す。"},
+    {"name":"頭蓋下降流","effect":"眼窩から断続的に吹き下ろす。骨苔の消灯で予兆を読む。"},
+    {"name":"峡谷風の分岐","effect":"遠回りの安定風と、速い乱流を選択。失敗しても雲海上へ押し戻されるだけ。"},
+    {"name":"残響信号","effect":"旧観測装置の音。近づくほど雑音が旋律へ変わり、探索点を示す。"}
+  ],
+  "people": [
+    {"name":"ミレト・サーン","role":"最後の主任観測士","truth":"装置の危険を記録したが、都市を救いたい気持ちから停止命令を遅らせた。"},
+    {"name":"ハルナ","role":"風布職人、避難船の乗員","truth":"日常の言葉で事件と住民の退去を伝える。"},
+    {"name":"オルド議長","role":"エルカ評議会議長","truth":"悪人ではなく、飢えと孤立を前に危険な実験を承認した責任者。"},
+    {"name":"イオラ","role":"雲鯨の長老個体","truth":"意図は最後まで不明。人間側が英雄にも怪物にも仕立てられない存在。"}
+  ],
+  "records": [
+    {"id":"route-warning","type":"航路記録","title":"航路7-B・最終追記","x":760,"y":48,"snippet":"第七肋骨より先、合図鐘は使用禁止。\n風が鐘に答えるのではない。あれらが答えている。\nもし白い門が低く唸ったら、高度を下げず、塔へ戻れ。","fieldClue":"第七肋骨という場所があるらしい。塔の橙色の風布の下、開いた小屋に観測士の机がある。","meaning":"峡谷の音と巨大生物が結びついていたことを最初に示す。","required":true},
+    {"id":"tower-log","type":"観測日誌","title":"ミレト観測日誌・三月十二日","x":1480,"y":34,"snippet":"群れは今年も南へ曲がった。幼体は六、長老は一。\n鳴風冠を試すたび、長老だけが塔を見る。\n議長は『風路が戻った』と言った。私は、戻したのではなく呼びつけたのだと思う。\n\n余白の走り書き：東の窓、欠けた照準の先に七つの白い門。群れが通った谷を、明日は歩いて調べる。","fieldClue":"塔の東側に銅の照準が残る。その先の尾根を越えた谷で、七つ連なる白いアーチを探そう。","meaning":"人工装置が雲鯨の行動へ干渉していたと分かる。","required":true,"hintTargetId":"ribs"},
+    {"id":"wind-banner","type":"壁画・風布","title":"七つの背を渡る図","x":2700,"y":43,"snippet":"七頭の雲鯨。その背に小さな家々。先頭の一頭だけ、角の根元に金の輪が描かれている。\n後世の解説には『街を運ぶ守り手イオラ』とあるが、同時代の文字は残っていない。","meaning":"住民がイオラを守護者として記憶した可能性。ただし後世の脚色も示す。","required":false,"fieldClue":"壁画の端の橙色と同じ風布が、谷の先の低い家並みに残る。集落で、風布の掲げられた開いた家を探そう。","hintTargetId":"village"},
+    {"id":"field-note","type":"生物観察記録","title":"雲鯨の聴覚域について","x":3450,"y":66,"snippet":"低い共鳴音に対し、成体は音源へ頭部を向ける。幼体は隊列を崩しやすい。\n同じ音を長く浴びせてはならない。骨腔が震え、平衡感覚を失う。\n——主任観測士ミレト","meaning":"鳴風冠が群れを混乱させた仕組みを説明する。","required":true,"fieldClue":"小屋の外に残る短い風布をたどると、骨の間の壁画に出る。七頭の図を、観察記録と見比べてみたい。"},
+    {"id":"letter","type":"未投函の手紙","title":"ハルナから弟へ","x":4440,"y":39,"snippet":"明日の船で谷を出ます。家は鍵をかけません。あなたが帰った時、風布だけでも見つけられるように。\n怪物に襲われたのではありません。あの大きな一頭は、落ちながら街の上を越えていきました。\n庇ったのかもしれない、と皆は言います。私は、そう信じたいだけかもしれません。","meaning":"住民は避難したこと、イオラの最後の飛行に二つの解釈があることを伝える。","required":true,"fieldClue":"「街の上を越えて落ちた」一頭。集落から巨大な頭蓋を探し、顎の脇に残る金色の輪を調べてみたい。","hintTargetId":"skull"},
+    {"id":"council","type":"評議会記録","title":"第百八回・風路維持会議","x":5220,"y":53,"snippet":"備蓄は四十日分。北路は閉鎖。鳴風冠を三倍出力で運転し、渡りを峡谷へ誘導する。\n反対二、賛成七。\n付記：観測士ミレトより『幼体への影響は予測不能』。議長判断により実施。","meaning":"事件を起こしたのは抽象的な悪ではなく、追い詰められた人間の意思決定だった。","required":true,"fieldClue":"会議の机には銅の輪の模型が残っていた。巨大な頭蓋の顎の脇にも、同じ形の装置が残っていないだろうか。","hintTargetId":"skull"},
+    {"id":"memorial","type":"墓標銘","title":"無銘の風標","x":6620,"y":28,"snippet":"ここに眠るものへ。\nあなたを守り手とは呼ばない。災いとも呼ばない。\n私たちがあなたの声を道具にしたことだけを、石に残す。\n風が文字を消すまで。","meaning":"都市側が責任を認めた最後の記録。物語の結論だが、イオラの意図までは断定しない。","required":true,"fieldClue":"この言葉を刻んだ人々は、何を決め、何を置いて谷を去ったのか。集落の風布の家と、輪の模型がある評議会の机を確かめたい。","hintTargetId":"village"}
+  ],
+  "discoveries": [
+    {"name":"鳴風冠の共鳴環","kind":"代表展示物","libraryChange":"自然史展示室の中央に設置。近づくと低い共鳴音が鳴る。"},
+    {"name":"イオラの骨片","kind":"生物標本","libraryChange":"骨格標本棚に追加。骨苔の淡い光が時間で変化。"},
+    {"name":"エルカの風布","kind":"生活資料","libraryChange":"閲覧机の上に展示。触れると航路図が浮かぶ。"},
+    {"name":"白骨の風路・地域記録集","kind":"一冊の本","libraryChange":"七資料と推定年表を収録。未発見資料は空欄として再訪を促す。"}
+  ],
+  "assets": {
+    "threeD": ["峡谷地形1式（遠景・中景・接近用LOD）","巨大雲鯨骨格1体＋肋骨門7本","観測塔、集落12棟、鳴風冠、墓標","プレイヤードラゴン＋騎乗者（旋回・上昇・下降・反応）","風鳶、雲喰いクラゲ、骨苔、鳴き石蟹","記録物7点、展示物4点"],
+    "twoD": ["地域全景コンセプト","エルカ航路図","壁画『七つの背を渡る図』","読み物用紙面テンプレ3種","図書館の本背・展示ラベル","風・調査・収蔵アイコン"],
+    "audio": ["高度別の風3層","骨笛の音階5種","塔の残響信号","ドラゴンの呼吸・警戒・発見反応","風鳶と石蟹の環境音","鳴風冠の低周波","発見・収蔵・帰還の短い音楽","地域テーマ曲（探索／結末）"],
+    "vfx": ["上昇流リボン","下降流の塵","雲海と薄明光","骨苔の発光","遠距離ランドマーク強調用の鳥群"]
+  },
+  "systems": {
+    "prototypeSpecific": ["二次元空間での騎乗移動","距離判定によるドラゴン反応","風域による自動変位","発見・収蔵・進行解放","帰還と図書館展示更新"],
+    "reusable": ["飛行コントローラとカメラ","空域ボリューム（上昇・下降・横風・乱流）","ランドマーク視認性テスト","探索点と近接リアクション","記録閲覧・収蔵・既読管理","パッケージ進行グラフ","図書館の本棚・展示スロット","セーブと再訪","字幕・操作・酔い軽減設定","パッケージJSON検証"],
+    "notNeededYet": ["戦闘・ダメージ","装備とレベル","巨大な共通神話","NPC会話分岐","クラフト・経済","自由着陸と徒歩探索"]
+  },
+  "packageFields": {
+    "required": ["id/title/schemaVersion","visualTheme/premise","playTimeMinutes","chapters","map/routes","landmarks","environmentGimmicks","records","discoveries","assets","completionRule"],
+    "conditional": ["ecology","people","combatEncounters","voiceLogs","puzzles","interiorSpaces"],
+    "newlyIdentified": ["視線誘導計画（どこから何が見えるか）","探索点の発見手掛かり","必須／任意の区分","失敗時の戻し方","移動中の無刺激時間上限","結末解釈の確定範囲","図書館の物理的変化","制作規模とLOD"]
+  },
+  "library": {
+    "coverImage": "assets/bonewind-panorama.png",
+    "exploreUrl": "blockout.html?v=141",
+    "shelfDescription": "雲鯨の骨と無人の集落。風の中に残る七つの声を、一冊に。",
+    "completedStory": {
+      "title": "白骨の風路 ― 風を呼び戻した街",
+      "intro": "手紙、観測日誌、会議の記録、そして風標の言葉。七つの資料を重ねると、閉ざされた航路の歴史が見えてくる。記録が語る出来事と、今も答えのない問いを、ここに綴じる。",
+      "chapters": [
+        {
+          "title": "七つの背を渡る暮らし",
+          "text": "峡谷都市エルカは、雲鯨の渡りとともに栄えた。巨大な生き物が生む上昇気流を読み、人々は谷を越え、荷を運び、季節を待った。風路は、街だけで作れる道ではなかった。\n\n壁画には七頭の雲鯨と、小さな家々が描かれている。先頭の一頭には金の輪があり、後世の解説はそれを「街を運ぶ守り手イオラ」と呼ぶ。だが、同時代の文字は残っていない。絵に描かれた親しさと、守り手という呼び名が、最初から同じものだったのかは分からない。",
+          "recordIds": [
+            "wind-banner",
+            "tower-log"
+          ]
+        },
+        {
+          "title": "戻らなくなった風路",
+          "text": "寒冷化とともに渡りは不安定になり、エルカの暮らしも揺らぎ始めた。北路は閉ざされ、評議会が数えた備蓄は四十日分。街は、次の季節をただ待ってはいられなかった。\n\n鳴風冠は、共鳴音によって雲鯨を呼び、風路を峡谷へ固定しようとする装置だった。議長は試験を見て「風路が戻った」と言った。観測士ミレトは、戻ったのではなく、呼びつけたのだと日誌に書いた。同じ光景から、二人は違うものを見ていた。",
+          "recordIds": [
+            "council",
+            "tower-log"
+          ]
+        },
+        {
+          "title": "聞こえていた警告",
+          "text": "ミレトの観察記録によれば、成体は低い共鳴音へ頭を向け、幼体は隊列を崩しやすかった。同じ音を長く浴びせると骨腔が震え、平衡感覚を失う。航路の追記には、第七肋骨より先では合図鐘を使わないよう記されている。応じていたのは風ではなく、生き物だった。\n\n評議会は鳴風冠を三倍出力で運転することを決めた。反対二、賛成七。幼体への影響は予測不能だというミレトの警告も、記録から消されてはいない。それでも実施された。暮らしを守るための判断が、誰の声を聞き、誰の声を押し切ったのか。その両方が紙に残った。",
+          "recordIds": [
+            "field-note",
+            "route-warning",
+            "council"
+          ]
+        },
+        {
+          "title": "街の上を越えた一頭",
+          "text": "装置の音は群れを混乱させ、長老個体イオラが峡谷へ墜落した。七つの白い門と、谷に残る大きな頭蓋は、渡りの道が途切れた場所にある。\n\nハルナの手紙は、怪物に襲われたのではない、と伝えている。大きな一頭は、落ちながら街の上を越えていった。人々は街を庇ったのかもしれないと言ったが、ハルナ自身は「そう信じたいだけかもしれない」とも書いた。救おうとしたのか、苦痛と混乱の中で飛んだのか。残された記録は、イオラの意思までは語らない。",
+          "recordIds": [
+            "letter",
+            "field-note",
+            "wind-banner"
+          ]
+        },
+        {
+          "title": "鍵をかけなかった家",
+          "text": "墜落の直後、嵐で都市の機能は失われ、住民は段階的に谷を離れた。集落に人がいないのは、全員がそこで命を失ったからではない。少なくともハルナは、翌日の船で退去するつもりだった。\n\n弟が帰った時に風布だけでも見つけられるよう、家の鍵はかけない。未投函の手紙に残されたのは、街の運命を語る大きな言葉より、小さな帰り道だった。観測の記録や評議会の決定の向こうにも、こうして誰かを待つ家があった。",
+          "recordIds": [
+            "letter",
+            "council"
+          ]
+        },
+        {
+          "title": "守り手とも、災いとも呼ばず",
+          "text": "退去する人々は、風標に言葉を残した。イオラを守り手とは呼ばず、災いとも呼ばない。自分たちがその声を道具にしたことだけを、石に残す。\n\nこの碑文は、イオラの最期に答えを与えるものではない。人々が自らの行いを引き受けるための言葉だった。街を救うはずの装置、聞こえていた警告、谷を去る船、鍵のない家。七つの記録を集めた今、それらは一つの歴史として並ぶ。\n\n六十七年後に届いた風信号の送り手も、最後の飛行に込められた意思も、まだ分からない。谷には白い骨が残り、風だけがその間を通り続けている。",
+          "recordIds": [
+            "memorial",
+            "tower-log",
+            "letter"
+          ]
+        }
+      ],
+      "afterword": "この完成編は、収蔵した資料を地域の歴史に沿ってつないだものです。イオラの意図や後世の「守り手」という解釈は、断定せずに残しています。気になった言葉があれば、原文の頁へ戻ってみてください。"
+    }
+  },
+  "completionRule": {"requiredRecords":6,"finalRecordId":"memorial","returnAfterFinal":true},
+  "template": {
+    "identity":"地域名／一文の探索欲／独立性宣言／想定時間",
+    "promise":"遠景で見せる三つ／飛行ならではの選択／持ち帰る問い",
+    "story":"探索開始理由／過去の生活／事件の原因／当時の選択／現在残る結果／結末で確定すること／確定しないこと",
+    "space":"地形の一文図／入口・中継・中心・最終地点／主経路と迂回路／空域レイヤー／戻し設計",
+    "content":"ランドマーク3-5／探索点5-8／読み物本文5-8／生物0-4／環境ギミック2-4／展示物1-4",
+    "pacing":"0-2分の驚き／2-5分の学習／5-8分の選択／8-11分の理解／11-13分の象徴／13-15分の帰還",
+    "production":"固有3D・2D・音声・VFX／共通システム依存／追加実装／テスト条件／削れる要素",
+    "validation":"遠景から次候補が二つ以上見えるか／30秒以上無刺激がないか／マーカーなしで到達できるか／必須資料だけで大筋を理解できるか／任意資料で解釈が深まるか／帰還時に物理的報酬があるか"
+  }
+}

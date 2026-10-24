@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#101922">
+  <title>白骨の風路｜飛行探索試作</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M8 44C24 12 36 10 56 17 40 21 30 31 24 52Z' fill='%23e8d8b7'/%3E%3Cpath d='M19 42c12-12 20-17 35-19' fill='none' stroke='%23d89444' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="blockout.css?v=139">
+</head>
+<body>
+  <canvas id="terrain3d" aria-hidden="true"></canvas>
+  <canvas id="scene" aria-label="白骨の風路3D飛行ブロックアウト"></canvas>
+  <canvas id="dragon3d" aria-hidden="true"></canvas>
+
+  <header class="hud topbar">
+    <div><span class="kicker">WORLD DEPTH 04</span><strong>白骨の風路</strong></div>
+    <div class="objective"><span id="zone">閉鎖航路入口</span><i><b id="routeProgress"></b></i><span id="distance">収蔵 0 / 7</span></div>
+    <nav>
+      <button id="openJournal" aria-haspopup="dialog">手帳</button>
+      <button id="toggleCamera" aria-pressed="false">視点：後方</button>
+      <button id="toggleSettings" aria-expanded="false" aria-controls="settingsPanel">設定</button>
+      <div id="settingsPanel" class="settings-panel hud" hidden>
+      <label class="camera-distance-control" for="cameraDistance">視点距離 <output id="cameraDistanceLabel" for="cameraDistance">18 m</output><input id="cameraDistance" type="range" min="0" max="100" step="0.5" aria-label="視点距離。一番左で一人称"><small>近い ← ピンチ・マウスホイール → 遠い</small></label>
+      <button id="toggleFlightDetails" aria-pressed="false">飛行情報：簡易</button>
+      <button id="toggleNarration" aria-pressed="false">相棒の声：非表示</button>
+      <div id="skillConditions" class="skill-conditions" aria-label="技の使用条件"></div>
+      <button id="toggleDesign">設計線 OFF</button>
+      <button id="toggleMapJump" class="active" aria-pressed="true">座標跳躍 ON</button>
+      <button id="openConcept">完成像</button>
+      <a class="terrain-lab-link" href="terrain-lab.html">地形試験</a>
+      <a href="composer.html">配置台</a>
+      <a href="library.html?v=142">図書館へ帰る</a>
+      </div>
+    </nav>
+  </header>
+
+  <aside class="hud telemetry">
+    <div><span>高度</span><strong id="altitude">180 m</strong></div>
+    <div><span>速度</span><strong id="speed">0 km/h</strong></div>
+    <div class="telemetry-detail"><span>飛行状態</span><strong id="flightState">巡航</strong></div>
+    <div class="telemetry-detail"><span>機首ピッチ</span><strong id="pitch">0°</strong></div>
+    <div class="telemetry-detail"><span>ロール</span><strong id="roll">0°</strong></div>
+  </aside>
+
+  <aside id="reaction" class="hud reaction"><i></i><p>相棒が峡谷の風を読んでいる。</p></aside>
+  <div id="nearPrompt" class="near-prompt" hidden><span>ドラゴンが痕跡を見つけた</span><strong></strong><button id="investigate">E　調査する</button></div>
+
+  <div id="groundAction" class="ground-action hud" hidden><button id="toggleGroundWalk">地面に降りる</button></div>
+  <p id="groundHint" class="ground-hint hud" hidden>WASD・左スティックで歩く　ドラッグ・矢印で見回す　Gで乗る</p>
+
+  <div class="reticle" aria-hidden="true"><i></i><i></i><span></span></div>
+  <canvas id="radar" class="radar jump-enabled" width="220" height="160" aria-label="進行方向が上の地形図。Nは北。タップした座標へ瞬間移動できます" title="タップした座標へ瞬間移動"></canvas>
+
+  <section class="flight-help hud">
+    <p><kbd>A</kbd><kbd>D</kbd> 翼を傾ける　<kbd>W</kbd> 羽ばたく　<kbd>S</kbd> 減速・長押しで滞空</p>
+    <p>旋回：翼を傾けて <kbd>Space</kbd> で引く・<kbd>Q</kbd> で機首を下げる　着地：物語エリアで「着陸進入」を押す　<kbd>E</kbd> 調査　<kbd>R</kbd> ローリング　<kbd>L</kbd> 宙返り　<kbd>B</kbd> 超高速　<kbd>F</kbd> 自由落下　<kbd>T</kbd> クイックターン</p>
+  </section>
+
+  <div class="touch-controls" aria-label="タッチ操作">
+    <div id="flightStick" class="flight-stick" role="application" aria-label="操縦桿。左右で旋回、上下で機首を上げ下げ">
+      <span class="stick-guide stick-guide-x" aria-hidden="true"></span>
+      <span class="stick-guide stick-guide-y" aria-hidden="true"></span>
+      <span class="stick-knob" aria-hidden="true"></span>
+      <small>旋回・機首</small>
+    </div>
+    <div class="touch-throttle">
+      <button data-key="w" class="touch-boost" aria-label="加速">加速</button>
+      <button data-key="s" class="touch-brake" aria-label="減速">減速</button>
+    </div>
+  </div>
+
+  <button id="toggleSkills" class="skills-toggle" type="button" aria-expanded="false" aria-controls="acroControls" hidden>技</button>
+  <section id="acroControls" class="acro-controls" aria-label="アクロバットを選ぶ" hidden>
+    <div class="skill-heading"><strong>技を選ぶ</strong><button id="closeSkills" type="button" aria-label="技一覧を閉じる">閉じる</button></div>
+    <div class="acro-buttons">
+      <div class="skill-choice"><button id="rollAction" type="button" aria-describedby="rollReason" disabled>ロール</button><span id="rollReason">回転：通常飛行で使用</span></div>
+      <div class="skill-choice"><button id="loopAction" type="button" aria-describedby="loopReason" disabled>宙返り</button><span id="loopReason">宙返り：通常飛行で使用</span></div>
+      <div class="skill-choice"><button id="dashAction" type="button" aria-describedby="dashReason" disabled>超高速</button><span id="dashReason">直進：通常飛行で使用</span></div>
+      <div class="skill-choice"><button id="fallAction" type="button" aria-describedby="fallReason" disabled>自由落下</button><span id="fallReason">落下：通常飛行で使用</span></div>
+      <div class="skill-choice"><button id="turnAction" type="button" aria-describedby="turnReason" disabled>クイックターン</button><span id="turnReason">反転：通常飛行で使用</span></div>
+    </div>
+  </section>
+  <p class="landscape-hint">スマホを横向きにすると、広い視界で操縦できるよ</p>
+
+  <dialog id="conceptDialog">
+    <button class="close" aria-label="閉じる">×</button>
+    <span class="kicker">VISUAL NORTH STAR</span>
+    <h1>完成像と、現在の骨格</h1>
+    <img src="assets/bonewind-panorama.png" alt="白骨の風路の完成イメージ">
+    <p>この絵をそのまま立体化するのではなく、遠景の頭蓋・骨の門・塔・集落が飛行中にどう重なって見えるかを、無彩色の形で検証しています。</p>
+  </dialog>
+
+  <dialog id="briefDialog">
+    <div class="brief-image"></div>
+    <div class="brief-copy">
+      <span class="kicker">白骨の風路・最初の探索</span>
+      <h1>折れた塔に、誰かの記録が残る。</h1>
+      <p>出発時に向いている先が「折れた観測塔」。近づいて着陸し、橙色の風布のある記録室を探そう。拾った記録と観察メモは「手帳」で読み返せます。</p>
+      <p>左右入力は方向転換ではなく、翼を傾ける操作です。傾けた状態で機首を引き起こすと、揚力が飛行軌道を内側へ曲げます。入力を離すと、ドラゴンが緩やかに翼を水平へ戻します。</p>
+      <p>スマホは横向きがおすすめ。左スティックで操縦、右で加速・減速。「技」からアクロバットを選べます。PCはSpaceで機首を上げ、Qで下げます。</p>
+      <ul><li>操作を離すと数秒かけて水平な直線飛行へ戻る</li><li>減速を続けると滞空へ移行し、加速で通常飛行へ戻る</li><li>最低通過高度は20m。速度と降下角から引き起こし時機を判断する</li></ul>
+      <button id="enterBlockout">飛行を開始</button>
+    </div>
+  </dialog>
+
+  <dialog id="recordDialog" class="record-dialog">
+    <button class="close" aria-label="閉じる">×</button>
+    <span class="kicker">FIELD RECORD</span>
+    <p id="recordPlace" class="record-place"></p>
+    <div id="recordPages"></div>
+    <div id="newHint" class="new-hint"></div>
+    <button id="lookFromClue" hidden>手がかりの方角を見る</button>
+    <button id="continueFlight">探索へ戻る</button>
+  </dialog>
+
+  <dialog id="journalDialog" class="record-dialog journal-dialog" aria-labelledby="journalTitle">
+    <button class="close" aria-label="手帳を閉じる">×</button>
+    <span class="kicker">旅の手帳</span>
+    <h1 id="journalTitle">風の中で拾ったもの</h1>
+    <p class="record-place">読んだ記録と、調べた痕跡。まだ訪れていない場所の答えは、ここにはない。</p>
+    <section id="journalLeads" aria-label="見つけた手がかり"></section>
+    <div id="journalPages"></div>
+    <button id="closeJournal">探索へ戻る</button>
+    <a class="library-return" href="library.html?v=142">図書館へ帰る</a>
+  </dialog>
+  <script src="blockout.js?v=142" type="module"></script>
+</body>
+</html>

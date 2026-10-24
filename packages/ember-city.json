@@ -1,0 +1,1481 @@
+{
+  "schemaVersion": "exploration-package/0.2",
+  "id": "ember-city",
+  "title": "灰灯の炉都",
+  "premise": "火の消えた炉都に、一本だけ赤い窓が残る。最後の運転日を記した札は、工場と診療所で一日ずれていた。",
+  "playTimeMinutes": {
+    "target": "15-25",
+    "readingExcluded": false
+  },
+  "departureBrief": {
+    "title": "灰灯の炉都へ",
+    "text": "火の消えた炉都に、一本だけ赤い窓が残る。最後の運転日を記した札は、工場と診療所で一日ずれていた。 出発時の正面にある「煤色の測温塔」へ。着陸場から色布を目印に、最初の記録を探そう。"
+  },
+  "regionRecipe": {
+    "siteTerraces": [
+      {
+        "id": "entry",
+        "nx": 0.8933333333333333,
+        "nz": 0.15,
+        "height": 0.8067702068719942,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "tower",
+        "nx": 0.7533333333333334,
+        "nz": 0.2533333333333333,
+        "height": 0.7037279545858293,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "crossing",
+        "nx": 0.5566666666666666,
+        "nz": 0.19666666666666668,
+        "height": 0.20035821693644537,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "village",
+        "nx": 0.3766666666666667,
+        "nz": 0.36000000000000004,
+        "height": 0.2865075276328525,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "center",
+        "nx": 0.21333333333333335,
+        "nz": 0.5066666666666666,
+        "height": 0.47136443523897137,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "refuge",
+        "nx": 0.4066666666666666,
+        "nz": 0.7,
+        "height": 0.32599161767979756,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "memorial",
+        "nx": 0.19666666666666668,
+        "nz": 0.84,
+        "height": 0.6760567519996488,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      }
+    ],
+    "generator": "common-canyon-v1",
+    "noiseScale": 2.29,
+    "octaves": 5,
+    "canyon": {
+      "width": 0.082,
+      "depth": 0.33,
+      "bendFrequency": 8.2,
+      "bendAmount": 0.11,
+      "depthVariationFrequency": 4.2,
+      "terraceLevels": 5,
+      "terraceSharpness": 5.4,
+      "innerWidth": 0.26,
+      "innerDepth": 0.065,
+      "tributaryFrequency": 11,
+      "tributaryDepth": 0.1,
+      "tributarySharpness": 8,
+      "rillFrequency": 62,
+      "rillDepth": 0.026,
+      "rillSharpness": 10
+    },
+    "ridge": {
+      "headingDeg": 98,
+      "minimumHeight": 0.54,
+      "heightBlend": 0.18,
+      "alongScale": 1.8,
+      "crossScale": 5.2,
+      "warp": 0.42,
+      "sharpness": 3.6,
+      "detailWeight": 0.04,
+      "relief": 0.275
+    },
+    "palette": [
+      {
+        "max": 0.18,
+        "color": [
+          57,
+          83,
+          91
+        ]
+      },
+      {
+        "max": 0.28,
+        "color": [
+          74,
+          99,
+          102
+        ]
+      },
+      {
+        "max": 0.43,
+        "color": [
+          89,
+          100,
+          91
+        ]
+      },
+      {
+        "max": 0.6,
+        "color": [
+          102,
+          100,
+          85
+        ]
+      },
+      {
+        "max": 0.76,
+        "color": [
+          94,
+          91,
+          82
+        ]
+      },
+      {
+        "max": 1,
+        "color": [
+          119,
+          116,
+          105
+        ]
+      }
+    ],
+    "semanticLayers": [
+      "height",
+      "canyon",
+      "ridge",
+      "shelf",
+      "basin"
+    ]
+  },
+  "fieldLayout": {
+    "schemaVersion": "story-field-layout/0.2",
+    "fieldSizeKm": 30,
+    "terrainSeed": 7417,
+    "cruiseSpeedKmh": 200,
+    "boundaryAssist": {
+      "enabled": true,
+      "minimumMarginM": 1800,
+      "extraMarginM": 750,
+      "lookAheadSeconds": 8
+    },
+    "storyAreas": [
+      {
+        "id": "entry",
+        "name": "灰の検問路",
+        "order": 1,
+        "positionKm": [
+          26.8,
+          4.5
+        ],
+        "recordIds": [],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "双煙突と送熱管の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "ember",
+          "kind": "entry",
+          "palette": {
+            "stone": "#57545a",
+            "metal": "#a38469",
+            "cloth": "#d79864",
+            "floor": "#73665e",
+            "low": [
+              0.13,
+              0.14,
+              0.16
+            ],
+            "high": [
+              0.43,
+              0.33,
+              0.29
+            ],
+            "sky": [
+              70,
+              62,
+              70
+            ],
+            "middle": [
+              147,
+              120,
+              109
+            ],
+            "haze": [
+              0.54,
+              0.45,
+              0.43
+            ],
+            "depth": 0.33,
+            "precipitation": "ash"
+          },
+          "points": [
+            {
+              "id": "ember-city-arrival",
+              "label": "旅の案内札",
+              "recordIds": [],
+              "offset": [
+                0,
+                14
+              ],
+              "observation": {
+                "type": "入口の痕跡",
+                "text": "火の消えた炉都に、一本だけ赤い窓が残る。最後の運転日を記した札は、工場と診療所で一日ずれていた。"
+              },
+              "clue": "正面の「煤色の測温塔」を探そう。色布のそばの机に、この土地の最初の記録が残る。",
+              "lookTargetId": "tower"
+            }
+          ]
+        }
+      },
+      {
+        "id": "tower",
+        "name": "煤色の測温塔",
+        "order": 2,
+        "positionKm": [
+          22.6,
+          7.6
+        ],
+        "recordIds": [
+          "ember-city-1"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "双煙突と送熱管の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "ember",
+          "kind": "beacon",
+          "palette": {
+            "stone": "#57545a",
+            "metal": "#a38469",
+            "cloth": "#d79864",
+            "floor": "#73665e",
+            "low": [
+              0.13,
+              0.14,
+              0.16
+            ],
+            "high": [
+              0.43,
+              0.33,
+              0.29
+            ],
+            "sky": [
+              70,
+              62,
+              70
+            ],
+            "middle": [
+              147,
+              120,
+              109
+            ],
+            "haze": [
+              0.54,
+              0.45,
+              0.43
+            ],
+            "depth": 0.33,
+            "precipitation": "ash"
+          },
+          "points": [
+            {
+              "id": "ember-city-point-1",
+              "label": "温度の下がらない朝",
+              "recordIds": [
+                "ember-city-1"
+              ],
+              "offset": [
+                -28,
+                2
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "crossing",
+        "name": "双煙突の送熱路",
+        "order": 3,
+        "positionKm": [
+          16.7,
+          5.9
+        ],
+        "recordIds": [
+          "ember-city-2",
+          "ember-city-3"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "双煙突と送熱管の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "ember",
+          "kind": "crossing",
+          "palette": {
+            "stone": "#57545a",
+            "metal": "#a38469",
+            "cloth": "#d79864",
+            "floor": "#73665e",
+            "low": [
+              0.13,
+              0.14,
+              0.16
+            ],
+            "high": [
+              0.43,
+              0.33,
+              0.29
+            ],
+            "sky": [
+              70,
+              62,
+              70
+            ],
+            "middle": [
+              147,
+              120,
+              109
+            ],
+            "haze": [
+              0.54,
+              0.45,
+              0.43
+            ],
+            "depth": 0.33,
+            "precipitation": "ash"
+          },
+          "points": [
+            {
+              "id": "ember-city-point-2",
+              "label": "封じなかった枝管",
+              "recordIds": [
+                "ember-city-2"
+              ],
+              "offset": [
+                -34,
+                10
+              ]
+            },
+            {
+              "id": "ember-city-point-3",
+              "label": "八人目の休憩",
+              "recordIds": [
+                "ember-city-3"
+              ],
+              "offset": [
+                32,
+                10
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "village",
+        "name": "炉工の長屋",
+        "order": 4,
+        "positionKm": [
+          11.3,
+          10.8
+        ],
+        "recordIds": [
+          "ember-city-4",
+          "ember-city-5"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "双煙突と送熱管の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "ember",
+          "kind": "village",
+          "palette": {
+            "stone": "#57545a",
+            "metal": "#a38469",
+            "cloth": "#d79864",
+            "floor": "#73665e",
+            "low": [
+              0.13,
+              0.14,
+              0.16
+            ],
+            "high": [
+              0.43,
+              0.33,
+              0.29
+            ],
+            "sky": [
+              70,
+              62,
+              70
+            ],
+            "middle": [
+              147,
+              120,
+              109
+            ],
+            "haze": [
+              0.54,
+              0.45,
+              0.43
+            ],
+            "depth": 0.33,
+            "precipitation": "ash"
+          },
+          "points": [
+            {
+              "id": "ember-city-point-4",
+              "label": "止める日を決める",
+              "recordIds": [
+                "ember-city-4"
+              ],
+              "offset": [
+                -28,
+                -12
+              ]
+            },
+            {
+              "id": "ember-city-point-5",
+              "label": "最後の賃金ではなく",
+              "recordIds": [
+                "ember-city-5"
+              ],
+              "offset": [
+                27,
+                -19
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "center",
+        "name": "中央の休火炉",
+        "order": 5,
+        "positionKm": [
+          6.4,
+          15.2
+        ],
+        "recordIds": [
+          "ember-city-6"
+        ],
+        "discoveryRadiusM": 700,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "双煙突と送熱管の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "ember",
+          "kind": "center",
+          "palette": {
+            "stone": "#57545a",
+            "metal": "#a38469",
+            "cloth": "#d79864",
+            "floor": "#73665e",
+            "low": [
+              0.13,
+              0.14,
+              0.16
+            ],
+            "high": [
+              0.43,
+              0.33,
+              0.29
+            ],
+            "sky": [
+              70,
+              62,
+              70
+            ],
+            "middle": [
+              147,
+              120,
+              109
+            ],
+            "haze": [
+              0.54,
+              0.45,
+              0.43
+            ],
+            "depth": 0.33,
+            "precipitation": "ash"
+          },
+          "points": [
+            {
+              "id": "ember-city-point-6",
+              "label": "灰灯に切り替える",
+              "recordIds": [
+                "ember-city-6"
+              ],
+              "offset": [
+                -28,
+                10
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "refuge",
+        "name": "赤窓の診療所",
+        "order": 6,
+        "positionKm": [
+          12.2,
+          21
+        ],
+        "recordIds": [
+          "ember-city-7"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "双煙突と送熱管の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "ember",
+          "kind": "refuge",
+          "palette": {
+            "stone": "#57545a",
+            "metal": "#a38469",
+            "cloth": "#d79864",
+            "floor": "#73665e",
+            "low": [
+              0.13,
+              0.14,
+              0.16
+            ],
+            "high": [
+              0.43,
+              0.33,
+              0.29
+            ],
+            "sky": [
+              70,
+              62,
+              70
+            ],
+            "middle": [
+              147,
+              120,
+              109
+            ],
+            "haze": [
+              0.54,
+              0.45,
+              0.43
+            ],
+            "depth": 0.33,
+            "precipitation": "ash"
+          },
+          "points": [
+            {
+              "id": "ember-city-point-7",
+              "label": "赤い窓の夜",
+              "recordIds": [
+                "ember-city-7"
+              ],
+              "offset": [
+                0,
+                -15
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "memorial",
+        "name": "種火の記念庭",
+        "order": 7,
+        "positionKm": [
+          5.9,
+          25.2
+        ],
+        "recordIds": [
+          "ember-city-8"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "双煙突と送熱管の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "ember",
+          "kind": "final",
+          "palette": {
+            "stone": "#57545a",
+            "metal": "#a38469",
+            "cloth": "#d79864",
+            "floor": "#73665e",
+            "low": [
+              0.13,
+              0.14,
+              0.16
+            ],
+            "high": [
+              0.43,
+              0.33,
+              0.29
+            ],
+            "sky": [
+              70,
+              62,
+              70
+            ],
+            "middle": [
+              147,
+              120,
+              109
+            ],
+            "haze": [
+              0.54,
+              0.45,
+              0.43
+            ],
+            "depth": 0.33,
+            "precipitation": "ash"
+          },
+          "points": [
+            {
+              "id": "ember-city-point-8",
+              "label": "火を守る仕事の終わり",
+              "recordIds": [
+                "ember-city-8"
+              ],
+              "offset": [
+                0,
+                5
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "ember-city-1",
+      "type": "測温記録",
+      "title": "温度の下がらない朝",
+      "snippet": "主炉は止まったはずなのに、北の管だけ温度が下がらなかった。補助炉への燃料配分は零。計器を疑ったが、雪解け水もそこだけ湯気を立てている。送熱路の弁を、現場で確かめることにする。",
+      "required": true,
+      "fieldClue": "次は「双煙突の送熱路」へ。双煙突と送熱管を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "crossing"
+    },
+    {
+      "id": "ember-city-2",
+      "type": "配管修繕票",
+      "title": "封じなかった枝管",
+      "snippet": "主工場へ向かう弁を閉じ、診療所への枝管を残す。図面には廃管とあるが、実際にはまだ使われていた。誰が直したのか分からない継ぎ目が三か所ある。作業を終えたら、まず長屋へ知らせてほしい。",
+      "required": true,
+      "fieldClue": "同じ足場の反対側にも、もう一枚の記録がある。次は「炉工の長屋」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "village"
+    },
+    {
+      "id": "ember-city-3",
+      "type": "炉壁の落書き",
+      "title": "八人目の休憩",
+      "snippet": "交代は七人。なのに休憩用の椀は八つある。誰の分か聞くと、皆が次の班だと言った。夜に来る見習いが、班へ入る前から湯を飲めるようにしたらしい。椀を減らすくらいなら、灰の掃除を一つ増やす。",
+      "required": false,
+      "fieldClue": "次は「炉工の長屋」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "village"
+    },
+    {
+      "id": "ember-city-4",
+      "type": "労働者の申入れ",
+      "title": "止める日を決める",
+      "snippet": "炉壁の傷はもう補修の範囲を越えている。止めれば仕事を失うが、破れれば長屋も診療所も失う。停止後の賃金と住まいを先に決めてほしい。安全のためという言葉だけで、生活を灰にしないでほしい。",
+      "required": true,
+      "fieldClue": "もう一方の色布の机にも、人の残した言葉がありそうだ。次は「中央の休火炉」へ。双煙突と送熱管を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "center"
+    },
+    {
+      "id": "ember-city-5",
+      "type": "給金の支払簿",
+      "title": "最後の賃金ではなく",
+      "snippet": "停止後三月分の給金を先払いする。帳簿の表題を『退職金』としないこと。次の仕事へ移るまでの橋渡しである。職を残せなかった者の名も、省略しない。長屋の鍵は、支払いの有無に関わらず本人へ渡す。",
+      "required": true,
+      "fieldClue": "次は「中央の休火炉」へ。双煙突と送熱管を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "center"
+    },
+    {
+      "id": "ember-city-6",
+      "type": "中央炉の停止命令",
+      "title": "灰灯に切り替える",
+      "snippet": "主炉の火を落とす。診療所の患者が移動を終えるまで、独立した小炉だけを残す。主炉の廃止日と、地域の送熱終了日は別に記録すること。この一日を隠せば、弁を残した者だけが違反者になる。",
+      "required": true,
+      "fieldClue": "次は「赤窓の診療所」へ。双煙突と送熱管を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "refuge"
+    },
+    {
+      "id": "ember-city-7",
+      "type": "診療所の日誌",
+      "title": "赤い窓の夜",
+      "snippet": "最後の患者は夜明け前に出発した。椀を八つ返すつもりだったが、一つだけ欠けていたので置いていく。小炉を止め、窓の赤い布を外す。待っている者が迷わないよう、廊下の灯だけは朝まで残した。",
+      "required": true,
+      "fieldClue": "次は「種火の記念庭」へ。高台の淡い灯を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "memorial"
+    },
+    {
+      "id": "ember-city-8",
+      "type": "記念庭の銘",
+      "title": "火を守る仕事の終わり",
+      "snippet": "火を絶やさぬことだけが、炉工の誇りではなかった。止める時を告げ、管の先で待つ者を送り、次の暮らしへ渡すことも仕事だった。ここに置くのは永遠の火ではなく、必要な時にだけ灯す小さな種火である。",
+      "required": true,
+      "fieldClue": "次は「煤色の測温塔」へ。欠けた輪を頂く塔を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "tower"
+    }
+  ],
+  "explorationLeads": [
+    {
+      "id": "arrival",
+      "sourcePointIds": [
+        "ember-city-arrival"
+      ],
+      "targetRecordIds": [
+        "ember-city-1"
+      ],
+      "title": "煤色の測温塔を探す",
+      "clue": "色布を掲げた塔の麓で、最初の記録を読もう。"
+    },
+    {
+      "id": "lead-0",
+      "sourceRecordIds": [
+        "ember-city-1"
+      ],
+      "targetRecordIds": [
+        "ember-city-2",
+        "ember-city-3"
+      ],
+      "title": "双煙突の送熱路に残るもの",
+      "clue": "次は「双煙突の送熱路」へ。双煙突と送熱管を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-1",
+      "sourceRecordIds": [
+        "ember-city-2"
+      ],
+      "targetRecordIds": [
+        "ember-city-4",
+        "ember-city-5"
+      ],
+      "title": "炉工の長屋に残るもの",
+      "clue": "同じ足場の反対側にも、もう一枚の記録がある。次は「炉工の長屋」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "local-1",
+      "sourceRecordIds": [
+        "ember-city-2"
+      ],
+      "targetRecordIds": [
+        "ember-city-3"
+      ],
+      "title": "近くのもう一つの記録",
+      "clue": "同じ足場の反対側にも、もう一枚の記録がある。相棒に戻る前に、反対側の色布を探してみよう。"
+    },
+    {
+      "id": "lead-2",
+      "sourceRecordIds": [
+        "ember-city-3"
+      ],
+      "targetRecordIds": [
+        "ember-city-4",
+        "ember-city-5"
+      ],
+      "title": "炉工の長屋に残るもの",
+      "clue": "次は「炉工の長屋」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-3",
+      "sourceRecordIds": [
+        "ember-city-4"
+      ],
+      "targetRecordIds": [
+        "ember-city-6"
+      ],
+      "title": "中央の休火炉に残るもの",
+      "clue": "もう一方の色布の机にも、人の残した言葉がありそうだ。次は「中央の休火炉」へ。双煙突と送熱管を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "local-3",
+      "sourceRecordIds": [
+        "ember-city-4"
+      ],
+      "targetRecordIds": [
+        "ember-city-5"
+      ],
+      "title": "近くのもう一つの記録",
+      "clue": "もう一方の色布の机にも、人の残した言葉がありそうだ。相棒に戻る前に、反対側の色布を探してみよう。"
+    },
+    {
+      "id": "lead-4",
+      "sourceRecordIds": [
+        "ember-city-5"
+      ],
+      "targetRecordIds": [
+        "ember-city-6"
+      ],
+      "title": "中央の休火炉に残るもの",
+      "clue": "次は「中央の休火炉」へ。双煙突と送熱管を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-5",
+      "sourceRecordIds": [
+        "ember-city-6"
+      ],
+      "targetRecordIds": [
+        "ember-city-7"
+      ],
+      "title": "赤窓の診療所に残るもの",
+      "clue": "次は「赤窓の診療所」へ。双煙突と送熱管を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-6",
+      "sourceRecordIds": [
+        "ember-city-7"
+      ],
+      "targetRecordIds": [
+        "ember-city-8"
+      ],
+      "title": "種火の記念庭に残るもの",
+      "clue": "次は「種火の記念庭」へ。高台の淡い灯を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-7",
+      "sourceRecordIds": [
+        "ember-city-8"
+      ],
+      "targetRecordIds": [
+        "ember-city-1"
+      ],
+      "title": "煤色の測温塔に残るもの",
+      "clue": "次は「煤色の測温塔」へ。欠けた輪を頂く塔を空から探し、色布の付いた机を調べよう。"
+    }
+  ],
+  "storyModel": {
+    "hintLinks": [
+      {
+        "from": "entry",
+        "to": "tower",
+        "mode": "visual",
+        "clue": "正面に、色布を掲げた塔が立つ"
+      },
+      {
+        "from": "tower",
+        "to": "crossing",
+        "mode": "text",
+        "clue": "次は「双煙突の送熱路」へ。双煙突と送熱管を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "crossing",
+        "to": "village",
+        "mode": "text",
+        "clue": "同じ足場の反対側にも、もう一枚の記録がある。次は「炉工の長屋」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "village",
+        "to": "center",
+        "mode": "text",
+        "clue": "もう一方の色布の机にも、人の残した言葉がありそうだ。次は「中央の休火炉」へ。双煙突と送熱管を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "center",
+        "to": "refuge",
+        "mode": "text",
+        "clue": "次は「赤窓の診療所」へ。双煙突と送熱管を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "refuge",
+        "to": "memorial",
+        "mode": "text",
+        "clue": "次は「種火の記念庭」へ。高台の淡い灯を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "memorial",
+        "to": "tower",
+        "mode": "text",
+        "clue": "次は「煤色の測温塔」へ。欠けた輪を頂く塔を空から探し、色布の付いた机を調べよう。"
+      }
+    ],
+    "historyTimeline": [
+      {
+        "id": "history-0",
+        "order": 1,
+        "summary": "止まったはずの炉",
+        "areaIds": [
+          "tower"
+        ]
+      },
+      {
+        "id": "history-1",
+        "order": 2,
+        "summary": "生活を止めないために",
+        "areaIds": [
+          "crossing"
+        ]
+      },
+      {
+        "id": "history-2",
+        "order": 3,
+        "summary": "一日違う終わり",
+        "areaIds": [
+          "village"
+        ]
+      },
+      {
+        "id": "history-3",
+        "order": 4,
+        "summary": "灰の中の種火",
+        "areaIds": [
+          "center"
+        ]
+      }
+    ]
+  },
+  "environmentPresentation": {
+    "renderer": "layered-atmosphere-v1",
+    "hazeColor": [
+      138,
+      115,
+      110
+    ],
+    "visibilityKm": 30,
+    "altitudeColorHeightM": 2400,
+    "surfaceCueHeightM": 720,
+    "surfaceCellM": 210,
+    "cloudLayers": [
+      {
+        "name": "低い雲海",
+        "heightM": 180,
+        "thicknessM": 100,
+        "count": 44,
+        "sizeM": [
+          620,
+          1450
+        ],
+        "flatness": 0.12,
+        "opacity": 0.09,
+        "driftMps": 3.5
+      },
+      {
+        "name": "中層のちぎれ雲",
+        "heightM": 1050,
+        "thicknessM": 620,
+        "count": 32,
+        "sizeM": [
+          240,
+          720
+        ],
+        "flatness": 0.28,
+        "opacity": 0.13,
+        "driftMps": 7.5
+      },
+      {
+        "name": "高空の薄雲",
+        "heightM": 2350,
+        "thicknessM": 360,
+        "count": 18,
+        "sizeM": [
+          700,
+          1500
+        ],
+        "flatness": 0.09,
+        "opacity": 0.08,
+        "driftMps": 14
+      }
+    ],
+    "airflow": {
+      "count": 120,
+      "nearDrawKm": 4.2,
+      "visualization": "neutral-particles",
+      "color": [
+        139,
+        219,
+        234
+      ]
+    },
+    "soundscape": {
+      "windBaseGain": 0.006,
+      "windSpeedGain": 0.034,
+      "ridgeGain": 0.012,
+      "canyonGain": 0.005,
+      "filterBaseHz": 230,
+      "filterSpeedFactor": 5.5,
+      "ridgeFilterBoostHz": 370,
+      "basinFilterDropHz": 70,
+      "canyonRumbleGain": 0.012,
+      "openRumbleGain": 0.003,
+      "rumbleFadeHeightM": 1300
+    },
+    "distantLandmarks": {
+      "maxDrawKm": 30,
+      "flockCueKm": [
+        0,
+        14
+      ],
+      "flockAltitudeM": [
+        40,
+        95
+      ],
+      "flockSpanM": 150,
+      "silhouetteFloor": 0.16
+    },
+    "boundaryVisual": {
+      "style": "mountain-ring",
+      "segmentsPerSide": 32,
+      "midOffsetKm": 2.4,
+      "outerOffsetKm": 6.5,
+      "midHeightM": [
+        1450,
+        2450
+      ],
+      "outerHeightM": [
+        3300,
+        4400
+      ],
+      "colors": [
+        [
+          54,
+          76,
+          70
+        ],
+        [
+          52,
+          69,
+          76
+        ]
+      ]
+    },
+    "skyTop": [
+      70,
+      62,
+      70
+    ],
+    "skyHigh": [
+      55,
+      48,
+      55
+    ],
+    "skyMiddle": [
+      147,
+      120,
+      109
+    ],
+    "precipitation": "ash"
+  },
+  "biomeRecipe": {
+    "defaultBiome": {
+      "id": "open-ground",
+      "name": "灰灯の炉都",
+      "groundColor": [
+        110,
+        84,
+        74
+      ],
+      "accentColor": [
+        138,
+        115,
+        110
+      ],
+      "hazeColor": [
+        138,
+        115,
+        110
+      ],
+      "colorMix": 0.86,
+      "dressing": {
+        "type": "wind-grass",
+        "density": 0.09
+      },
+      "macro": {
+        "type": "none",
+        "density": 0
+      },
+      "flight": {
+        "name": "地域の風",
+        "kind": "open",
+        "verticalMps": 0.3,
+        "lateralMps": 0.35,
+        "forwardMps": 0,
+        "turbulence": 0.18,
+        "gustRate": 0.4
+      }
+    },
+    "biomes": []
+  },
+  "terrainLod": {
+    "renderer": "webgl-nested-lod-v1",
+    "visibilityKm": 30,
+    "base": {
+      "sizeKm": 30,
+      "segments": 192
+    },
+    "mid": {
+      "sizeKm": 5,
+      "segments": 96,
+      "rebuildM": 1000
+    },
+    "near": {
+      "sizeKm": 1.6,
+      "segments": 64,
+      "rebuildM": 300
+    },
+    "boundaryMesh": {
+      "segmentsPerSide": 40,
+      "midOffsetKm": 2.6,
+      "outerOffsetKm": 6.8,
+      "midHeightM": [
+        1500,
+        2500
+      ],
+      "outerHeightM": [
+        3300,
+        4400
+      ]
+    },
+    "midEcologyCellM": 84,
+    "nearEcologyCellM": 27,
+    "groundCover": {
+      "shortGrassHeightM": [
+        0.05,
+        0.3
+      ],
+      "tallGrassHeightM": [
+        0.3,
+        1.3
+      ],
+      "windDirectionDeg": 72,
+      "waveLengthM": 46,
+      "waveSpeedMps": 11,
+      "waveContrast": 0.055,
+      "distribution": "advected-shelter-clusters"
+    },
+    "canyonSurface": {
+      "strataSpacingM": 26,
+      "strataWarpM": 18,
+      "erosionScaleM": 72,
+      "windDirectionDeg": 4,
+      "dustSpeedMps": 4.2,
+      "dustContrast": 0.07,
+      "floorMaterial": "dry-gravel-and-wash-marks",
+      "talusDistribution": "clustered-at-wall-base"
+    },
+    "basinSurface": {
+      "crackModel": "none",
+      "rippleSpacingM": 8.5,
+      "windDirectionDeg": 118,
+      "movingSandSpeedMps": 3.2,
+      "rippleContrast": 0.055,
+      "movingSandContrast": 0.035,
+      "material": "alluvial-fan-old-channels-and-wind-ripples"
+    },
+    "ridgeSurface": {
+      "windDirectionDeg": 38,
+      "erosionScaleM": 130,
+      "erosionContrast": 0.065,
+      "windwardMaterial": "sunlit-alpine-grass-and-exposed-rock",
+      "leewardMaterial": "deep-green-vegetation-and-shadowed-rock",
+      "vegetationDistribution": "broad-slope-patches-with-dark-gullies",
+      "rockExposure": "steep-slopes-crests-and-erosion-scars"
+    },
+    "transitionSurface": {
+      "boundaryWarp": "multi-scale-height-and-moisture-noise",
+      "ridgeFoot": "deep-green-foothill-to-exposed-rock",
+      "canyonLip": "broken-grass-to-dry-talus",
+      "basinFringe": "sand-fingers-with-dry-grass",
+      "visualBlendWidthM": [
+        450,
+        1100
+      ]
+    },
+    "fallback": "canvas-terrain-v1",
+    "regionTint": {
+      "low": [
+        0.13,
+        0.14,
+        0.16
+      ],
+      "high": [
+        0.43,
+        0.33,
+        0.29
+      ],
+      "haze": [
+        0.54,
+        0.45,
+        0.43
+      ],
+      "mix": 0.9
+    },
+    "seaLevel": -1
+  },
+  "ecologyPresentation": {
+    "species": [
+      {
+        "type": "wind-kite",
+        "count": 28,
+        "biomeIds": [],
+        "altitudeM": [
+          35,
+          90
+        ],
+        "scale": [
+          0.55,
+          0.9
+        ],
+        "orbitM": [
+          100,
+          260
+        ],
+        "speed": [
+          0.08,
+          0.14
+        ],
+        "color": [
+          30,
+          45,
+          48
+        ],
+        "maxDrawKm": 6
+      }
+    ],
+    "cloudShadows": {
+      "enabled": true,
+      "opacity": 0.08,
+      "maxDrawKm": 5
+    }
+  },
+  "library": {
+    "coverImage": "assets/ember-city.svg",
+    "exploreUrl": "blockout.html?region=ember-city&v=142",
+    "shelfDescription": "火の消えた炉都に、一本だけ赤い窓が残る。最後の運転日を記した札は、工場と診療所で一日ずれていた。",
+    "completedStory": {
+      "title": "灰灯の炉都 ― 地域の物語",
+      "intro": "集めた八つの記録を重ね、この土地で起きた出来事を辿る。",
+      "chapters": [
+        {
+          "title": "止まったはずの炉",
+          "text": "測温塔には、主炉の停止後も温かかった枝管の記録がある。故障や秘密の操業と読む前に、修繕票はその行き先を示している。工場へ送る熱を止め、診療所への細い管だけを残した。図面より長く働き続けた継ぎ目が、人のいる場所へつながっていた。",
+          "recordIds": [
+            "ember-city-1",
+            "ember-city-2"
+          ]
+        },
+        {
+          "title": "生活を止めないために",
+          "text": "炉壁の傷を知る労働者は、停止に反対するのではなく、その後の暮らしを先に決めるよう求めた。給金と住まいを確保しようとする帳簿には、解決できなかった人の名も残る。八つの椀の話は、制度になるより早く日常にあった支え合いを伝えている。",
+          "recordIds": [
+            "ember-city-3",
+            "ember-city-4",
+            "ember-city-5"
+          ]
+        },
+        {
+          "title": "一日違う終わり",
+          "text": "中央炉と診療所の札の日付が違うのは、同じものを記録していないからだった。主炉の廃止と、独立した小炉による最後の送熱には一日の差があった。停止命令はその違いを隠さず、弁を残した者へ責任を押し付けないよう明記した。",
+          "recordIds": [
+            "ember-city-6",
+            "ember-city-7"
+          ]
+        },
+        {
+          "title": "灰の中の種火",
+          "text": "患者の移動が終わると、小炉も止められた。赤い窓は待つ人への合図であり、いつまでも燃える炉の証ではなかった。記念庭は永遠に火を保つ誓いを置かず、必要な時にだけ灯す種火を残す。炉都が最後に守ろうとしたのは、火そのものより、その先にある暮らしだった。",
+          "recordIds": [
+            "ember-city-8",
+            "ember-city-7"
+          ]
+        }
+      ],
+      "afterword": "資料のない部分を断定せず、残された言葉をつないでいます。気になった一文があれば、原文の頁へ戻ってみてください。"
+    }
+  },
+  "completionRule": {
+    "requiredRecords": 8,
+    "finalRecordId": "ember-city-8",
+    "returnAfterFinal": true
+  },
+  "history": [
+    "測温塔には、主炉の停止後も温かかった枝管の記録がある。故障や秘密の操業と読む前に、修繕票はその行き先を示している。工場へ送る熱を止め、診療所への細い管だけを残した。図面より長く働き続けた継ぎ目が、人のいる場所へつながっていた。",
+    "炉壁の傷を知る労働者は、停止に反対するのではなく、その後の暮らしを先に決めるよう求めた。給金と住まいを確保しようとする帳簿には、解決できなかった人の名も残る。八つの椀の話は、制度になるより早く日常にあった支え合いを伝えている。",
+    "中央炉と診療所の札の日付が違うのは、同じものを記録していないからだった。主炉の廃止と、独立した小炉による最後の送熱には一日の差があった。停止命令はその違いを隠さず、弁を残した者へ責任を押し付けないよう明記した。",
+    "患者の移動が終わると、小炉も止められた。赤い窓は待つ人への合図であり、いつまでも燃える炉の証ではなかった。記念庭は永遠に火を保つ誓いを置かず、必要な時にだけ灯す種火を残す。炉都が最後に守ろうとしたのは、火そのものより、その先にある暮らしだった。"
+  ]
+}

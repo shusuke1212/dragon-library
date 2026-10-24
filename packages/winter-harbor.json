@@ -1,0 +1,1488 @@
+{
+  "schemaVersion": "exploration-package/0.2",
+  "id": "winter-harbor",
+  "title": "帰らずの雪港",
+  "premise": "吹雪の港に、出航済みの船の灯が二つ残っている。船は帰らなかったというのに、待合所には今も温かな色の毛布が畳まれている。",
+  "playTimeMinutes": {
+    "target": "15-25",
+    "readingExcluded": false
+  },
+  "departureBrief": {
+    "title": "帰らずの雪港へ",
+    "text": "吹雪の港に、出航済みの船の灯が二つ残っている。船は帰らなかったというのに、待合所には今も温かな色の毛布が畳まれている。 出発時の正面にある「双灯の見張り台」へ。着陸場から色布を目印に、最初の記録を探そう。"
+  },
+  "regionRecipe": {
+    "siteTerraces": [
+      {
+        "id": "entry",
+        "nx": 0.8933333333333333,
+        "nz": 0.85,
+        "height": 0.49749549283008937,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "tower",
+        "nx": 0.7533333333333334,
+        "nz": 0.7466666666666666,
+        "height": 0.4480925856917284,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "crossing",
+        "nx": 0.5566666666666666,
+        "nz": 0.8033333333333333,
+        "height": 0.28677991086046994,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "village",
+        "nx": 0.3766666666666667,
+        "nz": 0.64,
+        "height": 0.28833965949044954,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "center",
+        "nx": 0.21333333333333335,
+        "nz": 0.49333333333333335,
+        "height": 0.83,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "refuge",
+        "nx": 0.4066666666666666,
+        "nz": 0.3,
+        "height": 0.5975793702058821,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "memorial",
+        "nx": 0.19666666666666668,
+        "nz": 0.16,
+        "height": 0.49038406996025646,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      }
+    ],
+    "generator": "common-canyon-v1",
+    "noiseScale": 1.97,
+    "octaves": 5,
+    "canyon": {
+      "width": 0.109,
+      "depth": 0.36,
+      "bendFrequency": 6.6,
+      "bendAmount": 0.11,
+      "depthVariationFrequency": 4.2,
+      "terraceLevels": 5,
+      "terraceSharpness": 5.4,
+      "innerWidth": 0.26,
+      "innerDepth": 0.065,
+      "tributaryFrequency": 11,
+      "tributaryDepth": 0.1,
+      "tributarySharpness": 8,
+      "rillFrequency": 62,
+      "rillDepth": 0.026,
+      "rillSharpness": 10
+    },
+    "ridge": {
+      "headingDeg": 56,
+      "minimumHeight": 0.54,
+      "heightBlend": 0.18,
+      "alongScale": 1.8,
+      "crossScale": 5.2,
+      "warp": 0.42,
+      "sharpness": 3.6,
+      "detailWeight": 0.04,
+      "relief": 0.35
+    },
+    "palette": [
+      {
+        "max": 0.18,
+        "color": [
+          57,
+          83,
+          91
+        ]
+      },
+      {
+        "max": 0.28,
+        "color": [
+          74,
+          99,
+          102
+        ]
+      },
+      {
+        "max": 0.43,
+        "color": [
+          89,
+          100,
+          91
+        ]
+      },
+      {
+        "max": 0.6,
+        "color": [
+          102,
+          100,
+          85
+        ]
+      },
+      {
+        "max": 0.76,
+        "color": [
+          94,
+          91,
+          82
+        ]
+      },
+      {
+        "max": 1,
+        "color": [
+          119,
+          116,
+          105
+        ]
+      }
+    ],
+    "semanticLayers": [
+      "height",
+      "canyon",
+      "ridge",
+      "shelf",
+      "basin"
+    ]
+  },
+  "fieldLayout": {
+    "schemaVersion": "story-field-layout/0.2",
+    "fieldSizeKm": 30,
+    "terrainSeed": 5101,
+    "cruiseSpeedKmh": 200,
+    "boundaryAssist": {
+      "enabled": true,
+      "minimumMarginM": 1800,
+      "extraMarginM": 750,
+      "lookAheadSeconds": 8
+    },
+    "storyAreas": [
+      {
+        "id": "entry",
+        "name": "風除けの峠",
+        "order": 1,
+        "positionKm": [
+          26.8,
+          25.5
+        ],
+        "recordIds": [],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "凍った桟橋と双灯の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "snow",
+          "kind": "entry",
+          "palette": {
+            "stone": "#bccbd2",
+            "metal": "#8ea6ba",
+            "cloth": "#cf8d74",
+            "wood": "#586673",
+            "floor": "#c5d1d4",
+            "low": [
+              0.52,
+              0.63,
+              0.7
+            ],
+            "high": [
+              0.9,
+              0.94,
+              0.95
+            ],
+            "sky": [
+              65,
+              92,
+              122
+            ],
+            "middle": [
+              165,
+              188,
+              203
+            ],
+            "haze": [
+              0.71,
+              0.79,
+              0.83
+            ],
+            "depth": 0.36,
+            "precipitation": "snow"
+          },
+          "points": [
+            {
+              "id": "winter-harbor-arrival",
+              "label": "旅の案内札",
+              "recordIds": [],
+              "offset": [
+                0,
+                14
+              ],
+              "observation": {
+                "type": "入口の痕跡",
+                "text": "吹雪の港に、出航済みの船の灯が二つ残っている。船は帰らなかったというのに、待合所には今も温かな色の毛布が畳まれている。"
+              },
+              "clue": "正面の「双灯の見張り台」を探そう。色布のそばの机に、この土地の最初の記録が残る。",
+              "lookTargetId": "tower"
+            }
+          ]
+        }
+      },
+      {
+        "id": "tower",
+        "name": "双灯の見張り台",
+        "order": 2,
+        "positionKm": [
+          22.6,
+          22.4
+        ],
+        "recordIds": [
+          "winter-harbor-1"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "凍った桟橋と双灯の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "snow",
+          "kind": "beacon",
+          "palette": {
+            "stone": "#bccbd2",
+            "metal": "#8ea6ba",
+            "cloth": "#cf8d74",
+            "wood": "#586673",
+            "floor": "#c5d1d4",
+            "low": [
+              0.52,
+              0.63,
+              0.7
+            ],
+            "high": [
+              0.9,
+              0.94,
+              0.95
+            ],
+            "sky": [
+              65,
+              92,
+              122
+            ],
+            "middle": [
+              165,
+              188,
+              203
+            ],
+            "haze": [
+              0.71,
+              0.79,
+              0.83
+            ],
+            "depth": 0.36,
+            "precipitation": "snow"
+          },
+          "points": [
+            {
+              "id": "winter-harbor-point-1",
+              "label": "三度目の点灯",
+              "recordIds": [
+                "winter-harbor-1"
+              ],
+              "offset": [
+                -28,
+                2
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "crossing",
+        "name": "氷縁の桟橋",
+        "order": 3,
+        "positionKm": [
+          16.7,
+          24.1
+        ],
+        "recordIds": [
+          "winter-harbor-2",
+          "winter-harbor-3"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "凍った桟橋と双灯の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "snow",
+          "kind": "crossing",
+          "palette": {
+            "stone": "#bccbd2",
+            "metal": "#8ea6ba",
+            "cloth": "#cf8d74",
+            "wood": "#586673",
+            "floor": "#c5d1d4",
+            "low": [
+              0.52,
+              0.63,
+              0.7
+            ],
+            "high": [
+              0.9,
+              0.94,
+              0.95
+            ],
+            "sky": [
+              65,
+              92,
+              122
+            ],
+            "middle": [
+              165,
+              188,
+              203
+            ],
+            "haze": [
+              0.71,
+              0.79,
+              0.83
+            ],
+            "depth": 0.36,
+            "precipitation": "snow"
+          },
+          "points": [
+            {
+              "id": "winter-harbor-point-2",
+              "label": "重い荷を下ろす",
+              "recordIds": [
+                "winter-harbor-2"
+              ],
+              "offset": [
+                -34,
+                10
+              ]
+            },
+            {
+              "id": "winter-harbor-point-3",
+              "label": "窓を描く",
+              "recordIds": [
+                "winter-harbor-3"
+              ],
+              "offset": [
+                32,
+                10
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "village",
+        "name": "港番の長屋",
+        "order": 4,
+        "positionKm": [
+          11.3,
+          19.2
+        ],
+        "recordIds": [
+          "winter-harbor-4",
+          "winter-harbor-5"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "凍った桟橋と双灯の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "snow",
+          "kind": "village",
+          "palette": {
+            "stone": "#bccbd2",
+            "metal": "#8ea6ba",
+            "cloth": "#cf8d74",
+            "wood": "#586673",
+            "floor": "#c5d1d4",
+            "low": [
+              0.52,
+              0.63,
+              0.7
+            ],
+            "high": [
+              0.9,
+              0.94,
+              0.95
+            ],
+            "sky": [
+              65,
+              92,
+              122
+            ],
+            "middle": [
+              165,
+              188,
+              203
+            ],
+            "haze": [
+              0.71,
+              0.79,
+              0.83
+            ],
+            "depth": 0.36,
+            "precipitation": "snow"
+          },
+          "points": [
+            {
+              "id": "winter-harbor-point-4",
+              "label": "対岸からの最後の便",
+              "recordIds": [
+                "winter-harbor-4"
+              ],
+              "offset": [
+                -28,
+                -12
+              ]
+            },
+            {
+              "id": "winter-harbor-point-5",
+              "label": "帰り賃のない契約",
+              "recordIds": [
+                "winter-harbor-5"
+              ],
+              "offset": [
+                27,
+                -19
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "center",
+        "name": "封鎖された連絡塔",
+        "order": 5,
+        "positionKm": [
+          6.4,
+          14.8
+        ],
+        "recordIds": [
+          "winter-harbor-6"
+        ],
+        "discoveryRadiusM": 700,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "凍った桟橋と双灯の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "snow",
+          "kind": "center",
+          "palette": {
+            "stone": "#bccbd2",
+            "metal": "#8ea6ba",
+            "cloth": "#cf8d74",
+            "wood": "#586673",
+            "floor": "#c5d1d4",
+            "low": [
+              0.52,
+              0.63,
+              0.7
+            ],
+            "high": [
+              0.9,
+              0.94,
+              0.95
+            ],
+            "sky": [
+              65,
+              92,
+              122
+            ],
+            "middle": [
+              165,
+              188,
+              203
+            ],
+            "haze": [
+              0.71,
+              0.79,
+              0.83
+            ],
+            "depth": 0.36,
+            "precipitation": "snow"
+          },
+          "points": [
+            {
+              "id": "winter-harbor-point-6",
+              "label": "南港にて受領",
+              "recordIds": [
+                "winter-harbor-6"
+              ],
+              "offset": [
+                -28,
+                10
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "refuge",
+        "name": "毛布の待合所",
+        "order": 6,
+        "positionKm": [
+          12.2,
+          9
+        ],
+        "recordIds": [
+          "winter-harbor-7"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "凍った桟橋と双灯の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "snow",
+          "kind": "refuge",
+          "palette": {
+            "stone": "#bccbd2",
+            "metal": "#8ea6ba",
+            "cloth": "#cf8d74",
+            "wood": "#586673",
+            "floor": "#c5d1d4",
+            "low": [
+              0.52,
+              0.63,
+              0.7
+            ],
+            "high": [
+              0.9,
+              0.94,
+              0.95
+            ],
+            "sky": [
+              65,
+              92,
+              122
+            ],
+            "middle": [
+              165,
+              188,
+              203
+            ],
+            "haze": [
+              0.71,
+              0.79,
+              0.83
+            ],
+            "depth": 0.36,
+            "precipitation": "snow"
+          },
+          "points": [
+            {
+              "id": "winter-harbor-point-7",
+              "label": "毛布を片づけない理由",
+              "recordIds": [
+                "winter-harbor-7"
+              ],
+              "offset": [
+                0,
+                -15
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "memorial",
+        "name": "迎え火の丘",
+        "order": 7,
+        "positionKm": [
+          5.9,
+          4.8
+        ],
+        "recordIds": [
+          "winter-harbor-8"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "凍った桟橋と双灯の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "snow",
+          "kind": "final",
+          "palette": {
+            "stone": "#bccbd2",
+            "metal": "#8ea6ba",
+            "cloth": "#cf8d74",
+            "wood": "#586673",
+            "floor": "#c5d1d4",
+            "low": [
+              0.52,
+              0.63,
+              0.7
+            ],
+            "high": [
+              0.9,
+              0.94,
+              0.95
+            ],
+            "sky": [
+              65,
+              92,
+              122
+            ],
+            "middle": [
+              165,
+              188,
+              203
+            ],
+            "haze": [
+              0.71,
+              0.79,
+              0.83
+            ],
+            "depth": 0.36,
+            "precipitation": "snow"
+          },
+          "points": [
+            {
+              "id": "winter-harbor-point-8",
+              "label": "帰らずの名の続き",
+              "recordIds": [
+                "winter-harbor-8"
+              ],
+              "offset": [
+                0,
+                5
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "winter-harbor-1",
+      "type": "見張り日誌",
+      "title": "三度目の点灯",
+      "snippet": "船の出ない夜なのに、南灯が点いた。北灯は返事をしなかった。見張り小屋の古い表を見ると、二つの灯は帰港船ではなく、対岸から来る小舟へ向けたものだった。今夜は氷が薄い。灯を消す判断は朝まで待つ。",
+      "required": true,
+      "fieldClue": "次は「氷縁の桟橋」へ。凍った桟橋と双灯を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "crossing"
+    },
+    {
+      "id": "winter-harbor-2",
+      "type": "桟橋の作業票",
+      "title": "重い荷を下ろす",
+      "snippet": "出港予定の三隻から鉱石を全て下ろす。かわりに寝台、湯の樽、空の水袋を積む。港の収入は今季分失われる。積荷の変更命令は船主の署名で出たが、最初に寝台を運び込んだのは荷役の者たちだった。",
+      "required": true,
+      "fieldClue": "同じ足場の反対側にも、もう一枚の記録がある。次は「港番の長屋」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "village"
+    },
+    {
+      "id": "winter-harbor-3",
+      "type": "船室の落書き",
+      "title": "窓を描く",
+      "snippet": "窓のない寝台が怖いという子に、壁へ窓を描いた。外には白い雪しか見えないけれど、絵の窓には夏の港を描ける。帰りに消そうと思っていたが、船はこのまま南の港で使うらしい。絵も、乗せていこう。",
+      "required": false,
+      "fieldClue": "次は「港番の長屋」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "village"
+    },
+    {
+      "id": "winter-harbor-4",
+      "type": "港番宛の通信",
+      "title": "対岸からの最後の便",
+      "snippet": "山側の道が閉ざされ、対岸の集落に二百人が残る。救援船は凍結前に着けても、同じ道を戻れない。南の港へ抜ける航路だけはまだ開いている。帰港日を約束せず、来てくれる船を探している。",
+      "required": true,
+      "fieldClue": "もう一方の色布の机にも、人の残した言葉がありそうだ。次は「封鎖された連絡塔」へ。凍った桟橋と双灯を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "center"
+    },
+    {
+      "id": "winter-harbor-5",
+      "type": "組合の帳簿",
+      "title": "帰り賃のない契約",
+      "snippet": "三隻の船賃を、片道として支払う。乗員は救援後に南で新しい所属先を探すことになる。署名欄には全員の名があったが、二人だけ筆跡が同じだった。字を書けない者の名を、船長が読み上げながら代筆した。",
+      "required": true,
+      "fieldClue": "次は「封鎖された連絡塔」へ。凍った桟橋と双灯を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "center"
+    },
+    {
+      "id": "winter-harbor-6",
+      "type": "通信塔の受信紙",
+      "title": "南港にて受領",
+      "snippet": "三隻とも到着。対岸の住民と乗員を確認した。雪港へ向けた帰航は中止、船は住居と診療所として使用する。この紙を受け取ったら、待っている家へ知らせてほしい。船が戻らないことと、人が戻れないことを、一緒にしないで。",
+      "required": true,
+      "fieldClue": "次は「毛布の待合所」へ。凍った桟橋と双灯を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "refuge"
+    },
+    {
+      "id": "winter-harbor-7",
+      "type": "待合所の札",
+      "title": "毛布を片づけない理由",
+      "snippet": "ここで待つのは、帰港船ではない。対岸から氷を越えてくる遅れた者たちだ。最後の人が何人かは分からない。だから名簿の末尾を閉じず、毛布も畳んだまま置いておく。双灯が点いている間は、入ってよい。",
+      "required": true,
+      "fieldClue": "次は「迎え火の丘」へ。高台の淡い灯を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "memorial"
+    },
+    {
+      "id": "winter-harbor-8",
+      "type": "丘の灯台銘",
+      "title": "帰らずの名の続き",
+      "snippet": "この港から出た船は帰らなかった。その後、南の港から何通もの便りが届いた。ここでは船の名を灯へ移した。北灯は対岸へ、南灯は峠へ。帰港を待つ灯から、次に辿り着く者を迎える灯へ。",
+      "required": true,
+      "fieldClue": "次は「双灯の見張り台」へ。欠けた輪を頂く塔を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "tower"
+    }
+  ],
+  "explorationLeads": [
+    {
+      "id": "arrival",
+      "sourcePointIds": [
+        "winter-harbor-arrival"
+      ],
+      "targetRecordIds": [
+        "winter-harbor-1"
+      ],
+      "title": "双灯の見張り台を探す",
+      "clue": "色布を掲げた塔の麓で、最初の記録を読もう。"
+    },
+    {
+      "id": "lead-0",
+      "sourceRecordIds": [
+        "winter-harbor-1"
+      ],
+      "targetRecordIds": [
+        "winter-harbor-2",
+        "winter-harbor-3"
+      ],
+      "title": "氷縁の桟橋に残るもの",
+      "clue": "次は「氷縁の桟橋」へ。凍った桟橋と双灯を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-1",
+      "sourceRecordIds": [
+        "winter-harbor-2"
+      ],
+      "targetRecordIds": [
+        "winter-harbor-4",
+        "winter-harbor-5"
+      ],
+      "title": "港番の長屋に残るもの",
+      "clue": "同じ足場の反対側にも、もう一枚の記録がある。次は「港番の長屋」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "local-1",
+      "sourceRecordIds": [
+        "winter-harbor-2"
+      ],
+      "targetRecordIds": [
+        "winter-harbor-3"
+      ],
+      "title": "近くのもう一つの記録",
+      "clue": "同じ足場の反対側にも、もう一枚の記録がある。相棒に戻る前に、反対側の色布を探してみよう。"
+    },
+    {
+      "id": "lead-2",
+      "sourceRecordIds": [
+        "winter-harbor-3"
+      ],
+      "targetRecordIds": [
+        "winter-harbor-4",
+        "winter-harbor-5"
+      ],
+      "title": "港番の長屋に残るもの",
+      "clue": "次は「港番の長屋」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-3",
+      "sourceRecordIds": [
+        "winter-harbor-4"
+      ],
+      "targetRecordIds": [
+        "winter-harbor-6"
+      ],
+      "title": "封鎖された連絡塔に残るもの",
+      "clue": "もう一方の色布の机にも、人の残した言葉がありそうだ。次は「封鎖された連絡塔」へ。凍った桟橋と双灯を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "local-3",
+      "sourceRecordIds": [
+        "winter-harbor-4"
+      ],
+      "targetRecordIds": [
+        "winter-harbor-5"
+      ],
+      "title": "近くのもう一つの記録",
+      "clue": "もう一方の色布の机にも、人の残した言葉がありそうだ。相棒に戻る前に、反対側の色布を探してみよう。"
+    },
+    {
+      "id": "lead-4",
+      "sourceRecordIds": [
+        "winter-harbor-5"
+      ],
+      "targetRecordIds": [
+        "winter-harbor-6"
+      ],
+      "title": "封鎖された連絡塔に残るもの",
+      "clue": "次は「封鎖された連絡塔」へ。凍った桟橋と双灯を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-5",
+      "sourceRecordIds": [
+        "winter-harbor-6"
+      ],
+      "targetRecordIds": [
+        "winter-harbor-7"
+      ],
+      "title": "毛布の待合所に残るもの",
+      "clue": "次は「毛布の待合所」へ。凍った桟橋と双灯を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-6",
+      "sourceRecordIds": [
+        "winter-harbor-7"
+      ],
+      "targetRecordIds": [
+        "winter-harbor-8"
+      ],
+      "title": "迎え火の丘に残るもの",
+      "clue": "次は「迎え火の丘」へ。高台の淡い灯を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-7",
+      "sourceRecordIds": [
+        "winter-harbor-8"
+      ],
+      "targetRecordIds": [
+        "winter-harbor-1"
+      ],
+      "title": "双灯の見張り台に残るもの",
+      "clue": "次は「双灯の見張り台」へ。欠けた輪を頂く塔を空から探し、色布の付いた机を調べよう。"
+    }
+  ],
+  "storyModel": {
+    "hintLinks": [
+      {
+        "from": "entry",
+        "to": "tower",
+        "mode": "visual",
+        "clue": "正面に、色布を掲げた塔が立つ"
+      },
+      {
+        "from": "tower",
+        "to": "crossing",
+        "mode": "text",
+        "clue": "次は「氷縁の桟橋」へ。凍った桟橋と双灯を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "crossing",
+        "to": "village",
+        "mode": "text",
+        "clue": "同じ足場の反対側にも、もう一枚の記録がある。次は「港番の長屋」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "village",
+        "to": "center",
+        "mode": "text",
+        "clue": "もう一方の色布の机にも、人の残した言葉がありそうだ。次は「封鎖された連絡塔」へ。凍った桟橋と双灯を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "center",
+        "to": "refuge",
+        "mode": "text",
+        "clue": "次は「毛布の待合所」へ。凍った桟橋と双灯を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "refuge",
+        "to": "memorial",
+        "mode": "text",
+        "clue": "次は「迎え火の丘」へ。高台の淡い灯を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "memorial",
+        "to": "tower",
+        "mode": "text",
+        "clue": "次は「双灯の見張り台」へ。欠けた輪を頂く塔を空から探し、色布の付いた机を調べよう。"
+      }
+    ],
+    "historyTimeline": [
+      {
+        "id": "history-0",
+        "order": 1,
+        "summary": "港を離れた積荷",
+        "areaIds": [
+          "tower"
+        ]
+      },
+      {
+        "id": "history-1",
+        "order": 2,
+        "summary": "戻らない航路",
+        "areaIds": [
+          "crossing"
+        ]
+      },
+      {
+        "id": "history-2",
+        "order": 3,
+        "summary": "届いた受信紙",
+        "areaIds": [
+          "village"
+        ]
+      },
+      {
+        "id": "history-3",
+        "order": 4,
+        "summary": "灯を向け直す",
+        "areaIds": [
+          "center"
+        ]
+      }
+    ]
+  },
+  "environmentPresentation": {
+    "renderer": "layered-atmosphere-v1",
+    "hazeColor": [
+      181,
+      201,
+      212
+    ],
+    "visibilityKm": 30,
+    "altitudeColorHeightM": 2400,
+    "surfaceCueHeightM": 720,
+    "surfaceCellM": 210,
+    "cloudLayers": [
+      {
+        "name": "低い雲海",
+        "heightM": 180,
+        "thicknessM": 100,
+        "count": 44,
+        "sizeM": [
+          620,
+          1450
+        ],
+        "flatness": 0.12,
+        "opacity": 0.09,
+        "driftMps": 3.5
+      },
+      {
+        "name": "中層のちぎれ雲",
+        "heightM": 1050,
+        "thicknessM": 620,
+        "count": 32,
+        "sizeM": [
+          240,
+          720
+        ],
+        "flatness": 0.28,
+        "opacity": 0.13,
+        "driftMps": 7.5
+      },
+      {
+        "name": "高空の薄雲",
+        "heightM": 2350,
+        "thicknessM": 360,
+        "count": 18,
+        "sizeM": [
+          700,
+          1500
+        ],
+        "flatness": 0.09,
+        "opacity": 0.08,
+        "driftMps": 14
+      }
+    ],
+    "airflow": {
+      "count": 120,
+      "nearDrawKm": 4.2,
+      "visualization": "neutral-particles",
+      "color": [
+        139,
+        219,
+        234
+      ]
+    },
+    "soundscape": {
+      "windBaseGain": 0.006,
+      "windSpeedGain": 0.034,
+      "ridgeGain": 0.012,
+      "canyonGain": 0.005,
+      "filterBaseHz": 230,
+      "filterSpeedFactor": 5.5,
+      "ridgeFilterBoostHz": 370,
+      "basinFilterDropHz": 70,
+      "canyonRumbleGain": 0.012,
+      "openRumbleGain": 0.003,
+      "rumbleFadeHeightM": 1300
+    },
+    "distantLandmarks": {
+      "maxDrawKm": 30,
+      "flockCueKm": [
+        0,
+        14
+      ],
+      "flockAltitudeM": [
+        40,
+        95
+      ],
+      "flockSpanM": 150,
+      "silhouetteFloor": 0.16
+    },
+    "boundaryVisual": {
+      "style": "mountain-ring",
+      "segmentsPerSide": 32,
+      "midOffsetKm": 2.4,
+      "outerOffsetKm": 6.5,
+      "midHeightM": [
+        1450,
+        2450
+      ],
+      "outerHeightM": [
+        3300,
+        4400
+      ],
+      "colors": [
+        [
+          54,
+          76,
+          70
+        ],
+        [
+          52,
+          69,
+          76
+        ]
+      ]
+    },
+    "skyTop": [
+      65,
+      92,
+      122
+    ],
+    "skyHigh": [
+      51,
+      72,
+      95
+    ],
+    "skyMiddle": [
+      165,
+      188,
+      203
+    ],
+    "precipitation": "snow"
+  },
+  "biomeRecipe": {
+    "defaultBiome": {
+      "id": "open-ground",
+      "name": "帰らずの雪港",
+      "groundColor": [
+        230,
+        240,
+        242
+      ],
+      "accentColor": [
+        181,
+        201,
+        212
+      ],
+      "hazeColor": [
+        181,
+        201,
+        212
+      ],
+      "colorMix": 0.86,
+      "dressing": {
+        "type": "wind-grass",
+        "density": 0.09
+      },
+      "macro": {
+        "type": "none",
+        "density": 0
+      },
+      "flight": {
+        "name": "地域の風",
+        "kind": "open",
+        "verticalMps": 0.3,
+        "lateralMps": 0.35,
+        "forwardMps": 0,
+        "turbulence": 0.18,
+        "gustRate": 0.4
+      }
+    },
+    "biomes": []
+  },
+  "terrainLod": {
+    "renderer": "webgl-nested-lod-v1",
+    "visibilityKm": 30,
+    "base": {
+      "sizeKm": 30,
+      "segments": 192
+    },
+    "mid": {
+      "sizeKm": 5,
+      "segments": 96,
+      "rebuildM": 1000
+    },
+    "near": {
+      "sizeKm": 1.6,
+      "segments": 64,
+      "rebuildM": 300
+    },
+    "boundaryMesh": {
+      "segmentsPerSide": 40,
+      "midOffsetKm": 2.6,
+      "outerOffsetKm": 6.8,
+      "midHeightM": [
+        1500,
+        2500
+      ],
+      "outerHeightM": [
+        3300,
+        4400
+      ]
+    },
+    "midEcologyCellM": 84,
+    "nearEcologyCellM": 27,
+    "groundCover": {
+      "shortGrassHeightM": [
+        0.05,
+        0.3
+      ],
+      "tallGrassHeightM": [
+        0.3,
+        1.3
+      ],
+      "windDirectionDeg": 72,
+      "waveLengthM": 46,
+      "waveSpeedMps": 11,
+      "waveContrast": 0.055,
+      "distribution": "advected-shelter-clusters"
+    },
+    "canyonSurface": {
+      "strataSpacingM": 26,
+      "strataWarpM": 18,
+      "erosionScaleM": 72,
+      "windDirectionDeg": 4,
+      "dustSpeedMps": 4.2,
+      "dustContrast": 0.07,
+      "floorMaterial": "dry-gravel-and-wash-marks",
+      "talusDistribution": "clustered-at-wall-base"
+    },
+    "basinSurface": {
+      "crackModel": "none",
+      "rippleSpacingM": 8.5,
+      "windDirectionDeg": 118,
+      "movingSandSpeedMps": 3.2,
+      "rippleContrast": 0.055,
+      "movingSandContrast": 0.035,
+      "material": "alluvial-fan-old-channels-and-wind-ripples"
+    },
+    "ridgeSurface": {
+      "windDirectionDeg": 38,
+      "erosionScaleM": 130,
+      "erosionContrast": 0.065,
+      "windwardMaterial": "sunlit-alpine-grass-and-exposed-rock",
+      "leewardMaterial": "deep-green-vegetation-and-shadowed-rock",
+      "vegetationDistribution": "broad-slope-patches-with-dark-gullies",
+      "rockExposure": "steep-slopes-crests-and-erosion-scars"
+    },
+    "transitionSurface": {
+      "boundaryWarp": "multi-scale-height-and-moisture-noise",
+      "ridgeFoot": "deep-green-foothill-to-exposed-rock",
+      "canyonLip": "broken-grass-to-dry-talus",
+      "basinFringe": "sand-fingers-with-dry-grass",
+      "visualBlendWidthM": [
+        450,
+        1100
+      ]
+    },
+    "fallback": "canvas-terrain-v1",
+    "regionTint": {
+      "low": [
+        0.52,
+        0.63,
+        0.7
+      ],
+      "high": [
+        0.9,
+        0.94,
+        0.95
+      ],
+      "haze": [
+        0.71,
+        0.79,
+        0.83
+      ],
+      "mix": 0.9
+    },
+    "seaLevel": -1
+  },
+  "ecologyPresentation": {
+    "species": [
+      {
+        "type": "wind-kite",
+        "count": 28,
+        "biomeIds": [],
+        "altitudeM": [
+          35,
+          90
+        ],
+        "scale": [
+          0.55,
+          0.9
+        ],
+        "orbitM": [
+          100,
+          260
+        ],
+        "speed": [
+          0.08,
+          0.14
+        ],
+        "color": [
+          30,
+          45,
+          48
+        ],
+        "maxDrawKm": 6
+      }
+    ],
+    "cloudShadows": {
+      "enabled": true,
+      "opacity": 0.08,
+      "maxDrawKm": 5
+    }
+  },
+  "library": {
+    "coverImage": "assets/winter-harbor.svg",
+    "exploreUrl": "blockout.html?region=winter-harbor&v=142",
+    "shelfDescription": "吹雪の港に、出航済みの船の灯が二つ残っている。船は帰らなかったというのに、待合所には今も温かな色の毛布が畳まれている。",
+    "completedStory": {
+      "title": "帰らずの雪港 ― 地域の物語",
+      "intro": "集めた八つの記録を重ね、この土地で起きた出来事を辿る。",
+      "chapters": [
+        {
+          "title": "港を離れた積荷",
+          "text": "雪港は鉱石を運ぶ船で暮らしていた。厳しい凍結を前に、三隻の積荷は寝台と湯と水袋へ入れ替えられた。それは遭難後の処置ではなく、出航前の準備だった。荷役の者たちは正式な命令を待たずに動き始め、船主と組合が後からその仕事を引き受けた。",
+          "recordIds": [
+            "winter-harbor-2",
+            "winter-harbor-5"
+          ]
+        },
+        {
+          "title": "戻らない航路",
+          "text": "対岸には、道を失った住民が残されていた。救援船が入れば、同じ航路で戻れる保証はなかった。船は南港へ抜ける片道の航海を選び、乗員も新たな仕事先を探す契約へ署名した。窓を描かれた寝台は、長い滞在のための小さな工夫だった。",
+          "recordIds": [
+            "winter-harbor-3",
+            "winter-harbor-4"
+          ]
+        },
+        {
+          "title": "届いた受信紙",
+          "text": "通信塔には、三隻の到着を知らせる紙が残る。船は南港で住居や診療所へ転用された。帰らなかったのは船であり、それをそのまま乗員全員の死と読むことはできない。離れた家族がその後どう暮らしたかまでは、ここにある資料だけでは追えない。",
+          "recordIds": [
+            "winter-harbor-6",
+            "winter-harbor-5"
+          ]
+        },
+        {
+          "title": "灯を向け直す",
+          "text": "港の毛布は帰航を待つためではなく、遅れて氷を越えてくる人を迎えるために残された。双灯も、帰港船への信号から対岸と峠への道標へ役割を変えた。帰らずの雪港という名には別れが含まれている。だが、受信紙と灯は、その名だけでは語り尽くせない人々の続きも残している。",
+          "recordIds": [
+            "winter-harbor-1",
+            "winter-harbor-7",
+            "winter-harbor-8"
+          ]
+        }
+      ],
+      "afterword": "資料のない部分を断定せず、残された言葉をつないでいます。気になった一文があれば、原文の頁へ戻ってみてください。"
+    }
+  },
+  "completionRule": {
+    "requiredRecords": 8,
+    "finalRecordId": "winter-harbor-8",
+    "returnAfterFinal": true
+  },
+  "history": [
+    "雪港は鉱石を運ぶ船で暮らしていた。厳しい凍結を前に、三隻の積荷は寝台と湯と水袋へ入れ替えられた。それは遭難後の処置ではなく、出航前の準備だった。荷役の者たちは正式な命令を待たずに動き始め、船主と組合が後からその仕事を引き受けた。",
+    "対岸には、道を失った住民が残されていた。救援船が入れば、同じ航路で戻れる保証はなかった。船は南港へ抜ける片道の航海を選び、乗員も新たな仕事先を探す契約へ署名した。窓を描かれた寝台は、長い滞在のための小さな工夫だった。",
+    "通信塔には、三隻の到着を知らせる紙が残る。船は南港で住居や診療所へ転用された。帰らなかったのは船であり、それをそのまま乗員全員の死と読むことはできない。離れた家族がその後どう暮らしたかまでは、ここにある資料だけでは追えない。",
+    "港の毛布は帰航を待つためではなく、遅れて氷を越えてくる人を迎えるために残された。双灯も、帰港船への信号から対岸と峠への道標へ役割を変えた。帰らずの雪港という名には別れが含まれている。だが、受信紙と灯は、その名だけでは語り尽くせない人々の続きも残している。"
+  ]
+}

@@ -1,0 +1,1480 @@
+{
+  "schemaVersion": "exploration-package/0.2",
+  "id": "cloud-orchard",
+  "title": "雲摘みの果樹園",
+  "premise": "雲を越えた高原で、収穫の終わった木に白い袋が掛かっている。届いた招待状には、果実ではなく『次の春を運んでほしい』と書かれていた。",
+  "playTimeMinutes": {
+    "target": "15-25",
+    "readingExcluded": false
+  },
+  "departureBrief": {
+    "title": "雲摘みの果樹園へ",
+    "text": "雲を越えた高原で、収穫の終わった木に白い袋が掛かっている。届いた招待状には、果実ではなく『次の春を運んでほしい』と書かれていた。 出発時の正面にある「花粉の見張り塔」へ。着陸場から色布を目印に、最初の記録を探そう。"
+  },
+  "regionRecipe": {
+    "siteTerraces": [
+      {
+        "id": "entry",
+        "nx": 0.15,
+        "nz": 0.10666666666666667,
+        "height": 0.8128329762367581,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "tower",
+        "nx": 0.2533333333333333,
+        "nz": 0.24666666666666667,
+        "height": 0.75,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "crossing",
+        "nx": 0.19666666666666668,
+        "nz": 0.44333333333333336,
+        "height": 0.9967639514003526,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "village",
+        "nx": 0.36000000000000004,
+        "nz": 0.6233333333333333,
+        "height": 0.75,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "center",
+        "nx": 0.5066666666666666,
+        "nz": 0.7866666666666667,
+        "height": 0.75,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "refuge",
+        "nx": 0.7,
+        "nz": 0.5933333333333334,
+        "height": 0.75,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "memorial",
+        "nx": 0.84,
+        "nz": 0.8033333333333333,
+        "height": 0.75,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      }
+    ],
+    "generator": "common-canyon-v1",
+    "noiseScale": 2.45,
+    "octaves": 5,
+    "canyon": {
+      "width": 0.109,
+      "depth": 0.14,
+      "bendFrequency": 9,
+      "bendAmount": 0.11,
+      "depthVariationFrequency": 4.2,
+      "terraceLevels": 5,
+      "terraceSharpness": 5.4,
+      "innerWidth": 0.26,
+      "innerDepth": 0.065,
+      "tributaryFrequency": 11,
+      "tributaryDepth": 0.1,
+      "tributarySharpness": 8,
+      "rillFrequency": 62,
+      "rillDepth": 0.026,
+      "rillSharpness": 10
+    },
+    "ridge": {
+      "headingDeg": 119,
+      "minimumHeight": 0.54,
+      "heightBlend": 0.18,
+      "alongScale": 1.8,
+      "crossScale": 5.2,
+      "warp": 0.42,
+      "sharpness": 3.6,
+      "detailWeight": 0.04,
+      "relief": 0.35
+    },
+    "palette": [
+      {
+        "max": 0.18,
+        "color": [
+          57,
+          83,
+          91
+        ]
+      },
+      {
+        "max": 0.28,
+        "color": [
+          74,
+          99,
+          102
+        ]
+      },
+      {
+        "max": 0.43,
+        "color": [
+          89,
+          100,
+          91
+        ]
+      },
+      {
+        "max": 0.6,
+        "color": [
+          102,
+          100,
+          85
+        ]
+      },
+      {
+        "max": 0.76,
+        "color": [
+          94,
+          91,
+          82
+        ]
+      },
+      {
+        "max": 1,
+        "color": [
+          119,
+          116,
+          105
+        ]
+      }
+    ],
+    "semanticLayers": [
+      "height",
+      "canyon",
+      "ridge",
+      "shelf",
+      "basin"
+    ]
+  },
+  "fieldLayout": {
+    "schemaVersion": "story-field-layout/0.2",
+    "fieldSizeKm": 30,
+    "terrainSeed": 8537,
+    "cruiseSpeedKmh": 200,
+    "boundaryAssist": {
+      "enabled": true,
+      "minimumMarginM": 1800,
+      "extraMarginM": 750,
+      "lookAheadSeconds": 8
+    },
+    "storyAreas": [
+      {
+        "id": "entry",
+        "name": "雲縁の門",
+        "order": 1,
+        "positionKm": [
+          4.5,
+          3.2
+        ],
+        "recordIds": [],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "高原の果樹と風受けの痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "cloud",
+          "kind": "entry",
+          "palette": {
+            "stone": "#b4be9f",
+            "metal": "#bbaa78",
+            "cloth": "#e1e3c3",
+            "foliage": "#638160",
+            "floor": "#a9b78f",
+            "low": [
+              0.25,
+              0.39,
+              0.29
+            ],
+            "high": [
+              0.62,
+              0.72,
+              0.48
+            ],
+            "sky": [
+              72,
+              119,
+              156
+            ],
+            "middle": [
+              169,
+              199,
+              205
+            ],
+            "haze": [
+              0.72,
+              0.81,
+              0.77
+            ],
+            "depth": 0.14
+          },
+          "points": [
+            {
+              "id": "cloud-orchard-arrival",
+              "label": "旅の案内札",
+              "recordIds": [],
+              "offset": [
+                0,
+                14
+              ],
+              "observation": {
+                "type": "入口の痕跡",
+                "text": "雲を越えた高原で、収穫の終わった木に白い袋が掛かっている。届いた招待状には、果実ではなく『次の春を運んでほしい』と書かれていた。"
+              },
+              "clue": "正面の「花粉の見張り塔」を探そう。色布のそばの机に、この土地の最初の記録が残る。",
+              "lookTargetId": "tower"
+            }
+          ]
+        }
+      },
+      {
+        "id": "tower",
+        "name": "花粉の見張り塔",
+        "order": 2,
+        "positionKm": [
+          7.6,
+          7.4
+        ],
+        "recordIds": [
+          "cloud-orchard-1"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "高原の果樹と風受けの痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "cloud",
+          "kind": "beacon",
+          "palette": {
+            "stone": "#b4be9f",
+            "metal": "#bbaa78",
+            "cloth": "#e1e3c3",
+            "foliage": "#638160",
+            "floor": "#a9b78f",
+            "low": [
+              0.25,
+              0.39,
+              0.29
+            ],
+            "high": [
+              0.62,
+              0.72,
+              0.48
+            ],
+            "sky": [
+              72,
+              119,
+              156
+            ],
+            "middle": [
+              169,
+              199,
+              205
+            ],
+            "haze": [
+              0.72,
+              0.81,
+              0.77
+            ],
+            "depth": 0.14
+          },
+          "points": [
+            {
+              "id": "cloud-orchard-point-1",
+              "label": "咲いたのに実らない",
+              "recordIds": [
+                "cloud-orchard-1"
+              ],
+              "offset": [
+                -28,
+                2
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "crossing",
+        "name": "風受けの並木",
+        "order": 3,
+        "positionKm": [
+          5.9,
+          13.3
+        ],
+        "recordIds": [
+          "cloud-orchard-2",
+          "cloud-orchard-3"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "高原の果樹と風受けの痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "cloud",
+          "kind": "crossing",
+          "palette": {
+            "stone": "#b4be9f",
+            "metal": "#bbaa78",
+            "cloth": "#e1e3c3",
+            "foliage": "#638160",
+            "floor": "#a9b78f",
+            "low": [
+              0.25,
+              0.39,
+              0.29
+            ],
+            "high": [
+              0.62,
+              0.72,
+              0.48
+            ],
+            "sky": [
+              72,
+              119,
+              156
+            ],
+            "middle": [
+              169,
+              199,
+              205
+            ],
+            "haze": [
+              0.72,
+              0.81,
+              0.77
+            ],
+            "depth": 0.14
+          },
+          "points": [
+            {
+              "id": "cloud-orchard-point-2",
+              "label": "風を止めすぎた庭",
+              "recordIds": [
+                "cloud-orchard-2"
+              ],
+              "offset": [
+                -34,
+                10
+              ]
+            },
+            {
+              "id": "cloud-orchard-point-3",
+              "label": "袋は空でも",
+              "recordIds": [
+                "cloud-orchard-3"
+              ],
+              "offset": [
+                32,
+                10
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "village",
+        "name": "摘み手の集落",
+        "order": 4,
+        "positionKm": [
+          10.8,
+          18.7
+        ],
+        "recordIds": [
+          "cloud-orchard-4",
+          "cloud-orchard-5"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "高原の果樹と風受けの痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "cloud",
+          "kind": "village",
+          "palette": {
+            "stone": "#b4be9f",
+            "metal": "#bbaa78",
+            "cloth": "#e1e3c3",
+            "foliage": "#638160",
+            "floor": "#a9b78f",
+            "low": [
+              0.25,
+              0.39,
+              0.29
+            ],
+            "high": [
+              0.62,
+              0.72,
+              0.48
+            ],
+            "sky": [
+              72,
+              119,
+              156
+            ],
+            "middle": [
+              169,
+              199,
+              205
+            ],
+            "haze": [
+              0.72,
+              0.81,
+              0.77
+            ],
+            "depth": 0.14
+          },
+          "points": [
+            {
+              "id": "cloud-orchard-point-4",
+              "label": "最初の籠を渡す先",
+              "recordIds": [
+                "cloud-orchard-4"
+              ],
+              "offset": [
+                -28,
+                -12
+              ]
+            },
+            {
+              "id": "cloud-orchard-point-5",
+              "label": "高い場所が好きとは限らない",
+              "recordIds": [
+                "cloud-orchard-5"
+              ],
+              "offset": [
+                27,
+                -19
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "center",
+        "name": "空樹の大庭",
+        "order": 5,
+        "positionKm": [
+          15.2,
+          23.6
+        ],
+        "recordIds": [
+          "cloud-orchard-6"
+        ],
+        "discoveryRadiusM": 700,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "高原の果樹と風受けの痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "cloud",
+          "kind": "center",
+          "palette": {
+            "stone": "#b4be9f",
+            "metal": "#bbaa78",
+            "cloth": "#e1e3c3",
+            "foliage": "#638160",
+            "floor": "#a9b78f",
+            "low": [
+              0.25,
+              0.39,
+              0.29
+            ],
+            "high": [
+              0.62,
+              0.72,
+              0.48
+            ],
+            "sky": [
+              72,
+              119,
+              156
+            ],
+            "middle": [
+              169,
+              199,
+              205
+            ],
+            "haze": [
+              0.72,
+              0.81,
+              0.77
+            ],
+            "depth": 0.14
+          },
+          "points": [
+            {
+              "id": "cloud-orchard-point-6",
+              "label": "囲いを開く年",
+              "recordIds": [
+                "cloud-orchard-6"
+              ],
+              "offset": [
+                -28,
+                10
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "refuge",
+        "name": "種袋の乾燥庫",
+        "order": 6,
+        "positionKm": [
+          21,
+          17.8
+        ],
+        "recordIds": [
+          "cloud-orchard-7"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "高原の果樹と風受けの痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "cloud",
+          "kind": "refuge",
+          "palette": {
+            "stone": "#b4be9f",
+            "metal": "#bbaa78",
+            "cloth": "#e1e3c3",
+            "foliage": "#638160",
+            "floor": "#a9b78f",
+            "low": [
+              0.25,
+              0.39,
+              0.29
+            ],
+            "high": [
+              0.62,
+              0.72,
+              0.48
+            ],
+            "sky": [
+              72,
+              119,
+              156
+            ],
+            "middle": [
+              169,
+              199,
+              205
+            ],
+            "haze": [
+              0.72,
+              0.81,
+              0.77
+            ],
+            "depth": 0.14
+          },
+          "points": [
+            {
+              "id": "cloud-orchard-point-7",
+              "label": "次の春を運ぶ",
+              "recordIds": [
+                "cloud-orchard-7"
+              ],
+              "offset": [
+                0,
+                -15
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "memorial",
+        "name": "最初の接ぎ木",
+        "order": 7,
+        "positionKm": [
+          25.2,
+          24.1
+        ],
+        "recordIds": [
+          "cloud-orchard-8"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "高原の果樹と風受けの痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "cloud",
+          "kind": "final",
+          "palette": {
+            "stone": "#b4be9f",
+            "metal": "#bbaa78",
+            "cloth": "#e1e3c3",
+            "foliage": "#638160",
+            "floor": "#a9b78f",
+            "low": [
+              0.25,
+              0.39,
+              0.29
+            ],
+            "high": [
+              0.62,
+              0.72,
+              0.48
+            ],
+            "sky": [
+              72,
+              119,
+              156
+            ],
+            "middle": [
+              169,
+              199,
+              205
+            ],
+            "haze": [
+              0.72,
+              0.81,
+              0.77
+            ],
+            "depth": 0.14
+          },
+          "points": [
+            {
+              "id": "cloud-orchard-point-8",
+              "label": "最初の名を消さずに",
+              "recordIds": [
+                "cloud-orchard-8"
+              ],
+              "offset": [
+                0,
+                5
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "cloud-orchard-1",
+      "type": "開花観測帳",
+      "title": "咲いたのに実らない",
+      "snippet": "今年も花は揃って咲いた。だが実は北端の三本にしか付かない。風の強さは平年並み。違っていたのは、低地から来る小さな虫を見なくなったことだ。高原で完結する果樹園など、最初からなかったのかもしれない。",
+      "required": true,
+      "fieldClue": "次は「風受けの並木」へ。高原の果樹と風受けを空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "crossing"
+    },
+    {
+      "id": "cloud-orchard-2",
+      "type": "風受けの調整票",
+      "title": "風を止めすぎた庭",
+      "snippet": "花を守るため、並木の風受けを高くした。虫も草の種も、そこで止まっていた。板を半分外すと若木の枝は折れたが、外から来るものが戻り始めた。守るための壁にも、季節ごとの開け方が要る。",
+      "required": true,
+      "fieldClue": "同じ足場の反対側にも、もう一枚の記録がある。次は「摘み手の集落」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "village"
+    },
+    {
+      "id": "cloud-orchard-3",
+      "type": "摘み手の歌の断片",
+      "title": "袋は空でも",
+      "snippet": "白い袋を枝へ、赤い袋を籠へ。空の袋は、花粉を少し隣へ。重たい袋は、谷の子どもへ。歌の続きを忘れた者がいたので、乾燥庫の戸の裏へ書いた。空袋にも仕事があることだけは、忘れないように。",
+      "required": false,
+      "fieldClue": "次は「摘み手の集落」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "village"
+    },
+    {
+      "id": "cloud-orchard-4",
+      "type": "共同収穫簿",
+      "title": "最初の籠を渡す先",
+      "snippet": "北端の三本から採れた果実を、売りには出さない。谷の苗床へ送り、種を取り出してもらう。今季の収入は減るが、ここにしかない木を、ここにしかないままにしておきたくない。受取り先の名は、枝札へも書く。",
+      "required": true,
+      "fieldClue": "もう一方の色布の机にも、人の残した言葉がありそうだ。次は「空樹の大庭」へ。高原の果樹と風受けを空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "center"
+    },
+    {
+      "id": "cloud-orchard-5",
+      "type": "接ぎ木師の便り",
+      "title": "高い場所が好きとは限らない",
+      "snippet": "この木が高原を好むのではなく、かつてここへ運んだ者が高原を好んだのだろう。谷の苗は低い枝から新芽を出した。品種の名へ土地の高さを閉じ込めず、育った場所を一つずつ記録してほしい。",
+      "required": true,
+      "fieldClue": "次は「空樹の大庭」へ。高原の果樹と風受けを空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "center"
+    },
+    {
+      "id": "cloud-orchard-6",
+      "type": "大庭の会合記録",
+      "title": "囲いを開く年",
+      "snippet": "風受けをすべて戻す案は否決。残す板と外す板を季節ごとに決め、谷の苗床にも観察を頼む。果樹園の管理人を一本の木の持ち主と同じにしない。実を摘む者、虫を数える者、種を運ぶ者で順番に務める。",
+      "required": true,
+      "fieldClue": "次は「種袋の乾燥庫」へ。高原の果樹と風受けを空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "refuge"
+    },
+    {
+      "id": "cloud-orchard-7",
+      "type": "乾燥庫の荷札",
+      "title": "次の春を運ぶ",
+      "snippet": "白い袋には、受粉用の花粉と、谷へ渡す種を分けて入れた。保存用ではなく、運ぶための袋だ。封を開けたら、別の土地の名を札へ足してほしい。雲の上からしか来ない実でも、雲の上だけへ帰す必要はない。",
+      "required": true,
+      "fieldClue": "次は「最初の接ぎ木」へ。高台の淡い灯を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "memorial"
+    },
+    {
+      "id": "cloud-orchard-8",
+      "type": "接ぎ木の根元の札",
+      "title": "最初の名を消さずに",
+      "snippet": "この枝は高原で育ち、谷で根を張り、また高原へ戻ってきた。最初の木の名は残す。新しい土地の名も並べる。どちらか一方だけを本物と呼ばない。枝札が一枚で足りなくなったら、二枚目を掛ける。",
+      "required": true,
+      "fieldClue": "次は「花粉の見張り塔」へ。欠けた輪を頂く塔を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "tower"
+    }
+  ],
+  "explorationLeads": [
+    {
+      "id": "arrival",
+      "sourcePointIds": [
+        "cloud-orchard-arrival"
+      ],
+      "targetRecordIds": [
+        "cloud-orchard-1"
+      ],
+      "title": "花粉の見張り塔を探す",
+      "clue": "色布を掲げた塔の麓で、最初の記録を読もう。"
+    },
+    {
+      "id": "lead-0",
+      "sourceRecordIds": [
+        "cloud-orchard-1"
+      ],
+      "targetRecordIds": [
+        "cloud-orchard-2",
+        "cloud-orchard-3"
+      ],
+      "title": "風受けの並木に残るもの",
+      "clue": "次は「風受けの並木」へ。高原の果樹と風受けを空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-1",
+      "sourceRecordIds": [
+        "cloud-orchard-2"
+      ],
+      "targetRecordIds": [
+        "cloud-orchard-4",
+        "cloud-orchard-5"
+      ],
+      "title": "摘み手の集落に残るもの",
+      "clue": "同じ足場の反対側にも、もう一枚の記録がある。次は「摘み手の集落」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "local-1",
+      "sourceRecordIds": [
+        "cloud-orchard-2"
+      ],
+      "targetRecordIds": [
+        "cloud-orchard-3"
+      ],
+      "title": "近くのもう一つの記録",
+      "clue": "同じ足場の反対側にも、もう一枚の記録がある。相棒に戻る前に、反対側の色布を探してみよう。"
+    },
+    {
+      "id": "lead-2",
+      "sourceRecordIds": [
+        "cloud-orchard-3"
+      ],
+      "targetRecordIds": [
+        "cloud-orchard-4",
+        "cloud-orchard-5"
+      ],
+      "title": "摘み手の集落に残るもの",
+      "clue": "次は「摘み手の集落」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-3",
+      "sourceRecordIds": [
+        "cloud-orchard-4"
+      ],
+      "targetRecordIds": [
+        "cloud-orchard-6"
+      ],
+      "title": "空樹の大庭に残るもの",
+      "clue": "もう一方の色布の机にも、人の残した言葉がありそうだ。次は「空樹の大庭」へ。高原の果樹と風受けを空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "local-3",
+      "sourceRecordIds": [
+        "cloud-orchard-4"
+      ],
+      "targetRecordIds": [
+        "cloud-orchard-5"
+      ],
+      "title": "近くのもう一つの記録",
+      "clue": "もう一方の色布の机にも、人の残した言葉がありそうだ。相棒に戻る前に、反対側の色布を探してみよう。"
+    },
+    {
+      "id": "lead-4",
+      "sourceRecordIds": [
+        "cloud-orchard-5"
+      ],
+      "targetRecordIds": [
+        "cloud-orchard-6"
+      ],
+      "title": "空樹の大庭に残るもの",
+      "clue": "次は「空樹の大庭」へ。高原の果樹と風受けを空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-5",
+      "sourceRecordIds": [
+        "cloud-orchard-6"
+      ],
+      "targetRecordIds": [
+        "cloud-orchard-7"
+      ],
+      "title": "種袋の乾燥庫に残るもの",
+      "clue": "次は「種袋の乾燥庫」へ。高原の果樹と風受けを空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-6",
+      "sourceRecordIds": [
+        "cloud-orchard-7"
+      ],
+      "targetRecordIds": [
+        "cloud-orchard-8"
+      ],
+      "title": "最初の接ぎ木に残るもの",
+      "clue": "次は「最初の接ぎ木」へ。高台の淡い灯を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-7",
+      "sourceRecordIds": [
+        "cloud-orchard-8"
+      ],
+      "targetRecordIds": [
+        "cloud-orchard-1"
+      ],
+      "title": "花粉の見張り塔に残るもの",
+      "clue": "次は「花粉の見張り塔」へ。欠けた輪を頂く塔を空から探し、色布の付いた机を調べよう。"
+    }
+  ],
+  "storyModel": {
+    "hintLinks": [
+      {
+        "from": "entry",
+        "to": "tower",
+        "mode": "visual",
+        "clue": "正面に、色布を掲げた塔が立つ"
+      },
+      {
+        "from": "tower",
+        "to": "crossing",
+        "mode": "text",
+        "clue": "次は「風受けの並木」へ。高原の果樹と風受けを空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "crossing",
+        "to": "village",
+        "mode": "text",
+        "clue": "同じ足場の反対側にも、もう一枚の記録がある。次は「摘み手の集落」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "village",
+        "to": "center",
+        "mode": "text",
+        "clue": "もう一方の色布の机にも、人の残した言葉がありそうだ。次は「空樹の大庭」へ。高原の果樹と風受けを空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "center",
+        "to": "refuge",
+        "mode": "text",
+        "clue": "次は「種袋の乾燥庫」へ。高原の果樹と風受けを空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "refuge",
+        "to": "memorial",
+        "mode": "text",
+        "clue": "次は「最初の接ぎ木」へ。高台の淡い灯を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "memorial",
+        "to": "tower",
+        "mode": "text",
+        "clue": "次は「花粉の見張り塔」へ。欠けた輪を頂く塔を空から探し、色布の付いた机を調べよう。"
+      }
+    ],
+    "historyTimeline": [
+      {
+        "id": "history-0",
+        "order": 1,
+        "summary": "高原だけでは実らない",
+        "areaIds": [
+          "tower"
+        ]
+      },
+      {
+        "id": "history-1",
+        "order": 2,
+        "summary": "空の袋の仕事",
+        "areaIds": [
+          "crossing"
+        ]
+      },
+      {
+        "id": "history-2",
+        "order": 3,
+        "summary": "土地の高さを越えて",
+        "areaIds": [
+          "village"
+        ]
+      },
+      {
+        "id": "history-3",
+        "order": 4,
+        "summary": "二枚目の枝札",
+        "areaIds": [
+          "center"
+        ]
+      }
+    ]
+  },
+  "environmentPresentation": {
+    "renderer": "layered-atmosphere-v1",
+    "hazeColor": [
+      184,
+      207,
+      196
+    ],
+    "visibilityKm": 30,
+    "altitudeColorHeightM": 2400,
+    "surfaceCueHeightM": 720,
+    "surfaceCellM": 210,
+    "cloudLayers": [
+      {
+        "name": "低い雲海",
+        "heightM": 180,
+        "thicknessM": 100,
+        "count": 44,
+        "sizeM": [
+          620,
+          1450
+        ],
+        "flatness": 0.12,
+        "opacity": 0.09,
+        "driftMps": 3.5
+      },
+      {
+        "name": "中層のちぎれ雲",
+        "heightM": 1050,
+        "thicknessM": 620,
+        "count": 32,
+        "sizeM": [
+          240,
+          720
+        ],
+        "flatness": 0.28,
+        "opacity": 0.13,
+        "driftMps": 7.5
+      },
+      {
+        "name": "高空の薄雲",
+        "heightM": 2350,
+        "thicknessM": 360,
+        "count": 18,
+        "sizeM": [
+          700,
+          1500
+        ],
+        "flatness": 0.09,
+        "opacity": 0.08,
+        "driftMps": 14
+      }
+    ],
+    "airflow": {
+      "count": 120,
+      "nearDrawKm": 4.2,
+      "visualization": "neutral-particles",
+      "color": [
+        139,
+        219,
+        234
+      ]
+    },
+    "soundscape": {
+      "windBaseGain": 0.006,
+      "windSpeedGain": 0.034,
+      "ridgeGain": 0.012,
+      "canyonGain": 0.005,
+      "filterBaseHz": 230,
+      "filterSpeedFactor": 5.5,
+      "ridgeFilterBoostHz": 370,
+      "basinFilterDropHz": 70,
+      "canyonRumbleGain": 0.012,
+      "openRumbleGain": 0.003,
+      "rumbleFadeHeightM": 1300
+    },
+    "distantLandmarks": {
+      "maxDrawKm": 30,
+      "flockCueKm": [
+        0,
+        14
+      ],
+      "flockAltitudeM": [
+        40,
+        95
+      ],
+      "flockSpanM": 150,
+      "silhouetteFloor": 0.16
+    },
+    "boundaryVisual": {
+      "style": "mountain-ring",
+      "segmentsPerSide": 32,
+      "midOffsetKm": 2.4,
+      "outerOffsetKm": 6.5,
+      "midHeightM": [
+        1450,
+        2450
+      ],
+      "outerHeightM": [
+        3300,
+        4400
+      ],
+      "colors": [
+        [
+          54,
+          76,
+          70
+        ],
+        [
+          52,
+          69,
+          76
+        ]
+      ]
+    },
+    "skyTop": [
+      72,
+      119,
+      156
+    ],
+    "skyHigh": [
+      56,
+      93,
+      122
+    ],
+    "skyMiddle": [
+      169,
+      199,
+      205
+    ],
+    "precipitation": null
+  },
+  "biomeRecipe": {
+    "defaultBiome": {
+      "id": "open-ground",
+      "name": "雲摘みの果樹園",
+      "groundColor": [
+        158,
+        184,
+        122
+      ],
+      "accentColor": [
+        184,
+        207,
+        196
+      ],
+      "hazeColor": [
+        184,
+        207,
+        196
+      ],
+      "colorMix": 0.86,
+      "dressing": {
+        "type": "wind-grass",
+        "density": 0.09
+      },
+      "macro": {
+        "type": "none",
+        "density": 0
+      },
+      "flight": {
+        "name": "地域の風",
+        "kind": "open",
+        "verticalMps": 0.3,
+        "lateralMps": 0.35,
+        "forwardMps": 0,
+        "turbulence": 0.18,
+        "gustRate": 0.4
+      }
+    },
+    "biomes": []
+  },
+  "terrainLod": {
+    "renderer": "webgl-nested-lod-v1",
+    "visibilityKm": 30,
+    "base": {
+      "sizeKm": 30,
+      "segments": 192
+    },
+    "mid": {
+      "sizeKm": 5,
+      "segments": 96,
+      "rebuildM": 1000
+    },
+    "near": {
+      "sizeKm": 1.6,
+      "segments": 64,
+      "rebuildM": 300
+    },
+    "boundaryMesh": {
+      "segmentsPerSide": 40,
+      "midOffsetKm": 2.6,
+      "outerOffsetKm": 6.8,
+      "midHeightM": [
+        1500,
+        2500
+      ],
+      "outerHeightM": [
+        3300,
+        4400
+      ]
+    },
+    "midEcologyCellM": 84,
+    "nearEcologyCellM": 27,
+    "groundCover": {
+      "shortGrassHeightM": [
+        0.05,
+        0.3
+      ],
+      "tallGrassHeightM": [
+        0.3,
+        1.3
+      ],
+      "windDirectionDeg": 72,
+      "waveLengthM": 46,
+      "waveSpeedMps": 11,
+      "waveContrast": 0.055,
+      "distribution": "advected-shelter-clusters"
+    },
+    "canyonSurface": {
+      "strataSpacingM": 26,
+      "strataWarpM": 18,
+      "erosionScaleM": 72,
+      "windDirectionDeg": 4,
+      "dustSpeedMps": 4.2,
+      "dustContrast": 0.07,
+      "floorMaterial": "dry-gravel-and-wash-marks",
+      "talusDistribution": "clustered-at-wall-base"
+    },
+    "basinSurface": {
+      "crackModel": "none",
+      "rippleSpacingM": 8.5,
+      "windDirectionDeg": 118,
+      "movingSandSpeedMps": 3.2,
+      "rippleContrast": 0.055,
+      "movingSandContrast": 0.035,
+      "material": "alluvial-fan-old-channels-and-wind-ripples"
+    },
+    "ridgeSurface": {
+      "windDirectionDeg": 38,
+      "erosionScaleM": 130,
+      "erosionContrast": 0.065,
+      "windwardMaterial": "sunlit-alpine-grass-and-exposed-rock",
+      "leewardMaterial": "deep-green-vegetation-and-shadowed-rock",
+      "vegetationDistribution": "broad-slope-patches-with-dark-gullies",
+      "rockExposure": "steep-slopes-crests-and-erosion-scars"
+    },
+    "transitionSurface": {
+      "boundaryWarp": "multi-scale-height-and-moisture-noise",
+      "ridgeFoot": "deep-green-foothill-to-exposed-rock",
+      "canyonLip": "broken-grass-to-dry-talus",
+      "basinFringe": "sand-fingers-with-dry-grass",
+      "visualBlendWidthM": [
+        450,
+        1100
+      ]
+    },
+    "fallback": "canvas-terrain-v1",
+    "regionTint": {
+      "low": [
+        0.25,
+        0.39,
+        0.29
+      ],
+      "high": [
+        0.62,
+        0.72,
+        0.48
+      ],
+      "haze": [
+        0.72,
+        0.81,
+        0.77
+      ],
+      "mix": 0.9
+    },
+    "seaLevel": -1
+  },
+  "ecologyPresentation": {
+    "species": [
+      {
+        "type": "wind-kite",
+        "count": 28,
+        "biomeIds": [],
+        "altitudeM": [
+          35,
+          90
+        ],
+        "scale": [
+          0.55,
+          0.9
+        ],
+        "orbitM": [
+          100,
+          260
+        ],
+        "speed": [
+          0.08,
+          0.14
+        ],
+        "color": [
+          30,
+          45,
+          48
+        ],
+        "maxDrawKm": 6
+      }
+    ],
+    "cloudShadows": {
+      "enabled": true,
+      "opacity": 0.08,
+      "maxDrawKm": 5
+    }
+  },
+  "library": {
+    "coverImage": "assets/cloud-orchard.svg",
+    "exploreUrl": "blockout.html?region=cloud-orchard&v=142",
+    "shelfDescription": "雲を越えた高原で、収穫の終わった木に白い袋が掛かっている。届いた招待状には、果実ではなく『次の春を運んでほしい』と書かれていた。",
+    "completedStory": {
+      "title": "雲摘みの果樹園 ― 地域の物語",
+      "intro": "集めた八つの記録を重ね、この土地で起きた出来事を辿る。",
+      "chapters": [
+        {
+          "title": "高原だけでは実らない",
+          "text": "雲摘みの果樹園では、花が咲いても実が付かない年が続いた。花を風から守る壁は、受粉を助ける虫や草の種まで止めていた。守られた庭の外で起きている変化を見なければ、花の数だけを数えても原因は分からなかった。",
+          "recordIds": [
+            "cloud-orchard-1",
+            "cloud-orchard-2"
+          ]
+        },
+        {
+          "title": "空の袋の仕事",
+          "text": "白い袋は収穫し損ねた果実の代わりではなく、花粉や種を運ぶ道具だった。摘み手の歌はその使い分けを覚えていた。残り少ない果実をすぐ売らず、谷の苗床へ託す判断は、当季の収入と次の春の両方を量るものだった。",
+          "recordIds": [
+            "cloud-orchard-3",
+            "cloud-orchard-4"
+          ]
+        },
+        {
+          "title": "土地の高さを越えて",
+          "text": "接ぎ木師は、高原を好む木だという思い込みを疑った。谷で芽を出した苗は、元の品種の偽物ではなかった。大庭は季節ごとの囲い方を決め、管理を一人の持ち主から複数の仕事へ分けた。外へ出した種と、外から来るものの両方が庭を支えるようになった。",
+          "recordIds": [
+            "cloud-orchard-5",
+            "cloud-orchard-6"
+          ]
+        },
+        {
+          "title": "二枚目の枝札",
+          "text": "乾燥庫の袋は、保存棚に眠らせるためではなく、次の場所へ運ぶために用意されている。最初の接ぎ木には、高原と谷の名が並ぶ。果樹園の続きは同じ囲いの中にだけ生まれるのではない。名前を足せる札が、そのことを小さな枝の上で伝えている。",
+          "recordIds": [
+            "cloud-orchard-7",
+            "cloud-orchard-8"
+          ]
+        }
+      ],
+      "afterword": "資料のない部分を断定せず、残された言葉をつないでいます。気になった一文があれば、原文の頁へ戻ってみてください。"
+    }
+  },
+  "completionRule": {
+    "requiredRecords": 8,
+    "finalRecordId": "cloud-orchard-8",
+    "returnAfterFinal": true
+  },
+  "history": [
+    "雲摘みの果樹園では、花が咲いても実が付かない年が続いた。花を風から守る壁は、受粉を助ける虫や草の種まで止めていた。守られた庭の外で起きている変化を見なければ、花の数だけを数えても原因は分からなかった。",
+    "白い袋は収穫し損ねた果実の代わりではなく、花粉や種を運ぶ道具だった。摘み手の歌はその使い分けを覚えていた。残り少ない果実をすぐ売らず、谷の苗床へ託す判断は、当季の収入と次の春の両方を量るものだった。",
+    "接ぎ木師は、高原を好む木だという思い込みを疑った。谷で芽を出した苗は、元の品種の偽物ではなかった。大庭は季節ごとの囲い方を決め、管理を一人の持ち主から複数の仕事へ分けた。外へ出した種と、外から来るものの両方が庭を支えるようになった。",
+    "乾燥庫の袋は、保存棚に眠らせるためではなく、次の場所へ運ぶために用意されている。最初の接ぎ木には、高原と谷の名が並ぶ。果樹園の続きは同じ囲いの中にだけ生まれるのではない。名前を足せる札が、そのことを小さな枝の上で伝えている。"
+  ]
+}

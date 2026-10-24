@@ -1,0 +1,1488 @@
+{
+  "schemaVersion": "exploration-package/0.2",
+  "id": "rain-valley",
+  "title": "雨継ぎの谷",
+  "premise": "雨の多い谷から、水が足りないという便りが届く。七つの村を結ぶ水路に沿って、逆さに掛けられた量り桶が並んでいた。",
+  "playTimeMinutes": {
+    "target": "15-25",
+    "readingExcluded": false
+  },
+  "departureBrief": {
+    "title": "雨継ぎの谷へ",
+    "text": "雨の多い谷から、水が足りないという便りが届く。七つの村を結ぶ水路に沿って、逆さに掛けられた量り桶が並んでいた。 出発時の正面にある「水音の量り塔」へ。着陸場から色布を目印に、最初の記録を探そう。"
+  },
+  "regionRecipe": {
+    "siteTerraces": [
+      {
+        "id": "entry",
+        "nx": 0.85,
+        "nz": 0.8933333333333333,
+        "height": 0.6470526839959643,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "tower",
+        "nx": 0.7466666666666666,
+        "nz": 0.7533333333333334,
+        "height": 0.5775112445343569,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "crossing",
+        "nx": 0.8033333333333333,
+        "nz": 0.5566666666666666,
+        "height": 0.6634024404300792,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "village",
+        "nx": 0.64,
+        "nz": 0.3766666666666667,
+        "height": 0.6089399390691487,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "center",
+        "nx": 0.49333333333333335,
+        "nz": 0.21333333333333335,
+        "height": 0.4985499271280262,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "refuge",
+        "nx": 0.3,
+        "nz": 0.4066666666666666,
+        "height": 0.6146853931781372,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "memorial",
+        "nx": 0.16,
+        "nz": 0.19666666666666668,
+        "height": 0.5584516348165296,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      }
+    ],
+    "generator": "common-canyon-v1",
+    "noiseScale": 2.77,
+    "octaves": 5,
+    "canyon": {
+      "width": 0.082,
+      "depth": 0.3,
+      "bendFrequency": 10.600000000000001,
+      "bendAmount": 0.11,
+      "depthVariationFrequency": 4.2,
+      "terraceLevels": 5,
+      "terraceSharpness": 5.4,
+      "innerWidth": 0.26,
+      "innerDepth": 0.065,
+      "tributaryFrequency": 11,
+      "tributaryDepth": 0.1,
+      "tributarySharpness": 8,
+      "rillFrequency": 62,
+      "rillDepth": 0.026,
+      "rillSharpness": 10
+    },
+    "ridge": {
+      "headingDeg": 161,
+      "minimumHeight": 0.54,
+      "heightBlend": 0.18,
+      "alongScale": 1.8,
+      "crossScale": 5.2,
+      "warp": 0.42,
+      "sharpness": 3.6,
+      "detailWeight": 0.04,
+      "relief": 0.275
+    },
+    "palette": [
+      {
+        "max": 0.18,
+        "color": [
+          57,
+          83,
+          91
+        ]
+      },
+      {
+        "max": 0.28,
+        "color": [
+          74,
+          99,
+          102
+        ]
+      },
+      {
+        "max": 0.43,
+        "color": [
+          89,
+          100,
+          91
+        ]
+      },
+      {
+        "max": 0.6,
+        "color": [
+          102,
+          100,
+          85
+        ]
+      },
+      {
+        "max": 0.76,
+        "color": [
+          94,
+          91,
+          82
+        ]
+      },
+      {
+        "max": 1,
+        "color": [
+          119,
+          116,
+          105
+        ]
+      }
+    ],
+    "semanticLayers": [
+      "height",
+      "canyon",
+      "ridge",
+      "shelf",
+      "basin"
+    ]
+  },
+  "fieldLayout": {
+    "schemaVersion": "story-field-layout/0.2",
+    "fieldSizeKm": 30,
+    "terrainSeed": 10831,
+    "cruiseSpeedKmh": 200,
+    "boundaryAssist": {
+      "enabled": true,
+      "minimumMarginM": 1800,
+      "extraMarginM": 750,
+      "lookAheadSeconds": 8
+    },
+    "storyAreas": [
+      {
+        "id": "entry",
+        "name": "雨除けの関所",
+        "order": 1,
+        "positionKm": [
+          25.5,
+          26.8
+        ],
+        "recordIds": [],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "多段水路と雨受けの痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "rain",
+          "kind": "entry",
+          "palette": {
+            "stone": "#7f9094",
+            "metal": "#79aaa4",
+            "cloth": "#b8cebf",
+            "floor": "#83978a",
+            "water": "#507d82",
+            "low": [
+              0.14,
+              0.28,
+              0.26
+            ],
+            "high": [
+              0.4,
+              0.56,
+              0.46
+            ],
+            "sky": [
+              55,
+              77,
+              87
+            ],
+            "middle": [
+              126,
+              153,
+              159
+            ],
+            "haze": [
+              0.52,
+              0.65,
+              0.65
+            ],
+            "depth": 0.3,
+            "precipitation": "rain"
+          },
+          "points": [
+            {
+              "id": "rain-valley-arrival",
+              "label": "旅の案内札",
+              "recordIds": [],
+              "offset": [
+                0,
+                14
+              ],
+              "observation": {
+                "type": "入口の痕跡",
+                "text": "雨の多い谷から、水が足りないという便りが届く。七つの村を結ぶ水路に沿って、逆さに掛けられた量り桶が並んでいた。"
+              },
+              "clue": "正面の「水音の量り塔」を探そう。色布のそばの机に、この土地の最初の記録が残る。",
+              "lookTargetId": "tower"
+            }
+          ]
+        }
+      },
+      {
+        "id": "tower",
+        "name": "水音の量り塔",
+        "order": 2,
+        "positionKm": [
+          22.4,
+          22.6
+        ],
+        "recordIds": [
+          "rain-valley-1"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "多段水路と雨受けの痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "rain",
+          "kind": "beacon",
+          "palette": {
+            "stone": "#7f9094",
+            "metal": "#79aaa4",
+            "cloth": "#b8cebf",
+            "floor": "#83978a",
+            "water": "#507d82",
+            "low": [
+              0.14,
+              0.28,
+              0.26
+            ],
+            "high": [
+              0.4,
+              0.56,
+              0.46
+            ],
+            "sky": [
+              55,
+              77,
+              87
+            ],
+            "middle": [
+              126,
+              153,
+              159
+            ],
+            "haze": [
+              0.52,
+              0.65,
+              0.65
+            ],
+            "depth": 0.3,
+            "precipitation": "rain"
+          },
+          "points": [
+            {
+              "id": "rain-valley-point-1",
+              "label": "雨量と届いた量",
+              "recordIds": [
+                "rain-valley-1"
+              ],
+              "offset": [
+                -28,
+                2
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "crossing",
+        "name": "七段の水道橋",
+        "order": 3,
+        "positionKm": [
+          24.1,
+          16.7
+        ],
+        "recordIds": [
+          "rain-valley-2",
+          "rain-valley-3"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "多段水路と雨受けの痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "rain",
+          "kind": "crossing",
+          "palette": {
+            "stone": "#7f9094",
+            "metal": "#79aaa4",
+            "cloth": "#b8cebf",
+            "floor": "#83978a",
+            "water": "#507d82",
+            "low": [
+              0.14,
+              0.28,
+              0.26
+            ],
+            "high": [
+              0.4,
+              0.56,
+              0.46
+            ],
+            "sky": [
+              55,
+              77,
+              87
+            ],
+            "middle": [
+              126,
+              153,
+              159
+            ],
+            "haze": [
+              0.52,
+              0.65,
+              0.65
+            ],
+            "depth": 0.3,
+            "precipitation": "rain"
+          },
+          "points": [
+            {
+              "id": "rain-valley-point-2",
+              "label": "音が消える橋脚",
+              "recordIds": [
+                "rain-valley-2"
+              ],
+              "offset": [
+                -34,
+                10
+              ]
+            },
+            {
+              "id": "rain-valley-point-3",
+              "label": "隣の村を疑う前に",
+              "recordIds": [
+                "rain-valley-3"
+              ],
+              "offset": [
+                32,
+                10
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "village",
+        "name": "桶守の村",
+        "order": 4,
+        "positionKm": [
+          19.2,
+          11.3
+        ],
+        "recordIds": [
+          "rain-valley-4",
+          "rain-valley-5"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "多段水路と雨受けの痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "rain",
+          "kind": "village",
+          "palette": {
+            "stone": "#7f9094",
+            "metal": "#79aaa4",
+            "cloth": "#b8cebf",
+            "floor": "#83978a",
+            "water": "#507d82",
+            "low": [
+              0.14,
+              0.28,
+              0.26
+            ],
+            "high": [
+              0.4,
+              0.56,
+              0.46
+            ],
+            "sky": [
+              55,
+              77,
+              87
+            ],
+            "middle": [
+              126,
+              153,
+              159
+            ],
+            "haze": [
+              0.52,
+              0.65,
+              0.65
+            ],
+            "depth": 0.3,
+            "precipitation": "rain"
+          },
+          "points": [
+            {
+              "id": "rain-valley-point-4",
+              "label": "減らす順番",
+              "recordIds": [
+                "rain-valley-4"
+              ],
+              "offset": [
+                -28,
+                -12
+              ]
+            },
+            {
+              "id": "rain-valley-point-5",
+              "label": "修理へ行く者の留守",
+              "recordIds": [
+                "rain-valley-5"
+              ],
+              "offset": [
+                27,
+                -19
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "center",
+        "name": "分水盤の大庭",
+        "order": 5,
+        "positionKm": [
+          14.8,
+          6.4
+        ],
+        "recordIds": [
+          "rain-valley-6"
+        ],
+        "discoveryRadiusM": 700,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "多段水路と雨受けの痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "rain",
+          "kind": "center",
+          "palette": {
+            "stone": "#7f9094",
+            "metal": "#79aaa4",
+            "cloth": "#b8cebf",
+            "floor": "#83978a",
+            "water": "#507d82",
+            "low": [
+              0.14,
+              0.28,
+              0.26
+            ],
+            "high": [
+              0.4,
+              0.56,
+              0.46
+            ],
+            "sky": [
+              55,
+              77,
+              87
+            ],
+            "middle": [
+              126,
+              153,
+              159
+            ],
+            "haze": [
+              0.52,
+              0.65,
+              0.65
+            ],
+            "depth": 0.3,
+            "precipitation": "rain"
+          },
+          "points": [
+            {
+              "id": "rain-valley-point-6",
+              "label": "弁を替えるだけではない",
+              "recordIds": [
+                "rain-valley-6"
+              ],
+              "offset": [
+                -28,
+                10
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "refuge",
+        "name": "漏水の作業小屋",
+        "order": 6,
+        "positionKm": [
+          9,
+          12.2
+        ],
+        "recordIds": [
+          "rain-valley-7"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "多段水路と雨受けの痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "rain",
+          "kind": "refuge",
+          "palette": {
+            "stone": "#7f9094",
+            "metal": "#79aaa4",
+            "cloth": "#b8cebf",
+            "floor": "#83978a",
+            "water": "#507d82",
+            "low": [
+              0.14,
+              0.28,
+              0.26
+            ],
+            "high": [
+              0.4,
+              0.56,
+              0.46
+            ],
+            "sky": [
+              55,
+              77,
+              87
+            ],
+            "middle": [
+              126,
+              153,
+              159
+            ],
+            "haze": [
+              0.52,
+              0.65,
+              0.65
+            ],
+            "depth": 0.3,
+            "precipitation": "rain"
+          },
+          "points": [
+            {
+              "id": "rain-valley-point-7",
+              "label": "七つの手で支える",
+              "recordIds": [
+                "rain-valley-7"
+              ],
+              "offset": [
+                0,
+                -15
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "memorial",
+        "name": "同じ高さの七桶",
+        "order": 7,
+        "positionKm": [
+          4.8,
+          5.9
+        ],
+        "recordIds": [
+          "rain-valley-8"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "多段水路と雨受けの痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "rain",
+          "kind": "final",
+          "palette": {
+            "stone": "#7f9094",
+            "metal": "#79aaa4",
+            "cloth": "#b8cebf",
+            "floor": "#83978a",
+            "water": "#507d82",
+            "low": [
+              0.14,
+              0.28,
+              0.26
+            ],
+            "high": [
+              0.4,
+              0.56,
+              0.46
+            ],
+            "sky": [
+              55,
+              77,
+              87
+            ],
+            "middle": [
+              126,
+              153,
+              159
+            ],
+            "haze": [
+              0.52,
+              0.65,
+              0.65
+            ],
+            "depth": 0.3,
+            "precipitation": "rain"
+          },
+          "points": [
+            {
+              "id": "rain-valley-point-8",
+              "label": "同じ高さに置く理由",
+              "recordIds": [
+                "rain-valley-8"
+              ],
+              "offset": [
+                0,
+                5
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "rain-valley-1",
+      "type": "量り番の日誌",
+      "title": "雨量と届いた量",
+      "snippet": "雨は増えているのに、村へ届く水は減っている。上流が取り過ぎたと皆は言う。だが塔の桶も、同じだけ減っている。空から来た量と、道を通って来た量を、同じ欄へ書いていたことから直さなければ。",
+      "required": true,
+      "fieldClue": "次は「七段の水道橋」へ。多段水路と雨受けを空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "crossing"
+    },
+    {
+      "id": "rain-valley-2",
+      "type": "水道橋の点検票",
+      "title": "音が消える橋脚",
+      "snippet": "第一橋脚では水が鳴る。第三でも鳴る。第五と第六の間だけ、夜中に音が薄くなる。見上げても割れ目は見えない。逆さの桶は空だという印ではなく、ここから先の量を量り直せという点検の印だった。",
+      "required": true,
+      "fieldClue": "同じ足場の反対側にも、もう一枚の記録がある。次は「桶守の村」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "village"
+    },
+    {
+      "id": "rain-valley-3",
+      "type": "桶守の手紙",
+      "title": "隣の村を疑う前に",
+      "snippet": "昨日、下の村の者が水を借りに来た。こちらも足りないので、盗んだのではないかと言いかけた。持ってきた桶の底は乾いていた。帰る前に二人で雨を受け、同じ高さまで溜まるのを待った。まず同じものを量ろう。",
+      "required": false,
+      "fieldClue": "次は「桶守の村」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "village"
+    },
+    {
+      "id": "rain-valley-4",
+      "type": "配水会議の記録",
+      "title": "減らす順番",
+      "snippet": "不足した分は末端の村から減らす、という慣例を廃止する案が出た。上流の取水量を増やしても届く量が変わらないためだ。今夜は全村で一刻だけ弁を閉じ、橋の下を歩いて音を聞く。争うための数字を、調べるために使いたい。",
+      "required": true,
+      "fieldClue": "もう一方の色布の机にも、人の残した言葉がありそうだ。次は「分水盤の大庭」へ。多段水路と雨受けを空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "center"
+    },
+    {
+      "id": "rain-valley-5",
+      "type": "村の共同帳",
+      "title": "修理へ行く者の留守",
+      "snippet": "橋の修理に出た家の畑は、隣の家が水をやる。水路を守る仕事と、自分の畑を守る仕事を選ばせないように。誰が何日働いたかは書くが、誰が多く水を貰うかを決める札にはしない。",
+      "required": true,
+      "fieldClue": "次は「分水盤の大庭」へ。多段水路と雨受けを空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "center"
+    },
+    {
+      "id": "rain-valley-6",
+      "type": "分水盤の裏書",
+      "title": "弁を替えるだけではない",
+      "snippet": "盤の目盛りは正しかった。第五橋脚の内側で、古い継ぎ目が夜の冷えに合わせて開いていた。弁を大きくしても、漏れる水が増えるだけだった。配り方の議論を止める必要はないが、壊れた道をそのままにして数字を争ってはならない。",
+      "required": true,
+      "fieldClue": "次は「漏水の作業小屋」へ。多段水路と雨受けを空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "refuge"
+    },
+    {
+      "id": "rain-valley-7",
+      "type": "修理小屋の作業日誌",
+      "title": "七つの手で支える",
+      "snippet": "継ぎ目を開くと、内側だけ砂が抜けていた。上流の木工と下流の石工が同じ足場へ上がり、村の違う七人で支えた。修理後、逆さの桶を正位置へ戻す。全ての桶へ水が届くまで、道具を片づけない。",
+      "required": true,
+      "fieldClue": "次は「同じ高さの七桶」へ。高台の淡い灯を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "memorial"
+    },
+    {
+      "id": "rain-valley-8",
+      "type": "七桶の添え札",
+      "title": "同じ高さに置く理由",
+      "snippet": "桶を同じ高さへ置いたのは、水を同じ量ずつ配ると決めたからではない。違う村の目盛りを、同じ場所で確かめられるようにするためだ。雨は皆の上へ降る。水路は、人が手をつながなければ続かない。",
+      "required": true,
+      "fieldClue": "次は「水音の量り塔」へ。欠けた輪を頂く塔を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "tower"
+    }
+  ],
+  "explorationLeads": [
+    {
+      "id": "arrival",
+      "sourcePointIds": [
+        "rain-valley-arrival"
+      ],
+      "targetRecordIds": [
+        "rain-valley-1"
+      ],
+      "title": "水音の量り塔を探す",
+      "clue": "色布を掲げた塔の麓で、最初の記録を読もう。"
+    },
+    {
+      "id": "lead-0",
+      "sourceRecordIds": [
+        "rain-valley-1"
+      ],
+      "targetRecordIds": [
+        "rain-valley-2",
+        "rain-valley-3"
+      ],
+      "title": "七段の水道橋に残るもの",
+      "clue": "次は「七段の水道橋」へ。多段水路と雨受けを空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-1",
+      "sourceRecordIds": [
+        "rain-valley-2"
+      ],
+      "targetRecordIds": [
+        "rain-valley-4",
+        "rain-valley-5"
+      ],
+      "title": "桶守の村に残るもの",
+      "clue": "同じ足場の反対側にも、もう一枚の記録がある。次は「桶守の村」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "local-1",
+      "sourceRecordIds": [
+        "rain-valley-2"
+      ],
+      "targetRecordIds": [
+        "rain-valley-3"
+      ],
+      "title": "近くのもう一つの記録",
+      "clue": "同じ足場の反対側にも、もう一枚の記録がある。相棒に戻る前に、反対側の色布を探してみよう。"
+    },
+    {
+      "id": "lead-2",
+      "sourceRecordIds": [
+        "rain-valley-3"
+      ],
+      "targetRecordIds": [
+        "rain-valley-4",
+        "rain-valley-5"
+      ],
+      "title": "桶守の村に残るもの",
+      "clue": "次は「桶守の村」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-3",
+      "sourceRecordIds": [
+        "rain-valley-4"
+      ],
+      "targetRecordIds": [
+        "rain-valley-6"
+      ],
+      "title": "分水盤の大庭に残るもの",
+      "clue": "もう一方の色布の机にも、人の残した言葉がありそうだ。次は「分水盤の大庭」へ。多段水路と雨受けを空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "local-3",
+      "sourceRecordIds": [
+        "rain-valley-4"
+      ],
+      "targetRecordIds": [
+        "rain-valley-5"
+      ],
+      "title": "近くのもう一つの記録",
+      "clue": "もう一方の色布の机にも、人の残した言葉がありそうだ。相棒に戻る前に、反対側の色布を探してみよう。"
+    },
+    {
+      "id": "lead-4",
+      "sourceRecordIds": [
+        "rain-valley-5"
+      ],
+      "targetRecordIds": [
+        "rain-valley-6"
+      ],
+      "title": "分水盤の大庭に残るもの",
+      "clue": "次は「分水盤の大庭」へ。多段水路と雨受けを空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-5",
+      "sourceRecordIds": [
+        "rain-valley-6"
+      ],
+      "targetRecordIds": [
+        "rain-valley-7"
+      ],
+      "title": "漏水の作業小屋に残るもの",
+      "clue": "次は「漏水の作業小屋」へ。多段水路と雨受けを空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-6",
+      "sourceRecordIds": [
+        "rain-valley-7"
+      ],
+      "targetRecordIds": [
+        "rain-valley-8"
+      ],
+      "title": "同じ高さの七桶に残るもの",
+      "clue": "次は「同じ高さの七桶」へ。高台の淡い灯を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-7",
+      "sourceRecordIds": [
+        "rain-valley-8"
+      ],
+      "targetRecordIds": [
+        "rain-valley-1"
+      ],
+      "title": "水音の量り塔に残るもの",
+      "clue": "次は「水音の量り塔」へ。欠けた輪を頂く塔を空から探し、色布の付いた机を調べよう。"
+    }
+  ],
+  "storyModel": {
+    "hintLinks": [
+      {
+        "from": "entry",
+        "to": "tower",
+        "mode": "visual",
+        "clue": "正面に、色布を掲げた塔が立つ"
+      },
+      {
+        "from": "tower",
+        "to": "crossing",
+        "mode": "text",
+        "clue": "次は「七段の水道橋」へ。多段水路と雨受けを空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "crossing",
+        "to": "village",
+        "mode": "text",
+        "clue": "同じ足場の反対側にも、もう一枚の記録がある。次は「桶守の村」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "village",
+        "to": "center",
+        "mode": "text",
+        "clue": "もう一方の色布の机にも、人の残した言葉がありそうだ。次は「分水盤の大庭」へ。多段水路と雨受けを空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "center",
+        "to": "refuge",
+        "mode": "text",
+        "clue": "次は「漏水の作業小屋」へ。多段水路と雨受けを空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "refuge",
+        "to": "memorial",
+        "mode": "text",
+        "clue": "次は「同じ高さの七桶」へ。高台の淡い灯を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "memorial",
+        "to": "tower",
+        "mode": "text",
+        "clue": "次は「水音の量り塔」へ。欠けた輪を頂く塔を空から探し、色布の付いた机を調べよう。"
+      }
+    ],
+    "historyTimeline": [
+      {
+        "id": "history-0",
+        "order": 1,
+        "summary": "二つの水の量",
+        "areaIds": [
+          "tower"
+        ]
+      },
+      {
+        "id": "history-1",
+        "order": 2,
+        "summary": "同じものを量る",
+        "areaIds": [
+          "crossing"
+        ]
+      },
+      {
+        "id": "history-2",
+        "order": 3,
+        "summary": "夜だけ開く継ぎ目",
+        "areaIds": [
+          "village"
+        ]
+      },
+      {
+        "id": "history-3",
+        "order": 4,
+        "summary": "七つの桶を並べる",
+        "areaIds": [
+          "center"
+        ]
+      }
+    ]
+  },
+  "environmentPresentation": {
+    "renderer": "layered-atmosphere-v1",
+    "hazeColor": [
+      133,
+      166,
+      166
+    ],
+    "visibilityKm": 30,
+    "altitudeColorHeightM": 2400,
+    "surfaceCueHeightM": 720,
+    "surfaceCellM": 210,
+    "cloudLayers": [
+      {
+        "name": "低い雲海",
+        "heightM": 180,
+        "thicknessM": 100,
+        "count": 44,
+        "sizeM": [
+          620,
+          1450
+        ],
+        "flatness": 0.12,
+        "opacity": 0.09,
+        "driftMps": 3.5
+      },
+      {
+        "name": "中層のちぎれ雲",
+        "heightM": 1050,
+        "thicknessM": 620,
+        "count": 32,
+        "sizeM": [
+          240,
+          720
+        ],
+        "flatness": 0.28,
+        "opacity": 0.13,
+        "driftMps": 7.5
+      },
+      {
+        "name": "高空の薄雲",
+        "heightM": 2350,
+        "thicknessM": 360,
+        "count": 18,
+        "sizeM": [
+          700,
+          1500
+        ],
+        "flatness": 0.09,
+        "opacity": 0.08,
+        "driftMps": 14
+      }
+    ],
+    "airflow": {
+      "count": 120,
+      "nearDrawKm": 4.2,
+      "visualization": "neutral-particles",
+      "color": [
+        139,
+        219,
+        234
+      ]
+    },
+    "soundscape": {
+      "windBaseGain": 0.006,
+      "windSpeedGain": 0.034,
+      "ridgeGain": 0.012,
+      "canyonGain": 0.005,
+      "filterBaseHz": 230,
+      "filterSpeedFactor": 5.5,
+      "ridgeFilterBoostHz": 370,
+      "basinFilterDropHz": 70,
+      "canyonRumbleGain": 0.012,
+      "openRumbleGain": 0.003,
+      "rumbleFadeHeightM": 1300
+    },
+    "distantLandmarks": {
+      "maxDrawKm": 30,
+      "flockCueKm": [
+        0,
+        14
+      ],
+      "flockAltitudeM": [
+        40,
+        95
+      ],
+      "flockSpanM": 150,
+      "silhouetteFloor": 0.16
+    },
+    "boundaryVisual": {
+      "style": "mountain-ring",
+      "segmentsPerSide": 32,
+      "midOffsetKm": 2.4,
+      "outerOffsetKm": 6.5,
+      "midHeightM": [
+        1450,
+        2450
+      ],
+      "outerHeightM": [
+        3300,
+        4400
+      ],
+      "colors": [
+        [
+          54,
+          76,
+          70
+        ],
+        [
+          52,
+          69,
+          76
+        ]
+      ]
+    },
+    "skyTop": [
+      55,
+      77,
+      87
+    ],
+    "skyHigh": [
+      43,
+      60,
+      68
+    ],
+    "skyMiddle": [
+      126,
+      153,
+      159
+    ],
+    "precipitation": "rain"
+  },
+  "biomeRecipe": {
+    "defaultBiome": {
+      "id": "open-ground",
+      "name": "雨継ぎの谷",
+      "groundColor": [
+        102,
+        143,
+        117
+      ],
+      "accentColor": [
+        133,
+        166,
+        166
+      ],
+      "hazeColor": [
+        133,
+        166,
+        166
+      ],
+      "colorMix": 0.86,
+      "dressing": {
+        "type": "wind-grass",
+        "density": 0.09
+      },
+      "macro": {
+        "type": "none",
+        "density": 0
+      },
+      "flight": {
+        "name": "地域の風",
+        "kind": "open",
+        "verticalMps": 0.3,
+        "lateralMps": 0.35,
+        "forwardMps": 0,
+        "turbulence": 0.18,
+        "gustRate": 0.4
+      }
+    },
+    "biomes": []
+  },
+  "terrainLod": {
+    "renderer": "webgl-nested-lod-v1",
+    "visibilityKm": 30,
+    "base": {
+      "sizeKm": 30,
+      "segments": 192
+    },
+    "mid": {
+      "sizeKm": 5,
+      "segments": 96,
+      "rebuildM": 1000
+    },
+    "near": {
+      "sizeKm": 1.6,
+      "segments": 64,
+      "rebuildM": 300
+    },
+    "boundaryMesh": {
+      "segmentsPerSide": 40,
+      "midOffsetKm": 2.6,
+      "outerOffsetKm": 6.8,
+      "midHeightM": [
+        1500,
+        2500
+      ],
+      "outerHeightM": [
+        3300,
+        4400
+      ]
+    },
+    "midEcologyCellM": 84,
+    "nearEcologyCellM": 27,
+    "groundCover": {
+      "shortGrassHeightM": [
+        0.05,
+        0.3
+      ],
+      "tallGrassHeightM": [
+        0.3,
+        1.3
+      ],
+      "windDirectionDeg": 72,
+      "waveLengthM": 46,
+      "waveSpeedMps": 11,
+      "waveContrast": 0.055,
+      "distribution": "advected-shelter-clusters"
+    },
+    "canyonSurface": {
+      "strataSpacingM": 26,
+      "strataWarpM": 18,
+      "erosionScaleM": 72,
+      "windDirectionDeg": 4,
+      "dustSpeedMps": 4.2,
+      "dustContrast": 0.07,
+      "floorMaterial": "dry-gravel-and-wash-marks",
+      "talusDistribution": "clustered-at-wall-base"
+    },
+    "basinSurface": {
+      "crackModel": "none",
+      "rippleSpacingM": 8.5,
+      "windDirectionDeg": 118,
+      "movingSandSpeedMps": 3.2,
+      "rippleContrast": 0.055,
+      "movingSandContrast": 0.035,
+      "material": "alluvial-fan-old-channels-and-wind-ripples"
+    },
+    "ridgeSurface": {
+      "windDirectionDeg": 38,
+      "erosionScaleM": 130,
+      "erosionContrast": 0.065,
+      "windwardMaterial": "sunlit-alpine-grass-and-exposed-rock",
+      "leewardMaterial": "deep-green-vegetation-and-shadowed-rock",
+      "vegetationDistribution": "broad-slope-patches-with-dark-gullies",
+      "rockExposure": "steep-slopes-crests-and-erosion-scars"
+    },
+    "transitionSurface": {
+      "boundaryWarp": "multi-scale-height-and-moisture-noise",
+      "ridgeFoot": "deep-green-foothill-to-exposed-rock",
+      "canyonLip": "broken-grass-to-dry-talus",
+      "basinFringe": "sand-fingers-with-dry-grass",
+      "visualBlendWidthM": [
+        450,
+        1100
+      ]
+    },
+    "fallback": "canvas-terrain-v1",
+    "regionTint": {
+      "low": [
+        0.14,
+        0.28,
+        0.26
+      ],
+      "high": [
+        0.4,
+        0.56,
+        0.46
+      ],
+      "haze": [
+        0.52,
+        0.65,
+        0.65
+      ],
+      "mix": 0.9
+    },
+    "seaLevel": -1
+  },
+  "ecologyPresentation": {
+    "species": [
+      {
+        "type": "wind-kite",
+        "count": 28,
+        "biomeIds": [],
+        "altitudeM": [
+          35,
+          90
+        ],
+        "scale": [
+          0.55,
+          0.9
+        ],
+        "orbitM": [
+          100,
+          260
+        ],
+        "speed": [
+          0.08,
+          0.14
+        ],
+        "color": [
+          30,
+          45,
+          48
+        ],
+        "maxDrawKm": 6
+      }
+    ],
+    "cloudShadows": {
+      "enabled": true,
+      "opacity": 0.08,
+      "maxDrawKm": 5
+    }
+  },
+  "library": {
+    "coverImage": "assets/rain-valley.svg",
+    "exploreUrl": "blockout.html?region=rain-valley&v=142",
+    "shelfDescription": "雨の多い谷から、水が足りないという便りが届く。七つの村を結ぶ水路に沿って、逆さに掛けられた量り桶が並んでいた。",
+    "completedStory": {
+      "title": "雨継ぎの谷 ― 地域の物語",
+      "intro": "集めた八つの記録を重ね、この土地で起きた出来事を辿る。",
+      "chapters": [
+        {
+          "title": "二つの水の量",
+          "text": "雨継ぎの谷では、降る雨と村へ届く水が同じ記録欄へ書かれていた。降雨が増えているという数字だけでは、水不足を説明できなかった。逆さの桶は不足を訴える札ではなく、量り直しを求める点検の印だった。最初に必要だったのは、誰が悪いかを決めることより、何を量っているかを分けることだった。",
+          "recordIds": [
+            "rain-valley-1",
+            "rain-valley-2"
+          ]
+        },
+        {
+          "title": "同じものを量る",
+          "text": "桶守の手紙には、隣村への疑いを一度飲み込み、同じ場所で雨を受けた時間が残る。配水会議は全村で弁を閉じ、橋の下の音を確かめる作業へ進んだ。修理に出る者の畑を共同で守る帳面も、調査へ人を出すための条件を整えていた。",
+          "recordIds": [
+            "rain-valley-3",
+            "rain-valley-4",
+            "rain-valley-5"
+          ]
+        },
+        {
+          "title": "夜だけ開く継ぎ目",
+          "text": "分水盤の目盛りに故障はなかった。水道橋の内側の継ぎ目が夜の冷えで開き、水を失わせていた。目に見える弁を大きくしても問題は直らなかった。上流の木工と下流の石工が同じ足場へ上がり、内側へ手を入れることで、初めて水の通り道がつながった。",
+          "recordIds": [
+            "rain-valley-6",
+            "rain-valley-7"
+          ]
+        },
+        {
+          "title": "七つの桶を並べる",
+          "text": "修理後に同じ高さへ置かれた桶は、違う村の量り方を誰もが確かめられる道具になった。均等に配るという一つの答えを刻んだ記念碑ではない。配り方を話し合い続けるための、共通の足場だった。雨の多い谷で水を受け継ぐ仕事は、漏れを塞いだ日だけでは終わらない。",
+          "recordIds": [
+            "rain-valley-8",
+            "rain-valley-4"
+          ]
+        }
+      ],
+      "afterword": "資料のない部分を断定せず、残された言葉をつないでいます。気になった一文があれば、原文の頁へ戻ってみてください。"
+    }
+  },
+  "completionRule": {
+    "requiredRecords": 8,
+    "finalRecordId": "rain-valley-8",
+    "returnAfterFinal": true
+  },
+  "history": [
+    "雨継ぎの谷では、降る雨と村へ届く水が同じ記録欄へ書かれていた。降雨が増えているという数字だけでは、水不足を説明できなかった。逆さの桶は不足を訴える札ではなく、量り直しを求める点検の印だった。最初に必要だったのは、誰が悪いかを決めることより、何を量っているかを分けることだった。",
+    "桶守の手紙には、隣村への疑いを一度飲み込み、同じ場所で雨を受けた時間が残る。配水会議は全村で弁を閉じ、橋の下の音を確かめる作業へ進んだ。修理に出る者の畑を共同で守る帳面も、調査へ人を出すための条件を整えていた。",
+    "分水盤の目盛りに故障はなかった。水道橋の内側の継ぎ目が夜の冷えで開き、水を失わせていた。目に見える弁を大きくしても問題は直らなかった。上流の木工と下流の石工が同じ足場へ上がり、内側へ手を入れることで、初めて水の通り道がつながった。",
+    "修理後に同じ高さへ置かれた桶は、違う村の量り方を誰もが確かめられる道具になった。均等に配るという一つの答えを刻んだ記念碑ではない。配り方を話し合い続けるための、共通の足場だった。雨の多い谷で水を受け継ぐ仕事は、漏れを塞いだ日だけでは終わらない。"
+  ]
+}

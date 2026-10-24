@@ -1,0 +1,40 @@
+// Shared companion profile. Region packages may change the world around the
+// dragon, but the rider's partner keeps one stable physical scale.
+export const companionDragonProfile=Object.freeze({
+  form:'wyvern',
+  bodyLengthM:10.425,
+  noseForwardM:3.025,
+  tailRearM:7.4,
+  wingspanM:15,
+  riderHeightM:1.8,
+  hindLegLengthM:2.4,
+  riderSeatForwardM:.45,
+  riderSeatHeightM:.80,riderEyeHeightM:2.06,
+  modelScale:.16,
+  groundCenterM:2.4,
+  skeleton:Object.freeze({
+    bodyCenter:'wing-root',neckJoints:3,tailJoints:6,
+    neckLengthScale:1.25,neckRadiusScale:.8,
+    wingJoints:Object.freeze(['shoulder','elbow','wrist','tip']),
+    hindLegJoints:Object.freeze(['hip','knee','ankle','claw'])
+  }),
+  collision:Object.freeze({
+    body:Object.freeze({lengthM:4.2,widthM:1.4,heightM:1.6}),
+    headRadiusM:.55,hindLegRadiusM:.25,tailHardCollision:false,
+    wingSensor:Object.freeze({halfSpanM:7.5,lookAheadM:18,clearanceM:5}),
+    forwardSensor:Object.freeze({distancesM:Object.freeze([24,42,60]),clearanceM:13}),
+    maxAutoRollInput:.52,maxAutoPitchInput:.7,
+    normalCorridorM:Object.freeze([25,30]),narrowCorridorM:Object.freeze([18,20]),
+    landingDiameterM:20,approachClearanceM:Object.freeze([40,60])
+  }),
+  reaction:Object.freeze({noticeRadiusM:1600,callSeconds:.7,lookSeconds:4.6}),
+  groundIdle:Object.freeze({relaxSeconds:30,lieDownSeconds:75,asleepSeconds:100,wakeSeconds:1.25}),
+  landing:Object.freeze({
+    settleSeconds:.25,
+    descentMeanSpeedMps:7,
+    minDescentSeconds:1.6,
+    maxDescentSeconds:5
+  }),
+  camera:Object.freeze({distanceM:42,heightM:17,lookHeightRangeM:24}),
+  shadow:Object.freeze({noseForwardM:3.025,tailRearM:7.4,wingspanM:15})
+});

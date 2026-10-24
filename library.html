@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#211b16"><meta name="description" content="旅で拾った手紙と日誌を収める、風渡りの図書館。記録が揃うと、地域の物語がひらきます。">
+<title>風渡りの図書館｜旅の本棚</title>
+<link rel="stylesheet" href="library.css?v=142">
+</head>
+<body>
+<header class="library-header"><a class="wordmark" href="library.html">風渡りの図書館<span>旅の記録を収める場所</span></a><a id="resumeJourney" class="quiet-link" href="blockout.html?v=142">相棒のもとへ <span aria-hidden="true">↗</span></a></header>
+<main>
+<section class="arrival" aria-labelledby="welcomeTitle">
+ <div class="arrival-copy"><p class="eyebrow">風をしまう。物語をひらく。</p><h1 id="welcomeTitle">おかえり。<br>旅の続きを、本棚に。</h1><p class="arrival-intro">空の向こうで拾った声を、ここへ。<br>手紙も、日誌も、石に残された言葉も。<br>一つずつ揃うと、土地の物語がひらきます。</p><a class="text-link" href="#bookshelf">本棚を見る <span aria-hidden="true">↓</span></a></div>
+ <div class="reading-room" aria-label="本棚と地図机、窓に囲まれた閲覧室">
+  <div class="room-window" aria-hidden="true"><div class="window-cross"></div><div class="distant-ridge"></div><svg class="resting-dragon" viewBox="0 0 180 80"><path d="M15 64Q32 46 63 56Q48 23 78 35L99 17L93 42Q112 37 122 51L141 42L156 52L145 57L139 66L116 61Q100 73 67 66Q37 72 15 64Z" fill="currentColor"/><path d="M75 39L32 18L50 48M88 43L56 8L66 44M149 45L154 33L156 48" fill="none" stroke="currentColor" stroke-width="4"/></svg></div>
+  <div class="room-shelf" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="lamp" aria-hidden="true"><i></i></div>
+  <a class="map-desk" href="#bookshelf" aria-label="地図机で旅先と蔵書を見る"><span class="desk-map" aria-hidden="true"></span><strong>地図机</strong><small>旅先を選ぶ</small></a>
+  <span class="room-caption">窓の外で、相棒が翼を休めている。</span>
+ </div>
+</section>
+<section id="bookshelf" class="bookshelf" aria-labelledby="shelfTitle"><div class="section-heading"><div><p class="eyebrow">地域の本棚</p><h2 id="shelfTitle">持ち帰った土地の声</h2></div><p id="shelfSummary" role="status">本棚を開いています…</p></div><div class="shelf-toolbar"><p class="shelf-instruction">背表紙に触れて、一冊を閲覧机へ。棚は横に送れます。</p><nav class="shelf-navigation" aria-label="本棚を送る"><button id="shelfPrevious" type="button" aria-label="本棚を左へ" aria-controls="regionBooks">←</button><button id="shelfNext" type="button" aria-label="本棚を右へ" aria-controls="regionBooks">→</button></nav></div><div id="regionBooks" class="region-books"></div><p id="bookMotionStatus" class="book-motion-status" role="status" aria-live="polite"></p><p id="loadError" hidden role="alert">本棚を読み込めませんでした。<button id="retryLoad" type="button">もう一度開く</button></p></section>
+<section id="readingDesk" class="reading-desk" hidden aria-labelledby="bookTitle">
+ <header class="book-heading"><div><p class="eyebrow">地域記録集</p><h2 id="bookTitle"></h2><p id="bookStatus" role="status"></p></div><div class="book-actions"><button id="closeBook" type="button">本を閉じて棚へ戻す</button><a id="departRegion" class="journey-link" href="blockout.html?v=142">この地域へ飛ぶ <span aria-hidden="true">↗</span></a></div></header>
+ <div class="book-spread"><aside class="contents" aria-label="本の目次"><h3>収蔵した記録</h3><div id="recordContents"></div><div class="history-entry"><small>すべての声が揃ったら</small><button id="historyButton" type="button">地域の物語</button><p id="historyLock"></p></div></aside><article id="readingPage" class="reading-page" tabindex="-1" aria-live="polite"></article></div>
+</section>
+</main>
+<footer class="library-footer"><button id="togglePaperSound" type="button" aria-pressed="true">紙音：入</button><span>記録は、旅をしたこのブラウザの本棚に残ります。</span><a href="#welcomeTitle">閲覧室へ戻る ↑</a></footer>
+<div id="bookStage" class="book-stage" hidden aria-hidden="true"><div id="carriedBook" class="carried-book"><div class="carried-pages"></div><div id="carriedCover" class="carried-cover"></div></div></div>
+<script type="module" src="library.js?v=142"></script>
+</body></html>

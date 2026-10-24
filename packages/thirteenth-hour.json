@@ -1,0 +1,1474 @@
+{
+  "schemaVersion": "exploration-package/0.2",
+  "id": "thirteenth-hour",
+  "title": "十三時の機械街",
+  "premise": "すべての時計が十二を指す街で、一枚の時刻表だけに十三時がある。その一時間の欄には、行き先も運賃も書かれていなかった。",
+  "playTimeMinutes": {
+    "target": "15-25",
+    "readingExcluded": false
+  },
+  "departureBrief": {
+    "title": "十三時の機械街へ",
+    "text": "すべての時計が十二を指す街で、一枚の時刻表だけに十三時がある。その一時間の欄には、行き先も運賃も書かれていなかった。 出発時の正面にある「逆針の時計塔」へ。着陸場から色布を目印に、最初の記録を探そう。"
+  },
+  "regionRecipe": {
+    "siteTerraces": [
+      {
+        "id": "entry",
+        "nx": 0.10666666666666667,
+        "nz": 0.85,
+        "height": 0.49579359028205966,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "tower",
+        "nx": 0.24666666666666667,
+        "nz": 0.7466666666666666,
+        "height": 0.44068211337334234,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "crossing",
+        "nx": 0.44333333333333336,
+        "nz": 0.8033333333333333,
+        "height": 0.2944839916808934,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "village",
+        "nx": 0.6233333333333333,
+        "nz": 0.64,
+        "height": 0.5177045167395155,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "center",
+        "nx": 0.7866666666666667,
+        "nz": 0.49333333333333335,
+        "height": 0.6152408068846048,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "refuge",
+        "nx": 0.5933333333333334,
+        "nz": 0.3,
+        "height": 0.8138485850966245,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "memorial",
+        "nx": 0.8033333333333333,
+        "nz": 0.16,
+        "height": 0.7246753017132392,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      }
+    ],
+    "generator": "common-canyon-v1",
+    "noiseScale": 2.61,
+    "octaves": 5,
+    "canyon": {
+      "width": 0.055,
+      "depth": 0.32,
+      "bendFrequency": 9.8,
+      "bendAmount": 0.11,
+      "depthVariationFrequency": 4.2,
+      "terraceLevels": 5,
+      "terraceSharpness": 5.4,
+      "innerWidth": 0.26,
+      "innerDepth": 0.065,
+      "tributaryFrequency": 11,
+      "tributaryDepth": 0.1,
+      "tributarySharpness": 8,
+      "rillFrequency": 62,
+      "rillDepth": 0.026,
+      "rillSharpness": 10
+    },
+    "ridge": {
+      "headingDeg": 140,
+      "minimumHeight": 0.54,
+      "heightBlend": 0.18,
+      "alongScale": 1.8,
+      "crossScale": 5.2,
+      "warp": 0.42,
+      "sharpness": 3.6,
+      "detailWeight": 0.04,
+      "relief": 0.2
+    },
+    "palette": [
+      {
+        "max": 0.18,
+        "color": [
+          57,
+          83,
+          91
+        ]
+      },
+      {
+        "max": 0.28,
+        "color": [
+          74,
+          99,
+          102
+        ]
+      },
+      {
+        "max": 0.43,
+        "color": [
+          89,
+          100,
+          91
+        ]
+      },
+      {
+        "max": 0.6,
+        "color": [
+          102,
+          100,
+          85
+        ]
+      },
+      {
+        "max": 0.76,
+        "color": [
+          94,
+          91,
+          82
+        ]
+      },
+      {
+        "max": 1,
+        "color": [
+          119,
+          116,
+          105
+        ]
+      }
+    ],
+    "semanticLayers": [
+      "height",
+      "canyon",
+      "ridge",
+      "shelf",
+      "basin"
+    ]
+  },
+  "fieldLayout": {
+    "schemaVersion": "story-field-layout/0.2",
+    "fieldSizeKm": 30,
+    "terrainSeed": 9677,
+    "cruiseSpeedKmh": 200,
+    "boundaryAssist": {
+      "enabled": true,
+      "minimumMarginM": 1800,
+      "extraMarginM": 750,
+      "lookAheadSeconds": 8
+    },
+    "storyAreas": [
+      {
+        "id": "entry",
+        "name": "旧改札の門",
+        "order": 1,
+        "positionKm": [
+          3.2,
+          25.5
+        ],
+        "recordIds": [],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "歯車塔と逆向き時計の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "clock",
+          "kind": "entry",
+          "palette": {
+            "stone": "#7e8586",
+            "metal": "#bd995d",
+            "cloth": "#c39568",
+            "floor": "#9d967d",
+            "low": [
+              0.2,
+              0.24,
+              0.26
+            ],
+            "high": [
+              0.46,
+              0.43,
+              0.33
+            ],
+            "sky": [
+              54,
+              65,
+              85
+            ],
+            "middle": [
+              135,
+              147,
+              155
+            ],
+            "haze": [
+              0.62,
+              0.63,
+              0.61
+            ],
+            "depth": 0.32
+          },
+          "points": [
+            {
+              "id": "thirteenth-hour-arrival",
+              "label": "旅の案内札",
+              "recordIds": [],
+              "offset": [
+                0,
+                14
+              ],
+              "observation": {
+                "type": "入口の痕跡",
+                "text": "すべての時計が十二を指す街で、一枚の時刻表だけに十三時がある。その一時間の欄には、行き先も運賃も書かれていなかった。"
+              },
+              "clue": "正面の「逆針の時計塔」を探そう。色布のそばの机に、この土地の最初の記録が残る。",
+              "lookTargetId": "tower"
+            }
+          ]
+        }
+      },
+      {
+        "id": "tower",
+        "name": "逆針の時計塔",
+        "order": 2,
+        "positionKm": [
+          7.4,
+          22.4
+        ],
+        "recordIds": [
+          "thirteenth-hour-1"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "歯車塔と逆向き時計の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "clock",
+          "kind": "beacon",
+          "palette": {
+            "stone": "#7e8586",
+            "metal": "#bd995d",
+            "cloth": "#c39568",
+            "floor": "#9d967d",
+            "low": [
+              0.2,
+              0.24,
+              0.26
+            ],
+            "high": [
+              0.46,
+              0.43,
+              0.33
+            ],
+            "sky": [
+              54,
+              65,
+              85
+            ],
+            "middle": [
+              135,
+              147,
+              155
+            ],
+            "haze": [
+              0.62,
+              0.63,
+              0.61
+            ],
+            "depth": 0.32
+          },
+          "points": [
+            {
+              "id": "thirteenth-hour-point-1",
+              "label": "同じ遅れ",
+              "recordIds": [
+                "thirteenth-hour-1"
+              ],
+              "offset": [
+                -28,
+                2
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "crossing",
+        "name": "歯車の連絡橋",
+        "order": 3,
+        "positionKm": [
+          13.3,
+          24.1
+        ],
+        "recordIds": [
+          "thirteenth-hour-2",
+          "thirteenth-hour-3"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "歯車塔と逆向き時計の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "clock",
+          "kind": "crossing",
+          "palette": {
+            "stone": "#7e8586",
+            "metal": "#bd995d",
+            "cloth": "#c39568",
+            "floor": "#9d967d",
+            "low": [
+              0.2,
+              0.24,
+              0.26
+            ],
+            "high": [
+              0.46,
+              0.43,
+              0.33
+            ],
+            "sky": [
+              54,
+              65,
+              85
+            ],
+            "middle": [
+              135,
+              147,
+              155
+            ],
+            "haze": [
+              0.62,
+              0.63,
+              0.61
+            ],
+            "depth": 0.32
+          },
+          "points": [
+            {
+              "id": "thirteenth-hour-point-2",
+              "label": "人数のない列車",
+              "recordIds": [
+                "thirteenth-hour-2"
+              ],
+              "offset": [
+                -34,
+                10
+              ]
+            },
+            {
+              "id": "thirteenth-hour-point-3",
+              "label": "切らなかった切符",
+              "recordIds": [
+                "thirteenth-hour-3"
+              ],
+              "offset": [
+                32,
+                10
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "village",
+        "name": "計時工の長屋",
+        "order": 4,
+        "positionKm": [
+          18.7,
+          19.2
+        ],
+        "recordIds": [
+          "thirteenth-hour-4",
+          "thirteenth-hour-5"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "歯車塔と逆向き時計の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "clock",
+          "kind": "village",
+          "palette": {
+            "stone": "#7e8586",
+            "metal": "#bd995d",
+            "cloth": "#c39568",
+            "floor": "#9d967d",
+            "low": [
+              0.2,
+              0.24,
+              0.26
+            ],
+            "high": [
+              0.46,
+              0.43,
+              0.33
+            ],
+            "sky": [
+              54,
+              65,
+              85
+            ],
+            "middle": [
+              135,
+              147,
+              155
+            ],
+            "haze": [
+              0.62,
+              0.63,
+              0.61
+            ],
+            "depth": 0.32
+          },
+          "points": [
+            {
+              "id": "thirteenth-hour-point-4",
+              "label": "針を止める依頼",
+              "recordIds": [
+                "thirteenth-hour-4"
+              ],
+              "offset": [
+                -28,
+                -12
+              ]
+            },
+            {
+              "id": "thirteenth-hour-point-5",
+              "label": "閉門の印を待つ",
+              "recordIds": [
+                "thirteenth-hour-5"
+              ],
+              "offset": [
+                27,
+                -19
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "center",
+        "name": "十二面の中央時計",
+        "order": 5,
+        "positionKm": [
+          23.6,
+          14.8
+        ],
+        "recordIds": [
+          "thirteenth-hour-6"
+        ],
+        "discoveryRadiusM": 700,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "歯車塔と逆向き時計の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "clock",
+          "kind": "center",
+          "palette": {
+            "stone": "#7e8586",
+            "metal": "#bd995d",
+            "cloth": "#c39568",
+            "floor": "#9d967d",
+            "low": [
+              0.2,
+              0.24,
+              0.26
+            ],
+            "high": [
+              0.46,
+              0.43,
+              0.33
+            ],
+            "sky": [
+              54,
+              65,
+              85
+            ],
+            "middle": [
+              135,
+              147,
+              155
+            ],
+            "haze": [
+              0.62,
+              0.63,
+              0.61
+            ],
+            "depth": 0.32
+          },
+          "points": [
+            {
+              "id": "thirteenth-hour-point-6",
+              "label": "消した信号線",
+              "recordIds": [
+                "thirteenth-hour-6"
+              ],
+              "offset": [
+                -28,
+                10
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "refuge",
+        "name": "空欄の待合室",
+        "order": 6,
+        "positionKm": [
+          17.8,
+          9
+        ],
+        "recordIds": [
+          "thirteenth-hour-7"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "歯車塔と逆向き時計の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "clock",
+          "kind": "refuge",
+          "palette": {
+            "stone": "#7e8586",
+            "metal": "#bd995d",
+            "cloth": "#c39568",
+            "floor": "#9d967d",
+            "low": [
+              0.2,
+              0.24,
+              0.26
+            ],
+            "high": [
+              0.46,
+              0.43,
+              0.33
+            ],
+            "sky": [
+              54,
+              65,
+              85
+            ],
+            "middle": [
+              135,
+              147,
+              155
+            ],
+            "haze": [
+              0.62,
+              0.63,
+              0.61
+            ],
+            "depth": 0.32
+          },
+          "points": [
+            {
+              "id": "thirteenth-hour-point-7",
+              "label": "運賃欄の代わり",
+              "recordIds": [
+                "thirteenth-hour-7"
+              ],
+              "offset": [
+                0,
+                -15
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "memorial",
+        "name": "十三番目の鐘",
+        "order": 7,
+        "positionKm": [
+          24.1,
+          4.8
+        ],
+        "recordIds": [
+          "thirteenth-hour-8"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "歯車塔と逆向き時計の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "clock",
+          "kind": "final",
+          "palette": {
+            "stone": "#7e8586",
+            "metal": "#bd995d",
+            "cloth": "#c39568",
+            "floor": "#9d967d",
+            "low": [
+              0.2,
+              0.24,
+              0.26
+            ],
+            "high": [
+              0.46,
+              0.43,
+              0.33
+            ],
+            "sky": [
+              54,
+              65,
+              85
+            ],
+            "middle": [
+              135,
+              147,
+              155
+            ],
+            "haze": [
+              0.62,
+              0.63,
+              0.61
+            ],
+            "depth": 0.32
+          },
+          "points": [
+            {
+              "id": "thirteenth-hour-point-8",
+              "label": "十三番目の時刻",
+              "recordIds": [
+                "thirteenth-hour-8"
+              ],
+              "offset": [
+                0,
+                5
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "thirteenth-hour-1",
+      "type": "時計工の日報",
+      "title": "同じ遅れ",
+      "snippet": "塔も駅も工場も、同じ一時間だけ遅れている。歯車が同時に壊れるとは考えにくい。中央からの信号を切って、各時計の振り子を数えた。どれも正常だった。遅れは、機械が作ったものではない。",
+      "required": true,
+      "fieldClue": "次は「歯車の連絡橋」へ。歯車塔と逆向き時計を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "crossing"
+    },
+    {
+      "id": "thirteenth-hour-2",
+      "type": "連絡橋の通行票",
+      "title": "人数のない列車",
+      "snippet": "橋を渡った列車は空車扱い。だが車輪の跡は重く、停車時間も長かった。荷役の者は、車内で荷物を動かしたのではなく、足の悪い人を支えたと言った。集計へ入れないよう頼まれた人数だけ、誰も数えていない。",
+      "required": true,
+      "fieldClue": "同じ足場の反対側にも、もう一枚の記録がある。次は「計時工の長屋」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "village"
+    },
+    {
+      "id": "thirteenth-hour-3",
+      "type": "駅員の私記",
+      "title": "切らなかった切符",
+      "snippet": "切符のない乗客を乗せた。規則ではなく、今夜だけの判断だったと言われるのが怖い。だからここへ書く。次に同じことが起きた時も、扉を開ける理由が残るように。切符の代わりに、乗った者が互いの名を確かめた。",
+      "required": false,
+      "fieldClue": "次は「計時工の長屋」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "village"
+    },
+    {
+      "id": "thirteenth-hour-4",
+      "type": "計時工の往復書簡",
+      "title": "針を止める依頼",
+      "snippet": "中央時計を一時間止めてほしいとの依頼が来た。街の門は、交代の信号と同時に閉じる。その前に通せない人々がいるという。時間を止めても、夜が長くなるわけではない。止まるのは、門を閉める命令だけだ。",
+      "required": true,
+      "fieldClue": "もう一方の色布の机にも、人の残した言葉がありそうだ。次は「十二面の中央時計」へ。歯車塔と逆向き時計を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "center"
+    },
+    {
+      "id": "thirteenth-hour-5",
+      "type": "門衛の記録",
+      "title": "閉門の印を待つ",
+      "snippet": "交代の鐘は鳴らなかった。門外の者を中へ入れると、当直の席が足りなくなった。勤務表へ増やした『十三時』の欄に、私たちは皆で署名した。架空の時刻を作ったのは、誰か一人の手へ責任を押し付けないためだ。",
+      "required": true,
+      "fieldClue": "次は「十二面の中央時計」へ。歯車塔と逆向き時計を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "center"
+    },
+    {
+      "id": "thirteenth-hour-6",
+      "type": "中央時計の整備票",
+      "title": "消した信号線",
+      "snippet": "時計は止めたが、振り子は止めなかった。翌朝、針を合わせ直すのに必要だからだ。閉門信号への線だけを外す。記録上の一時間を無かったことにしても、その間に通った人を無かったことにしてはならない。",
+      "required": true,
+      "fieldClue": "次は「空欄の待合室」へ。歯車塔と逆向き時計を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "refuge"
+    },
+    {
+      "id": "thirteenth-hour-7",
+      "type": "待合室の名簿",
+      "title": "運賃欄の代わり",
+      "snippet": "この名簿には出身地と運賃を書かない。乗り継ぎ先で会いたい者の名だけを書く。空欄は、会いたい人がいないという意味ではない。名前を口にできるまで、温かい席を一つ残すという意味である。",
+      "required": true,
+      "fieldClue": "次は「十三番目の鐘」へ。高台の淡い灯を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "memorial"
+    },
+    {
+      "id": "thirteenth-hour-8",
+      "type": "小鐘の銘",
+      "title": "十三番目の時刻",
+      "snippet": "この鐘は毎日鳴らさない。時計の針が示せなかった一時間を、必要な時だけ思い出すために置く。門を閉じる時間を決める者は、まだ外にいる者を見よ。時計は、その代わりに見ることができない。",
+      "required": true,
+      "fieldClue": "次は「逆針の時計塔」へ。欠けた輪を頂く塔を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "tower"
+    }
+  ],
+  "explorationLeads": [
+    {
+      "id": "arrival",
+      "sourcePointIds": [
+        "thirteenth-hour-arrival"
+      ],
+      "targetRecordIds": [
+        "thirteenth-hour-1"
+      ],
+      "title": "逆針の時計塔を探す",
+      "clue": "色布を掲げた塔の麓で、最初の記録を読もう。"
+    },
+    {
+      "id": "lead-0",
+      "sourceRecordIds": [
+        "thirteenth-hour-1"
+      ],
+      "targetRecordIds": [
+        "thirteenth-hour-2",
+        "thirteenth-hour-3"
+      ],
+      "title": "歯車の連絡橋に残るもの",
+      "clue": "次は「歯車の連絡橋」へ。歯車塔と逆向き時計を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-1",
+      "sourceRecordIds": [
+        "thirteenth-hour-2"
+      ],
+      "targetRecordIds": [
+        "thirteenth-hour-4",
+        "thirteenth-hour-5"
+      ],
+      "title": "計時工の長屋に残るもの",
+      "clue": "同じ足場の反対側にも、もう一枚の記録がある。次は「計時工の長屋」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "local-1",
+      "sourceRecordIds": [
+        "thirteenth-hour-2"
+      ],
+      "targetRecordIds": [
+        "thirteenth-hour-3"
+      ],
+      "title": "近くのもう一つの記録",
+      "clue": "同じ足場の反対側にも、もう一枚の記録がある。相棒に戻る前に、反対側の色布を探してみよう。"
+    },
+    {
+      "id": "lead-2",
+      "sourceRecordIds": [
+        "thirteenth-hour-3"
+      ],
+      "targetRecordIds": [
+        "thirteenth-hour-4",
+        "thirteenth-hour-5"
+      ],
+      "title": "計時工の長屋に残るもの",
+      "clue": "次は「計時工の長屋」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-3",
+      "sourceRecordIds": [
+        "thirteenth-hour-4"
+      ],
+      "targetRecordIds": [
+        "thirteenth-hour-6"
+      ],
+      "title": "十二面の中央時計に残るもの",
+      "clue": "もう一方の色布の机にも、人の残した言葉がありそうだ。次は「十二面の中央時計」へ。歯車塔と逆向き時計を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "local-3",
+      "sourceRecordIds": [
+        "thirteenth-hour-4"
+      ],
+      "targetRecordIds": [
+        "thirteenth-hour-5"
+      ],
+      "title": "近くのもう一つの記録",
+      "clue": "もう一方の色布の机にも、人の残した言葉がありそうだ。相棒に戻る前に、反対側の色布を探してみよう。"
+    },
+    {
+      "id": "lead-4",
+      "sourceRecordIds": [
+        "thirteenth-hour-5"
+      ],
+      "targetRecordIds": [
+        "thirteenth-hour-6"
+      ],
+      "title": "十二面の中央時計に残るもの",
+      "clue": "次は「十二面の中央時計」へ。歯車塔と逆向き時計を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-5",
+      "sourceRecordIds": [
+        "thirteenth-hour-6"
+      ],
+      "targetRecordIds": [
+        "thirteenth-hour-7"
+      ],
+      "title": "空欄の待合室に残るもの",
+      "clue": "次は「空欄の待合室」へ。歯車塔と逆向き時計を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-6",
+      "sourceRecordIds": [
+        "thirteenth-hour-7"
+      ],
+      "targetRecordIds": [
+        "thirteenth-hour-8"
+      ],
+      "title": "十三番目の鐘に残るもの",
+      "clue": "次は「十三番目の鐘」へ。高台の淡い灯を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-7",
+      "sourceRecordIds": [
+        "thirteenth-hour-8"
+      ],
+      "targetRecordIds": [
+        "thirteenth-hour-1"
+      ],
+      "title": "逆針の時計塔に残るもの",
+      "clue": "次は「逆針の時計塔」へ。欠けた輪を頂く塔を空から探し、色布の付いた机を調べよう。"
+    }
+  ],
+  "storyModel": {
+    "hintLinks": [
+      {
+        "from": "entry",
+        "to": "tower",
+        "mode": "visual",
+        "clue": "正面に、色布を掲げた塔が立つ"
+      },
+      {
+        "from": "tower",
+        "to": "crossing",
+        "mode": "text",
+        "clue": "次は「歯車の連絡橋」へ。歯車塔と逆向き時計を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "crossing",
+        "to": "village",
+        "mode": "text",
+        "clue": "同じ足場の反対側にも、もう一枚の記録がある。次は「計時工の長屋」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "village",
+        "to": "center",
+        "mode": "text",
+        "clue": "もう一方の色布の机にも、人の残した言葉がありそうだ。次は「十二面の中央時計」へ。歯車塔と逆向き時計を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "center",
+        "to": "refuge",
+        "mode": "text",
+        "clue": "次は「空欄の待合室」へ。歯車塔と逆向き時計を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "refuge",
+        "to": "memorial",
+        "mode": "text",
+        "clue": "次は「十三番目の鐘」へ。高台の淡い灯を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "memorial",
+        "to": "tower",
+        "mode": "text",
+        "clue": "次は「逆針の時計塔」へ。欠けた輪を頂く塔を空から探し、色布の付いた机を調べよう。"
+      }
+    ],
+    "historyTimeline": [
+      {
+        "id": "history-0",
+        "order": 1,
+        "summary": "壊れなかった時計",
+        "areaIds": [
+          "tower"
+        ]
+      },
+      {
+        "id": "history-1",
+        "order": 2,
+        "summary": "止めたのは命令",
+        "areaIds": [
+          "crossing"
+        ]
+      },
+      {
+        "id": "history-2",
+        "order": 3,
+        "summary": "十三時を作る",
+        "areaIds": [
+          "village"
+        ]
+      },
+      {
+        "id": "history-3",
+        "order": 4,
+        "summary": "空欄の先へ",
+        "areaIds": [
+          "center"
+        ]
+      }
+    ]
+  },
+  "environmentPresentation": {
+    "renderer": "layered-atmosphere-v1",
+    "hazeColor": [
+      158,
+      161,
+      156
+    ],
+    "visibilityKm": 30,
+    "altitudeColorHeightM": 2400,
+    "surfaceCueHeightM": 720,
+    "surfaceCellM": 210,
+    "cloudLayers": [
+      {
+        "name": "低い雲海",
+        "heightM": 180,
+        "thicknessM": 100,
+        "count": 44,
+        "sizeM": [
+          620,
+          1450
+        ],
+        "flatness": 0.12,
+        "opacity": 0.09,
+        "driftMps": 3.5
+      },
+      {
+        "name": "中層のちぎれ雲",
+        "heightM": 1050,
+        "thicknessM": 620,
+        "count": 32,
+        "sizeM": [
+          240,
+          720
+        ],
+        "flatness": 0.28,
+        "opacity": 0.13,
+        "driftMps": 7.5
+      },
+      {
+        "name": "高空の薄雲",
+        "heightM": 2350,
+        "thicknessM": 360,
+        "count": 18,
+        "sizeM": [
+          700,
+          1500
+        ],
+        "flatness": 0.09,
+        "opacity": 0.08,
+        "driftMps": 14
+      }
+    ],
+    "airflow": {
+      "count": 120,
+      "nearDrawKm": 4.2,
+      "visualization": "neutral-particles",
+      "color": [
+        139,
+        219,
+        234
+      ]
+    },
+    "soundscape": {
+      "windBaseGain": 0.006,
+      "windSpeedGain": 0.034,
+      "ridgeGain": 0.012,
+      "canyonGain": 0.005,
+      "filterBaseHz": 230,
+      "filterSpeedFactor": 5.5,
+      "ridgeFilterBoostHz": 370,
+      "basinFilterDropHz": 70,
+      "canyonRumbleGain": 0.012,
+      "openRumbleGain": 0.003,
+      "rumbleFadeHeightM": 1300
+    },
+    "distantLandmarks": {
+      "maxDrawKm": 30,
+      "flockCueKm": [
+        0,
+        14
+      ],
+      "flockAltitudeM": [
+        40,
+        95
+      ],
+      "flockSpanM": 150,
+      "silhouetteFloor": 0.16
+    },
+    "boundaryVisual": {
+      "style": "mountain-ring",
+      "segmentsPerSide": 32,
+      "midOffsetKm": 2.4,
+      "outerOffsetKm": 6.5,
+      "midHeightM": [
+        1450,
+        2450
+      ],
+      "outerHeightM": [
+        3300,
+        4400
+      ],
+      "colors": [
+        [
+          54,
+          76,
+          70
+        ],
+        [
+          52,
+          69,
+          76
+        ]
+      ]
+    },
+    "skyTop": [
+      54,
+      65,
+      85
+    ],
+    "skyHigh": [
+      42,
+      51,
+      66
+    ],
+    "skyMiddle": [
+      135,
+      147,
+      155
+    ],
+    "precipitation": null
+  },
+  "biomeRecipe": {
+    "defaultBiome": {
+      "id": "open-ground",
+      "name": "十三時の機械街",
+      "groundColor": [
+        117,
+        110,
+        84
+      ],
+      "accentColor": [
+        158,
+        161,
+        156
+      ],
+      "hazeColor": [
+        158,
+        161,
+        156
+      ],
+      "colorMix": 0.86,
+      "dressing": {
+        "type": "wind-grass",
+        "density": 0.09
+      },
+      "macro": {
+        "type": "none",
+        "density": 0
+      },
+      "flight": {
+        "name": "地域の風",
+        "kind": "open",
+        "verticalMps": 0.3,
+        "lateralMps": 0.35,
+        "forwardMps": 0,
+        "turbulence": 0.18,
+        "gustRate": 0.4
+      }
+    },
+    "biomes": []
+  },
+  "terrainLod": {
+    "renderer": "webgl-nested-lod-v1",
+    "visibilityKm": 30,
+    "base": {
+      "sizeKm": 30,
+      "segments": 192
+    },
+    "mid": {
+      "sizeKm": 5,
+      "segments": 96,
+      "rebuildM": 1000
+    },
+    "near": {
+      "sizeKm": 1.6,
+      "segments": 64,
+      "rebuildM": 300
+    },
+    "boundaryMesh": {
+      "segmentsPerSide": 40,
+      "midOffsetKm": 2.6,
+      "outerOffsetKm": 6.8,
+      "midHeightM": [
+        1500,
+        2500
+      ],
+      "outerHeightM": [
+        3300,
+        4400
+      ]
+    },
+    "midEcologyCellM": 84,
+    "nearEcologyCellM": 27,
+    "groundCover": {
+      "shortGrassHeightM": [
+        0.05,
+        0.3
+      ],
+      "tallGrassHeightM": [
+        0.3,
+        1.3
+      ],
+      "windDirectionDeg": 72,
+      "waveLengthM": 46,
+      "waveSpeedMps": 11,
+      "waveContrast": 0.055,
+      "distribution": "advected-shelter-clusters"
+    },
+    "canyonSurface": {
+      "strataSpacingM": 26,
+      "strataWarpM": 18,
+      "erosionScaleM": 72,
+      "windDirectionDeg": 4,
+      "dustSpeedMps": 4.2,
+      "dustContrast": 0.07,
+      "floorMaterial": "dry-gravel-and-wash-marks",
+      "talusDistribution": "clustered-at-wall-base"
+    },
+    "basinSurface": {
+      "crackModel": "none",
+      "rippleSpacingM": 8.5,
+      "windDirectionDeg": 118,
+      "movingSandSpeedMps": 3.2,
+      "rippleContrast": 0.055,
+      "movingSandContrast": 0.035,
+      "material": "alluvial-fan-old-channels-and-wind-ripples"
+    },
+    "ridgeSurface": {
+      "windDirectionDeg": 38,
+      "erosionScaleM": 130,
+      "erosionContrast": 0.065,
+      "windwardMaterial": "sunlit-alpine-grass-and-exposed-rock",
+      "leewardMaterial": "deep-green-vegetation-and-shadowed-rock",
+      "vegetationDistribution": "broad-slope-patches-with-dark-gullies",
+      "rockExposure": "steep-slopes-crests-and-erosion-scars"
+    },
+    "transitionSurface": {
+      "boundaryWarp": "multi-scale-height-and-moisture-noise",
+      "ridgeFoot": "deep-green-foothill-to-exposed-rock",
+      "canyonLip": "broken-grass-to-dry-talus",
+      "basinFringe": "sand-fingers-with-dry-grass",
+      "visualBlendWidthM": [
+        450,
+        1100
+      ]
+    },
+    "fallback": "canvas-terrain-v1",
+    "regionTint": {
+      "low": [
+        0.2,
+        0.24,
+        0.26
+      ],
+      "high": [
+        0.46,
+        0.43,
+        0.33
+      ],
+      "haze": [
+        0.62,
+        0.63,
+        0.61
+      ],
+      "mix": 0.9
+    },
+    "seaLevel": -1
+  },
+  "ecologyPresentation": {
+    "species": [
+      {
+        "type": "wind-kite",
+        "count": 28,
+        "biomeIds": [],
+        "altitudeM": [
+          35,
+          90
+        ],
+        "scale": [
+          0.55,
+          0.9
+        ],
+        "orbitM": [
+          100,
+          260
+        ],
+        "speed": [
+          0.08,
+          0.14
+        ],
+        "color": [
+          30,
+          45,
+          48
+        ],
+        "maxDrawKm": 6
+      }
+    ],
+    "cloudShadows": {
+      "enabled": true,
+      "opacity": 0.08,
+      "maxDrawKm": 5
+    }
+  },
+  "library": {
+    "coverImage": "assets/thirteenth-hour.svg",
+    "exploreUrl": "blockout.html?region=thirteenth-hour&v=142",
+    "shelfDescription": "すべての時計が十二を指す街で、一枚の時刻表だけに十三時がある。その一時間の欄には、行き先も運賃も書かれていなかった。",
+    "completedStory": {
+      "title": "十三時の機械街 ― 地域の物語",
+      "intro": "集めた八つの記録を重ね、この土地で起きた出来事を辿る。",
+      "chapters": [
+        {
+          "title": "壊れなかった時計",
+          "text": "機械街の時計は揃って一時間遅れていた。時計工の調査では、振り子も歯車も正常だった。同じ夜に橋を渡った空車扱いの列車にも、人を運んだ痕跡がある。数字だけを見れば故障と空欄で終わる出来事の中に、複数の人が関わった仕事が隠れていた。",
+          "recordIds": [
+            "thirteenth-hour-1",
+            "thirteenth-hour-2"
+          ]
+        },
+        {
+          "title": "止めたのは命令",
+          "text": "門の閉鎖は中央時計の信号に従っていた。計時工へ来た依頼は、夜そのものを長くするものではなく、門を閉じる命令を遅らせるためのものだった。門衛は待っている人を中へ入れ、駅員は切符のない乗客を乗せた。機械を止めるだけでは完了しない判断が、それぞれの持ち場にあった。",
+          "recordIds": [
+            "thirteenth-hour-3",
+            "thirteenth-hour-4",
+            "thirteenth-hour-5"
+          ]
+        },
+        {
+          "title": "十三時を作る",
+          "text": "勤務表の十三時は、現実に増えた時間ではない。誰か一人を規則違反の犯人にしないため、関わった者が名を並べる欄だった。中央時計では振り子を動かしたまま、閉門信号への線だけを外した。翌朝には時刻を合わせ直せるが、人を通した一時間の意味まで消してはならなかった。",
+          "recordIds": [
+            "thirteenth-hour-5",
+            "thirteenth-hour-6"
+          ]
+        },
+        {
+          "title": "空欄の先へ",
+          "text": "待合室の名簿は、誰を運んだかの全てを記録してはいない。名を口にできない者のための空欄を、欠陥ではなく席として残した。十三番目の鐘も、毎日の規則へ組み込まれてはいない。時間を正確に計る街が、時計には見えない人を自分たちで見るために作った、例外の記憶である。",
+          "recordIds": [
+            "thirteenth-hour-7",
+            "thirteenth-hour-8"
+          ]
+        }
+      ],
+      "afterword": "資料のない部分を断定せず、残された言葉をつないでいます。気になった一文があれば、原文の頁へ戻ってみてください。"
+    }
+  },
+  "completionRule": {
+    "requiredRecords": 8,
+    "finalRecordId": "thirteenth-hour-8",
+    "returnAfterFinal": true
+  },
+  "history": [
+    "機械街の時計は揃って一時間遅れていた。時計工の調査では、振り子も歯車も正常だった。同じ夜に橋を渡った空車扱いの列車にも、人を運んだ痕跡がある。数字だけを見れば故障と空欄で終わる出来事の中に、複数の人が関わった仕事が隠れていた。",
+    "門の閉鎖は中央時計の信号に従っていた。計時工へ来た依頼は、夜そのものを長くするものではなく、門を閉じる命令を遅らせるためのものだった。門衛は待っている人を中へ入れ、駅員は切符のない乗客を乗せた。機械を止めるだけでは完了しない判断が、それぞれの持ち場にあった。",
+    "勤務表の十三時は、現実に増えた時間ではない。誰か一人を規則違反の犯人にしないため、関わった者が名を並べる欄だった。中央時計では振り子を動かしたまま、閉門信号への線だけを外した。翌朝には時刻を合わせ直せるが、人を通した一時間の意味まで消してはならなかった。",
+    "待合室の名簿は、誰を運んだかの全てを記録してはいない。名を口にできない者のための空欄を、欠陥ではなく席として残した。十三番目の鐘も、毎日の規則へ組み込まれてはいない。時間を正確に計る街が、時計には見えない人を自分たちで見るために作った、例外の記憶である。"
+  ]
+}

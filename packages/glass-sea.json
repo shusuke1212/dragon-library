@@ -1,0 +1,1474 @@
+{
+  "schemaVersion": "exploration-package/0.2",
+  "id": "glass-sea",
+  "title": "硝子の砂海",
+  "premise": "砂の上に、雨のような光が走る。地図に載らない道標には、あなたと同じ向きへ進む古い足跡が刻まれていた。",
+  "playTimeMinutes": {
+    "target": "15-25",
+    "readingExcluded": false
+  },
+  "departureBrief": {
+    "title": "硝子の砂海へ",
+    "text": "砂の上に、雨のような光が走る。地図に載らない道標には、あなたと同じ向きへ進む古い足跡が刻まれていた。 出発時の正面にある「分光の見張り塔」へ。着陸場から色布を目印に、最初の記録を探そう。"
+  },
+  "regionRecipe": {
+    "siteTerraces": [
+      {
+        "id": "entry",
+        "nx": 0.15,
+        "nz": 0.8933333333333333,
+        "height": 0.2824184045090887,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "tower",
+        "nx": 0.2533333333333333,
+        "nz": 0.7533333333333334,
+        "height": 0.39971388161029175,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "crossing",
+        "nx": 0.19666666666666668,
+        "nz": 0.5566666666666666,
+        "height": 0.5567130492442507,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "village",
+        "nx": 0.36000000000000004,
+        "nz": 0.3766666666666667,
+        "height": 0.6747598391704422,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "center",
+        "nx": 0.5066666666666666,
+        "nz": 0.21333333333333335,
+        "height": 0.3311262918168573,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "refuge",
+        "nx": 0.7,
+        "nz": 0.4066666666666666,
+        "height": 0.6143151182930223,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      },
+      {
+        "id": "memorial",
+        "nx": 0.84,
+        "nz": 0.19666666666666668,
+        "height": 0.558258567800998,
+        "innerRadius": 0.007833333333333333,
+        "outerRadius": 0.012166666666666666
+      }
+    ],
+    "generator": "common-canyon-v1",
+    "noiseScale": 2.13,
+    "octaves": 5,
+    "canyon": {
+      "width": 0.055,
+      "depth": 0.4,
+      "bendFrequency": 7.4,
+      "bendAmount": 0.11,
+      "depthVariationFrequency": 4.2,
+      "terraceLevels": 5,
+      "terraceSharpness": 5.4,
+      "innerWidth": 0.26,
+      "innerDepth": 0.065,
+      "tributaryFrequency": 11,
+      "tributaryDepth": 0.1,
+      "tributarySharpness": 8,
+      "rillFrequency": 62,
+      "rillDepth": 0.026,
+      "rillSharpness": 10
+    },
+    "ridge": {
+      "headingDeg": 77,
+      "minimumHeight": 0.54,
+      "heightBlend": 0.18,
+      "alongScale": 1.8,
+      "crossScale": 5.2,
+      "warp": 0.42,
+      "sharpness": 3.6,
+      "detailWeight": 0.04,
+      "relief": 0.2
+    },
+    "palette": [
+      {
+        "max": 0.18,
+        "color": [
+          57,
+          83,
+          91
+        ]
+      },
+      {
+        "max": 0.28,
+        "color": [
+          74,
+          99,
+          102
+        ]
+      },
+      {
+        "max": 0.43,
+        "color": [
+          89,
+          100,
+          91
+        ]
+      },
+      {
+        "max": 0.6,
+        "color": [
+          102,
+          100,
+          85
+        ]
+      },
+      {
+        "max": 0.76,
+        "color": [
+          94,
+          91,
+          82
+        ]
+      },
+      {
+        "max": 1,
+        "color": [
+          119,
+          116,
+          105
+        ]
+      }
+    ],
+    "semanticLayers": [
+      "height",
+      "canyon",
+      "ridge",
+      "shelf",
+      "basin"
+    ]
+  },
+  "fieldLayout": {
+    "schemaVersion": "story-field-layout/0.2",
+    "fieldSizeKm": 30,
+    "terrainSeed": 6271,
+    "cruiseSpeedKmh": 200,
+    "boundaryAssist": {
+      "enabled": true,
+      "minimumMarginM": 1800,
+      "extraMarginM": 750,
+      "lookAheadSeconds": 8
+    },
+    "storyAreas": [
+      {
+        "id": "entry",
+        "name": "反射する砂の門",
+        "order": 1,
+        "positionKm": [
+          4.5,
+          26.8
+        ],
+        "recordIds": [],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "緑の結晶列と光塔の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "glass",
+          "kind": "entry",
+          "palette": {
+            "stone": "#c4bca5",
+            "metal": "#8dbeb7",
+            "cloth": "#dfb785",
+            "floor": "#b7b090",
+            "low": [
+              0.43,
+              0.42,
+              0.3
+            ],
+            "high": [
+              0.81,
+              0.77,
+              0.55
+            ],
+            "sky": [
+              86,
+              74,
+              108
+            ],
+            "middle": [
+              173,
+              156,
+              173
+            ],
+            "haze": [
+              0.72,
+              0.67,
+              0.66
+            ],
+            "depth": 0.4
+          },
+          "points": [
+            {
+              "id": "glass-sea-arrival",
+              "label": "旅の案内札",
+              "recordIds": [],
+              "offset": [
+                0,
+                14
+              ],
+              "observation": {
+                "type": "入口の痕跡",
+                "text": "砂の上に、雨のような光が走る。地図に載らない道標には、あなたと同じ向きへ進む古い足跡が刻まれていた。"
+              },
+              "clue": "正面の「分光の見張り塔」を探そう。色布のそばの机に、この土地の最初の記録が残る。",
+              "lookTargetId": "tower"
+            }
+          ]
+        }
+      },
+      {
+        "id": "tower",
+        "name": "分光の見張り塔",
+        "order": 2,
+        "positionKm": [
+          7.6,
+          22.6
+        ],
+        "recordIds": [
+          "glass-sea-1"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "緑の結晶列と光塔の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "glass",
+          "kind": "beacon",
+          "palette": {
+            "stone": "#c4bca5",
+            "metal": "#8dbeb7",
+            "cloth": "#dfb785",
+            "floor": "#b7b090",
+            "low": [
+              0.43,
+              0.42,
+              0.3
+            ],
+            "high": [
+              0.81,
+              0.77,
+              0.55
+            ],
+            "sky": [
+              86,
+              74,
+              108
+            ],
+            "middle": [
+              173,
+              156,
+              173
+            ],
+            "haze": [
+              0.72,
+              0.67,
+              0.66
+            ],
+            "depth": 0.4
+          },
+          "points": [
+            {
+              "id": "glass-sea-point-1",
+              "label": "昼だけ見える道",
+              "recordIds": [
+                "glass-sea-1"
+              ],
+              "offset": [
+                -28,
+                2
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "crossing",
+        "name": "緑硝子の列柱",
+        "order": 3,
+        "positionKm": [
+          5.9,
+          16.7
+        ],
+        "recordIds": [
+          "glass-sea-2",
+          "glass-sea-3"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "緑の結晶列と光塔の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "glass",
+          "kind": "crossing",
+          "palette": {
+            "stone": "#c4bca5",
+            "metal": "#8dbeb7",
+            "cloth": "#dfb785",
+            "floor": "#b7b090",
+            "low": [
+              0.43,
+              0.42,
+              0.3
+            ],
+            "high": [
+              0.81,
+              0.77,
+              0.55
+            ],
+            "sky": [
+              86,
+              74,
+              108
+            ],
+            "middle": [
+              173,
+              156,
+              173
+            ],
+            "haze": [
+              0.72,
+              0.67,
+              0.66
+            ],
+            "depth": 0.4
+          },
+          "points": [
+            {
+              "id": "glass-sea-point-2",
+              "label": "声が聞こえる板",
+              "recordIds": [
+                "glass-sea-2"
+              ],
+              "offset": [
+                -34,
+                10
+              ]
+            },
+            {
+              "id": "glass-sea-point-3",
+              "label": "同じ返事",
+              "recordIds": [
+                "glass-sea-3"
+              ],
+              "offset": [
+                32,
+                10
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "village",
+        "name": "研磨師の宿場",
+        "order": 4,
+        "positionKm": [
+          10.8,
+          11.3
+        ],
+        "recordIds": [
+          "glass-sea-4",
+          "glass-sea-5"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "緑の結晶列と光塔の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "glass",
+          "kind": "village",
+          "palette": {
+            "stone": "#c4bca5",
+            "metal": "#8dbeb7",
+            "cloth": "#dfb785",
+            "floor": "#b7b090",
+            "low": [
+              0.43,
+              0.42,
+              0.3
+            ],
+            "high": [
+              0.81,
+              0.77,
+              0.55
+            ],
+            "sky": [
+              86,
+              74,
+              108
+            ],
+            "middle": [
+              173,
+              156,
+              173
+            ],
+            "haze": [
+              0.72,
+              0.67,
+              0.66
+            ],
+            "depth": 0.4
+          },
+          "points": [
+            {
+              "id": "glass-sea-point-4",
+              "label": "声の贈りもの",
+              "recordIds": [
+                "glass-sea-4"
+              ],
+              "offset": [
+                -28,
+                -12
+              ]
+            },
+            {
+              "id": "glass-sea-point-5",
+              "label": "削る前に読むこと",
+              "recordIds": [
+                "glass-sea-5"
+              ],
+              "offset": [
+                27,
+                -19
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "center",
+        "name": "記憶光の反射炉",
+        "order": 5,
+        "positionKm": [
+          15.2,
+          6.4
+        ],
+        "recordIds": [
+          "glass-sea-6"
+        ],
+        "discoveryRadiusM": 700,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "緑の結晶列と光塔の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "glass",
+          "kind": "center",
+          "palette": {
+            "stone": "#c4bca5",
+            "metal": "#8dbeb7",
+            "cloth": "#dfb785",
+            "floor": "#b7b090",
+            "low": [
+              0.43,
+              0.42,
+              0.3
+            ],
+            "high": [
+              0.81,
+              0.77,
+              0.55
+            ],
+            "sky": [
+              86,
+              74,
+              108
+            ],
+            "middle": [
+              173,
+              156,
+              173
+            ],
+            "haze": [
+              0.72,
+              0.67,
+              0.66
+            ],
+            "depth": 0.4
+          },
+          "points": [
+            {
+              "id": "glass-sea-point-6",
+              "label": "増幅を止める",
+              "recordIds": [
+                "glass-sea-6"
+              ],
+              "offset": [
+                -28,
+                10
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "refuge",
+        "name": "暗幕の小屋",
+        "order": 6,
+        "positionKm": [
+          21,
+          12.2
+        ],
+        "recordIds": [
+          "glass-sea-7"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "緑の結晶列と光塔の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "glass",
+          "kind": "refuge",
+          "palette": {
+            "stone": "#c4bca5",
+            "metal": "#8dbeb7",
+            "cloth": "#dfb785",
+            "floor": "#b7b090",
+            "low": [
+              0.43,
+              0.42,
+              0.3
+            ],
+            "high": [
+              0.81,
+              0.77,
+              0.55
+            ],
+            "sky": [
+              86,
+              74,
+              108
+            ],
+            "middle": [
+              173,
+              156,
+              173
+            ],
+            "haze": [
+              0.72,
+              0.67,
+              0.66
+            ],
+            "depth": 0.4
+          },
+          "points": [
+            {
+              "id": "glass-sea-point-7",
+              "label": "昼を避ける棚",
+              "recordIds": [
+                "glass-sea-7"
+              ],
+              "offset": [
+                0,
+                -15
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "memorial",
+        "name": "影を残す石",
+        "order": 7,
+        "positionKm": [
+          25.2,
+          5.9
+        ],
+        "recordIds": [
+          "glass-sea-8"
+        ],
+        "discoveryRadiusM": 560,
+        "dragonReaction": {
+          "type": "interest-call",
+          "radiusM": 1600
+        },
+        "historicalRole": "緑の結晶列と光塔の痕跡",
+        "exploration": {
+          "kind": "authored-region-area",
+          "radiusM": 215
+        },
+        "landing": {
+          "approachRadiusM": 650,
+          "hoverHeightM": 25,
+          "touchdownOffsetM": [
+            70,
+            50
+          ],
+          "facingDeg": 55,
+          "departure": {
+            "waypointOffsetM": [
+              850,
+              850
+            ],
+            "handoffRadiusM": 900,
+            "handoffHeightM": 150,
+            "handoffSpeedKmh": 180
+          }
+        },
+        "scene": {
+          "theme": "glass",
+          "kind": "final",
+          "palette": {
+            "stone": "#c4bca5",
+            "metal": "#8dbeb7",
+            "cloth": "#dfb785",
+            "floor": "#b7b090",
+            "low": [
+              0.43,
+              0.42,
+              0.3
+            ],
+            "high": [
+              0.81,
+              0.77,
+              0.55
+            ],
+            "sky": [
+              86,
+              74,
+              108
+            ],
+            "middle": [
+              173,
+              156,
+              173
+            ],
+            "haze": [
+              0.72,
+              0.67,
+              0.66
+            ],
+            "depth": 0.4
+          },
+          "points": [
+            {
+              "id": "glass-sea-point-8",
+              "label": "声の後ろにいる者",
+              "recordIds": [
+                "glass-sea-8"
+              ],
+              "offset": [
+                0,
+                5
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "glass-sea-1",
+      "type": "巡路手帳",
+      "title": "昼だけ見える道",
+      "snippet": "砂の道は毎朝なくなる。だが光塔からの反射が、昼の間だけ同じ線を引く。道標の足跡は、通った者を写したものではなく、歩く向きを教えるために彫ったものだ。夕方は列柱の暗い側へ回ること。",
+      "required": true,
+      "fieldClue": "次は「緑硝子の列柱」へ。緑の結晶列と光塔を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "crossing"
+    },
+    {
+      "id": "glass-sea-2",
+      "type": "硝子工の配合表",
+      "title": "声が聞こえる板",
+      "snippet": "炉で冷えた板へ光を通すと、作業場の古い音が響いた。閉じ込めた魂だと客は言うが、私は板のひずみと風の関係を疑っている。同じ声が同じ順で繰り返されることを、誰も不思議がらなくなった。",
+      "required": true,
+      "fieldClue": "同じ足場の反対側にも、もう一枚の記録がある。次は「研磨師の宿場」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "village"
+    },
+    {
+      "id": "glass-sea-3",
+      "type": "旅人の走り書き",
+      "title": "同じ返事",
+      "snippet": "母に似た声を聞いた。何度呼んでも、返ってくるのは『棚の下にある』の一言だけだった。誰かがいま話しているのなら、名前を呼んでほしかった。列柱の足元に、声を聞く時は暗幕を掛けるよう札がある。",
+      "required": false,
+      "fieldClue": "次は「研磨師の宿場」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "village"
+    },
+    {
+      "id": "glass-sea-4",
+      "type": "注文控え",
+      "title": "声の贈りもの",
+      "snippet": "亡くなった者の声を売る注文は受けない。受けるのは、本人が読んだ短い便りを板へ写す仕事だけだ。この区別が宿場の外へ出ると消えてしまう。箱の表へ『返事はできません』と、大きく書くことにした。",
+      "required": true,
+      "fieldClue": "もう一方の色布の机にも、人の残した言葉がありそうだ。次は「記憶光の反射炉」へ。緑の結晶列と光塔を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "center"
+    },
+    {
+      "id": "glass-sea-5",
+      "type": "研磨師の手紙",
+      "title": "削る前に読むこと",
+      "snippet": "光を強くすれば記録が鮮明になると思っていた。だが強い熱は、古い層から順に声を消す。新しい祝詞を入れるために誰かの古い便りを削っていたことに、ようやく気付いた。削る前に、持ち主へ知らせてほしい。",
+      "required": true,
+      "fieldClue": "次は「記憶光の反射炉」へ。緑の結晶列と光塔を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "center"
+    },
+    {
+      "id": "glass-sea-6",
+      "type": "反射炉の停止票",
+      "title": "増幅を止める",
+      "snippet": "大祭へ向けた増幅を中止。消えた層は戻せないが、残る板の読み取りはできる。炉を閉じる理由を『危険な声が出たため』としないこと。危険だったのは、声ではなく、私たちが熱を加え続けたことだ。",
+      "required": true,
+      "fieldClue": "次は「暗幕の小屋」へ。緑の結晶列と光塔を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "refuge"
+    },
+    {
+      "id": "glass-sea-7",
+      "type": "暗幕の保管簿",
+      "title": "昼を避ける棚",
+      "snippet": "板は暗い棚へ置く。読み取る時は一度に一枚、弱い光で。棚の下へ保管した便りの写しを添える。あの繰り返す声は、この部屋で棚を組んだ職人の作業中の一言だった。名を付けるなら、職人の名を。",
+      "required": true,
+      "fieldClue": "次は「影を残す石」へ。高台の淡い灯を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "memorial"
+    },
+    {
+      "id": "glass-sea-8",
+      "type": "記念石の銘",
+      "title": "声の後ろにいる者",
+      "snippet": "ここに残る声は、誰かが生きていた時の声である。いまの問いに答えられる者として、呼び戻してはならない。聞こえなくなったものを悼み、残る言葉を人の手で写す。石へ刻んだ足跡は、帰るための向き。",
+      "required": true,
+      "fieldClue": "次は「分光の見張り塔」へ。欠けた輪を頂く塔を空から探し、色布の付いた机を調べよう。",
+      "hintTargetId": "tower"
+    }
+  ],
+  "explorationLeads": [
+    {
+      "id": "arrival",
+      "sourcePointIds": [
+        "glass-sea-arrival"
+      ],
+      "targetRecordIds": [
+        "glass-sea-1"
+      ],
+      "title": "分光の見張り塔を探す",
+      "clue": "色布を掲げた塔の麓で、最初の記録を読もう。"
+    },
+    {
+      "id": "lead-0",
+      "sourceRecordIds": [
+        "glass-sea-1"
+      ],
+      "targetRecordIds": [
+        "glass-sea-2",
+        "glass-sea-3"
+      ],
+      "title": "緑硝子の列柱に残るもの",
+      "clue": "次は「緑硝子の列柱」へ。緑の結晶列と光塔を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-1",
+      "sourceRecordIds": [
+        "glass-sea-2"
+      ],
+      "targetRecordIds": [
+        "glass-sea-4",
+        "glass-sea-5"
+      ],
+      "title": "研磨師の宿場に残るもの",
+      "clue": "同じ足場の反対側にも、もう一枚の記録がある。次は「研磨師の宿場」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "local-1",
+      "sourceRecordIds": [
+        "glass-sea-2"
+      ],
+      "targetRecordIds": [
+        "glass-sea-3"
+      ],
+      "title": "近くのもう一つの記録",
+      "clue": "同じ足場の反対側にも、もう一枚の記録がある。相棒に戻る前に、反対側の色布を探してみよう。"
+    },
+    {
+      "id": "lead-2",
+      "sourceRecordIds": [
+        "glass-sea-3"
+      ],
+      "targetRecordIds": [
+        "glass-sea-4",
+        "glass-sea-5"
+      ],
+      "title": "研磨師の宿場に残るもの",
+      "clue": "次は「研磨師の宿場」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-3",
+      "sourceRecordIds": [
+        "glass-sea-4"
+      ],
+      "targetRecordIds": [
+        "glass-sea-6"
+      ],
+      "title": "記憶光の反射炉に残るもの",
+      "clue": "もう一方の色布の机にも、人の残した言葉がありそうだ。次は「記憶光の反射炉」へ。緑の結晶列と光塔を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "local-3",
+      "sourceRecordIds": [
+        "glass-sea-4"
+      ],
+      "targetRecordIds": [
+        "glass-sea-5"
+      ],
+      "title": "近くのもう一つの記録",
+      "clue": "もう一方の色布の机にも、人の残した言葉がありそうだ。相棒に戻る前に、反対側の色布を探してみよう。"
+    },
+    {
+      "id": "lead-4",
+      "sourceRecordIds": [
+        "glass-sea-5"
+      ],
+      "targetRecordIds": [
+        "glass-sea-6"
+      ],
+      "title": "記憶光の反射炉に残るもの",
+      "clue": "次は「記憶光の反射炉」へ。緑の結晶列と光塔を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-5",
+      "sourceRecordIds": [
+        "glass-sea-6"
+      ],
+      "targetRecordIds": [
+        "glass-sea-7"
+      ],
+      "title": "暗幕の小屋に残るもの",
+      "clue": "次は「暗幕の小屋」へ。緑の結晶列と光塔を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-6",
+      "sourceRecordIds": [
+        "glass-sea-7"
+      ],
+      "targetRecordIds": [
+        "glass-sea-8"
+      ],
+      "title": "影を残す石に残るもの",
+      "clue": "次は「影を残す石」へ。高台の淡い灯を空から探し、色布の付いた机を調べよう。"
+    },
+    {
+      "id": "lead-7",
+      "sourceRecordIds": [
+        "glass-sea-8"
+      ],
+      "targetRecordIds": [
+        "glass-sea-1"
+      ],
+      "title": "分光の見張り塔に残るもの",
+      "clue": "次は「分光の見張り塔」へ。欠けた輪を頂く塔を空から探し、色布の付いた机を調べよう。"
+    }
+  ],
+  "storyModel": {
+    "hintLinks": [
+      {
+        "from": "entry",
+        "to": "tower",
+        "mode": "visual",
+        "clue": "正面に、色布を掲げた塔が立つ"
+      },
+      {
+        "from": "tower",
+        "to": "crossing",
+        "mode": "text",
+        "clue": "次は「緑硝子の列柱」へ。緑の結晶列と光塔を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "crossing",
+        "to": "village",
+        "mode": "text",
+        "clue": "同じ足場の反対側にも、もう一枚の記録がある。次は「研磨師の宿場」へ。家並みの色布と銅の輪を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "village",
+        "to": "center",
+        "mode": "text",
+        "clue": "もう一方の色布の机にも、人の残した言葉がありそうだ。次は「記憶光の反射炉」へ。緑の結晶列と光塔を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "center",
+        "to": "refuge",
+        "mode": "text",
+        "clue": "次は「暗幕の小屋」へ。緑の結晶列と光塔を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "refuge",
+        "to": "memorial",
+        "mode": "text",
+        "clue": "次は「影を残す石」へ。高台の淡い灯を空から探し、色布の付いた机を調べよう。"
+      },
+      {
+        "from": "memorial",
+        "to": "tower",
+        "mode": "text",
+        "clue": "次は「分光の見張り塔」へ。欠けた輪を頂く塔を空から探し、色布の付いた机を調べよう。"
+      }
+    ],
+    "historyTimeline": [
+      {
+        "id": "history-0",
+        "order": 1,
+        "summary": "光が道を描く",
+        "areaIds": [
+          "tower"
+        ]
+      },
+      {
+        "id": "history-1",
+        "order": 2,
+        "summary": "便りを写す仕事",
+        "areaIds": [
+          "crossing"
+        ]
+      },
+      {
+        "id": "history-2",
+        "order": 3,
+        "summary": "熱が削った層",
+        "areaIds": [
+          "village"
+        ]
+      },
+      {
+        "id": "history-3",
+        "order": 4,
+        "summary": "弱い光で読む",
+        "areaIds": [
+          "center"
+        ]
+      }
+    ]
+  },
+  "environmentPresentation": {
+    "renderer": "layered-atmosphere-v1",
+    "hazeColor": [
+      184,
+      171,
+      168
+    ],
+    "visibilityKm": 30,
+    "altitudeColorHeightM": 2400,
+    "surfaceCueHeightM": 720,
+    "surfaceCellM": 210,
+    "cloudLayers": [
+      {
+        "name": "低い雲海",
+        "heightM": 180,
+        "thicknessM": 100,
+        "count": 44,
+        "sizeM": [
+          620,
+          1450
+        ],
+        "flatness": 0.12,
+        "opacity": 0.09,
+        "driftMps": 3.5
+      },
+      {
+        "name": "中層のちぎれ雲",
+        "heightM": 1050,
+        "thicknessM": 620,
+        "count": 32,
+        "sizeM": [
+          240,
+          720
+        ],
+        "flatness": 0.28,
+        "opacity": 0.13,
+        "driftMps": 7.5
+      },
+      {
+        "name": "高空の薄雲",
+        "heightM": 2350,
+        "thicknessM": 360,
+        "count": 18,
+        "sizeM": [
+          700,
+          1500
+        ],
+        "flatness": 0.09,
+        "opacity": 0.08,
+        "driftMps": 14
+      }
+    ],
+    "airflow": {
+      "count": 120,
+      "nearDrawKm": 4.2,
+      "visualization": "neutral-particles",
+      "color": [
+        139,
+        219,
+        234
+      ]
+    },
+    "soundscape": {
+      "windBaseGain": 0.006,
+      "windSpeedGain": 0.034,
+      "ridgeGain": 0.012,
+      "canyonGain": 0.005,
+      "filterBaseHz": 230,
+      "filterSpeedFactor": 5.5,
+      "ridgeFilterBoostHz": 370,
+      "basinFilterDropHz": 70,
+      "canyonRumbleGain": 0.012,
+      "openRumbleGain": 0.003,
+      "rumbleFadeHeightM": 1300
+    },
+    "distantLandmarks": {
+      "maxDrawKm": 30,
+      "flockCueKm": [
+        0,
+        14
+      ],
+      "flockAltitudeM": [
+        40,
+        95
+      ],
+      "flockSpanM": 150,
+      "silhouetteFloor": 0.16
+    },
+    "boundaryVisual": {
+      "style": "mountain-ring",
+      "segmentsPerSide": 32,
+      "midOffsetKm": 2.4,
+      "outerOffsetKm": 6.5,
+      "midHeightM": [
+        1450,
+        2450
+      ],
+      "outerHeightM": [
+        3300,
+        4400
+      ],
+      "colors": [
+        [
+          54,
+          76,
+          70
+        ],
+        [
+          52,
+          69,
+          76
+        ]
+      ]
+    },
+    "skyTop": [
+      86,
+      74,
+      108
+    ],
+    "skyHigh": [
+      67,
+      58,
+      84
+    ],
+    "skyMiddle": [
+      173,
+      156,
+      173
+    ],
+    "precipitation": null
+  },
+  "biomeRecipe": {
+    "defaultBiome": {
+      "id": "open-ground",
+      "name": "硝子の砂海",
+      "groundColor": [
+        207,
+        196,
+        140
+      ],
+      "accentColor": [
+        184,
+        171,
+        168
+      ],
+      "hazeColor": [
+        184,
+        171,
+        168
+      ],
+      "colorMix": 0.86,
+      "dressing": {
+        "type": "rock-spire",
+        "density": 0.09
+      },
+      "macro": {
+        "type": "none",
+        "density": 0
+      },
+      "flight": {
+        "name": "地域の風",
+        "kind": "open",
+        "verticalMps": 0.3,
+        "lateralMps": 0.35,
+        "forwardMps": 0,
+        "turbulence": 0.18,
+        "gustRate": 0.4
+      }
+    },
+    "biomes": []
+  },
+  "terrainLod": {
+    "renderer": "webgl-nested-lod-v1",
+    "visibilityKm": 30,
+    "base": {
+      "sizeKm": 30,
+      "segments": 192
+    },
+    "mid": {
+      "sizeKm": 5,
+      "segments": 96,
+      "rebuildM": 1000
+    },
+    "near": {
+      "sizeKm": 1.6,
+      "segments": 64,
+      "rebuildM": 300
+    },
+    "boundaryMesh": {
+      "segmentsPerSide": 40,
+      "midOffsetKm": 2.6,
+      "outerOffsetKm": 6.8,
+      "midHeightM": [
+        1500,
+        2500
+      ],
+      "outerHeightM": [
+        3300,
+        4400
+      ]
+    },
+    "midEcologyCellM": 84,
+    "nearEcologyCellM": 27,
+    "groundCover": {
+      "shortGrassHeightM": [
+        0.05,
+        0.3
+      ],
+      "tallGrassHeightM": [
+        0.3,
+        1.3
+      ],
+      "windDirectionDeg": 72,
+      "waveLengthM": 46,
+      "waveSpeedMps": 11,
+      "waveContrast": 0.055,
+      "distribution": "advected-shelter-clusters"
+    },
+    "canyonSurface": {
+      "strataSpacingM": 26,
+      "strataWarpM": 18,
+      "erosionScaleM": 72,
+      "windDirectionDeg": 4,
+      "dustSpeedMps": 4.2,
+      "dustContrast": 0.07,
+      "floorMaterial": "dry-gravel-and-wash-marks",
+      "talusDistribution": "clustered-at-wall-base"
+    },
+    "basinSurface": {
+      "crackModel": "none",
+      "rippleSpacingM": 8.5,
+      "windDirectionDeg": 118,
+      "movingSandSpeedMps": 3.2,
+      "rippleContrast": 0.055,
+      "movingSandContrast": 0.035,
+      "material": "alluvial-fan-old-channels-and-wind-ripples"
+    },
+    "ridgeSurface": {
+      "windDirectionDeg": 38,
+      "erosionScaleM": 130,
+      "erosionContrast": 0.065,
+      "windwardMaterial": "sunlit-alpine-grass-and-exposed-rock",
+      "leewardMaterial": "deep-green-vegetation-and-shadowed-rock",
+      "vegetationDistribution": "broad-slope-patches-with-dark-gullies",
+      "rockExposure": "steep-slopes-crests-and-erosion-scars"
+    },
+    "transitionSurface": {
+      "boundaryWarp": "multi-scale-height-and-moisture-noise",
+      "ridgeFoot": "deep-green-foothill-to-exposed-rock",
+      "canyonLip": "broken-grass-to-dry-talus",
+      "basinFringe": "sand-fingers-with-dry-grass",
+      "visualBlendWidthM": [
+        450,
+        1100
+      ]
+    },
+    "fallback": "canvas-terrain-v1",
+    "regionTint": {
+      "low": [
+        0.43,
+        0.42,
+        0.3
+      ],
+      "high": [
+        0.81,
+        0.77,
+        0.55
+      ],
+      "haze": [
+        0.72,
+        0.67,
+        0.66
+      ],
+      "mix": 0.9
+    },
+    "seaLevel": -1
+  },
+  "ecologyPresentation": {
+    "species": [
+      {
+        "type": "wind-kite",
+        "count": 28,
+        "biomeIds": [],
+        "altitudeM": [
+          35,
+          90
+        ],
+        "scale": [
+          0.55,
+          0.9
+        ],
+        "orbitM": [
+          100,
+          260
+        ],
+        "speed": [
+          0.08,
+          0.14
+        ],
+        "color": [
+          30,
+          45,
+          48
+        ],
+        "maxDrawKm": 6
+      }
+    ],
+    "cloudShadows": {
+      "enabled": true,
+      "opacity": 0.08,
+      "maxDrawKm": 5
+    }
+  },
+  "library": {
+    "coverImage": "assets/glass-sea.svg",
+    "exploreUrl": "blockout.html?region=glass-sea&v=142",
+    "shelfDescription": "砂の上に、雨のような光が走る。地図に載らない道標には、あなたと同じ向きへ進む古い足跡が刻まれていた。",
+    "completedStory": {
+      "title": "硝子の砂海 ― 地域の物語",
+      "intro": "集めた八つの記録を重ね、この土地で起きた出来事を辿る。",
+      "chapters": [
+        {
+          "title": "光が道を描く",
+          "text": "硝子の砂海では、反射する光が道を示し、板のひずみが短い音を留めていた。旅人たちはその性質へ自分の記憶を重ね、同じ返事を何度も聞いた。だが繰り返す言葉は、現在の問いに答えたものではなかった。道標の足跡もまた、誰かが今歩いている証ではなく、人が彫った案内だった。",
+          "recordIds": [
+            "glass-sea-1",
+            "glass-sea-2",
+            "glass-sea-3"
+          ]
+        },
+        {
+          "title": "便りを写す仕事",
+          "text": "宿場の職人は、本人が残した便りを写す仕事と、死者を呼び戻すという商売を区別しようとしていた。注文箱には返事ができないことを書いた。それでも、外へ運ばれた板には別の物語が付いた。受け取る側の願いが、作り手の注意書きを越えていった。",
+          "recordIds": [
+            "glass-sea-4",
+            "glass-sea-3"
+          ]
+        },
+        {
+          "title": "熱が削った層",
+          "text": "より鮮明な声を求めた増幅は、古い記録を消していた。研磨師は削る前に持ち主へ知らせるよう求め、反射炉は大祭を前に止められた。止めた理由を不思議な声のせいにしないという一文が、責任の置き場所をはっきりさせている。",
+          "recordIds": [
+            "glass-sea-5",
+            "glass-sea-6"
+          ]
+        },
+        {
+          "title": "弱い光で読む",
+          "text": "残る板は暗幕の小屋へ移され、人の手で写しが作られた。『棚の下にある』という声の主も、棚を組んだ職人として記録し直された。声の向こうへ願いを投げ続ける代わりに、かつてその言葉を発した人の暮らしを知る。記念石の足跡は、その読み方から現実の旅へ戻るための向きを示している。",
+          "recordIds": [
+            "glass-sea-7",
+            "glass-sea-8"
+          ]
+        }
+      ],
+      "afterword": "資料のない部分を断定せず、残された言葉をつないでいます。気になった一文があれば、原文の頁へ戻ってみてください。"
+    }
+  },
+  "completionRule": {
+    "requiredRecords": 8,
+    "finalRecordId": "glass-sea-8",
+    "returnAfterFinal": true
+  },
+  "history": [
+    "硝子の砂海では、反射する光が道を示し、板のひずみが短い音を留めていた。旅人たちはその性質へ自分の記憶を重ね、同じ返事を何度も聞いた。だが繰り返す言葉は、現在の問いに答えたものではなかった。道標の足跡もまた、誰かが今歩いている証ではなく、人が彫った案内だった。",
+    "宿場の職人は、本人が残した便りを写す仕事と、死者を呼び戻すという商売を区別しようとしていた。注文箱には返事ができないことを書いた。それでも、外へ運ばれた板には別の物語が付いた。受け取る側の願いが、作り手の注意書きを越えていった。",
+    "より鮮明な声を求めた増幅は、古い記録を消していた。研磨師は削る前に持ち主へ知らせるよう求め、反射炉は大祭を前に止められた。止めた理由を不思議な声のせいにしないという一文が、責任の置き場所をはっきりさせている。",
+    "残る板は暗幕の小屋へ移され、人の手で写しが作られた。『棚の下にある』という声の主も、棚を組んだ職人として記録し直された。声の向こうへ願いを投げ続ける代わりに、かつてその言葉を発した人の暮らしを知る。記念石の足跡は、その読み方から現実の旅へ戻るための向きを示している。"
+  ]
+}

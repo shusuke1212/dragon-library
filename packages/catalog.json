@@ -1,0 +1,40 @@
+{
+  "packages": [
+    {
+      "id": "white-bone",
+      "path": "white-bone.json"
+    },
+    {
+      "id": "tide-bells",
+      "path": "tide-bells.json"
+    },
+    {
+      "id": "verdant-observatory",
+      "path": "verdant-observatory.json"
+    },
+    {
+      "id": "winter-harbor",
+      "path": "winter-harbor.json"
+    },
+    {
+      "id": "glass-sea",
+      "path": "glass-sea.json"
+    },
+    {
+      "id": "ember-city",
+      "path": "ember-city.json"
+    },
+    {
+      "id": "cloud-orchard",
+      "path": "cloud-orchard.json"
+    },
+    {
+      "id": "thirteenth-hour",
+      "path": "thirteenth-hour.json"
+    },
+    {
+      "id": "rain-valley",
+      "path": "rain-valley.json"
+    }
+  ]
+}

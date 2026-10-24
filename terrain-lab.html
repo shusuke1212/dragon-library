@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#182735">
+  <title>白骨の風路｜WebGL地形試験</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M5 50 22 18l11 15 9-24 17 41Z' fill='%2384a858'/%3E%3Cpath d='M5 50h54' stroke='%23e2d5ac' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="terrain-lab.css">
+</head>
+<body>
+  <canvas id="terrain" aria-label="WebGLで描画した地形試験"></canvas>
+  <header class="lab-head">
+    <div><span>WORLD SURFACE LAB</span><strong>地表粒度試験</strong></div>
+    <a href="blockout.html">飛行試作へ戻る</a>
+  </header>
+  <section class="lab-panel" aria-label="地形試験設定">
+    <p>同じ約1.8万三角形を、どの広さへ使うか比較します。</p>
+    <fieldset><legend>地形の一辺</legend><div id="sizeChoices" class="choices">
+      <button data-size="1000">1 km</button><button data-size="2000" class="active">2 km</button><button data-size="4000">4 km</button>
+    </div></fieldset>
+    <fieldset><legend>地表からの視点高度</legend><div id="altitudeChoices" class="choices">
+      <button data-altitude="120">120 m</button><button data-altitude="350" class="active">350 m</button><button data-altitude="800">800 m</button><button data-altitude="1800">1800 m</button>
+    </div></fieldset>
+    <dl><div><dt>頂点間隔</dt><dd id="spacing">20.8 m</dd></div><div><dt>三角形</dt><dd>18,432</dd></div><div><dt>描画方式</dt><dd>WebGL 2</dd></div></dl>
+    <small>画面をドラッグすると周囲を見回せます。地表の色は草・土・岩を傾斜と高度で自動合成しています。</small>
+  </section>
+  <div class="scale-mark"><i></i><span id="scaleLabel">100 m</span></div>
+  <div id="unsupported" class="unsupported" hidden>この端末ではWebGL 2を利用できません。</div>
+  <script type="module" src="terrain-lab.js"></script>
+</body>
+</html>
